@@ -1,0 +1,1803 @@
+- api_version: null
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:34+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      component: apiserver
+      provider: kubernetes
+    managed_fields: null
+    name: kubernetes
+    namespace: default
+    owner_references: null
+    resource_version: '149'
+    self_link: /api/v1/namespaces/default/services/kubernetes
+    uid: ce04f03a-8cd6-451d-98de-f497b307bf0d
+  spec:
+    cluster_ip: 10.96.0.1
+    external_i_ps: null
+    external_name: null
+    external_traffic_policy: null
+    health_check_node_port: null
+    load_balancer_ip: null
+    load_balancer_source_ranges: null
+    ports:
+    - name: https
+      node_port: null
+      port: 443
+      protocol: TCP
+      target_port: 6443
+    publish_not_ready_addresses: null
+    selector: null
+    session_affinity: None
+    session_affinity_config: null
+    type: ClusterIP
+  status:
+    load_balancer:
+      ingress: null
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app.kubernetes.io/name":"ingress-nginx","app.kubernetes.io/part-of":"ingress-nginx"},"name":"ingress-nginx","namespace":"ingress-nginx"},"spec":{"externalTrafficPolicy":"Local","ports":[{"name":"http","port":80,"targetPort":"http"},{"name":"https","port":443,"targetPort":"https"}],"selector":{"app.kubernetes.io/name":"ingress-nginx","app.kubernetes.io/part-of":"ingress-nginx"},"type":"LoadBalancer"}}
+
+        '
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:57+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+    managed_fields: null
+    name: ingress-nginx
+    namespace: ingress-nginx
+    owner_references: null
+    resource_version: '698'
+    self_link: /api/v1/namespaces/ingress-nginx/services/ingress-nginx
+    uid: 0a69e025-1820-46a2-8bcc-2d2aac46404a
+  spec:
+    cluster_ip: 10.105.87.138
+    external_i_ps: null
+    external_name: null
+    external_traffic_policy: Local
+    health_check_node_port: 32158
+    load_balancer_ip: null
+    load_balancer_source_ranges: null
+    ports:
+    - name: http
+      node_port: 30459
+      port: 80
+      protocol: TCP
+      target_port: http
+    - name: https
+      node_port: 31686
+      port: 443
+      protocol: TCP
+      target_port: https
+    publish_not_ready_addresses: null
+    selector:
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+    session_affinity: None
+    session_affinity_config: null
+    type: LoadBalancer
+  status:
+    load_balancer:
+      ingress:
+      - hostname: null
+        ip: 172.16.99.240
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      prometheus.io/port: '9153'
+      prometheus.io/scrape: 'true'
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:36+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      k8s-app: kube-dns
+      kubernetes.io/cluster-service: 'true'
+      kubernetes.io/name: KubeDNS
+    managed_fields: null
+    name: kube-dns
+    namespace: kube-system
+    owner_references: null
+    resource_version: '215'
+    self_link: /api/v1/namespaces/kube-system/services/kube-dns
+    uid: 6edb84c0-2ed5-47ee-a3c9-47420b2de754
+  spec:
+    cluster_ip: 10.96.0.10
+    external_i_ps: null
+    external_name: null
+    external_traffic_policy: null
+    health_check_node_port: null
+    load_balancer_ip: null
+    load_balancer_source_ranges: null
+    ports:
+    - name: dns
+      node_port: null
+      port: 53
+      protocol: UDP
+      target_port: 53
+    - name: dns-tcp
+      node_port: null
+      port: 53
+      protocol: TCP
+      target_port: 53
+    - name: metrics
+      node_port: null
+      port: 9153
+      protocol: TCP
+      target_port: 9153
+    publish_not_ready_addresses: null
+    selector:
+      k8s-app: kube-dns
+    session_affinity: None
+    session_affinity_config: null
+    type: ClusterIP
+  status:
+    load_balancer:
+      ingress: null
+- api_version: null
+  binary_data: null
+  data: null
+  kind: null
+  metadata:
+    annotations:
+      control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"nginx-ingress-controller-79f6884cf6-xb8ds","leaseDurationSeconds":30,"acquireTime":"2019-09-14T18:30:36Z","renewTime":"2019-09-15T08:44:34Z","leaderTransitions":0}'
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:30:36+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: ingress-controller-leader-nginx
+    namespace: ingress-nginx
+    owner_references: null
+    resource_version: '26826'
+    self_link: /api/v1/namespaces/ingress-nginx/configmaps/ingress-controller-leader-nginx
+    uid: 43e6004b-4d3e-4223-9aa4-245387365d97
+- api_version: null
+  binary_data: null
+  data: null
+  kind: null
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"v1","kind":"ConfigMap","metadata":{"annotations":{},"labels":{"app.kubernetes.io/name":"ingress-nginx","app.kubernetes.io/part-of":"ingress-nginx"},"name":"nginx-configuration","namespace":"ingress-nginx"}}
+
+        '
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:55+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+    managed_fields: null
+    name: nginx-configuration
+    namespace: ingress-nginx
+    owner_references: null
+    resource_version: '665'
+    self_link: /api/v1/namespaces/ingress-nginx/configmaps/nginx-configuration
+    uid: 74ce65bc-dd11-49a9-8f72-aefff4504bdb
+- api_version: null
+  binary_data: null
+  data: null
+  kind: null
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"v1","kind":"ConfigMap","metadata":{"annotations":{},"labels":{"app.kubernetes.io/name":"ingress-nginx","app.kubernetes.io/part-of":"ingress-nginx"},"name":"tcp-services","namespace":"ingress-nginx"}}
+
+        '
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:55+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+    managed_fields: null
+    name: tcp-services
+    namespace: ingress-nginx
+    owner_references: null
+    resource_version: '666'
+    self_link: /api/v1/namespaces/ingress-nginx/configmaps/tcp-services
+    uid: e47f2aaf-202c-4570-8096-f9ef7cdf27cd
+- api_version: null
+  binary_data: null
+  data: null
+  kind: null
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"v1","kind":"ConfigMap","metadata":{"annotations":{},"labels":{"app.kubernetes.io/name":"ingress-nginx","app.kubernetes.io/part-of":"ingress-nginx"},"name":"udp-services","namespace":"ingress-nginx"}}
+
+        '
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:55+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+    managed_fields: null
+    name: udp-services
+    namespace: ingress-nginx
+    owner_references: null
+    resource_version: '667'
+    self_link: /api/v1/namespaces/ingress-nginx/configmaps/udp-services
+    uid: b3662505-1574-4622-bee1-d92192732055
+- api_version: null
+  binary_data: null
+  data:
+    jws-kubeconfig-abcdef: eyJhbGciOiJIUzI1NiIsImtpZCI6ImFiY2RlZiJ9..pRZoROxYnSCiH9p-plEMfIfb5Ct8feB3iOhH62cYKls
+    kubeconfig: "apiVersion: v1\nclusters:\n- cluster:\n    certificate-authority-data:\
+      \ LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=\n\
+      \    server: https://172.16.99.110:6443\n  name: \"\"\ncontexts: []\ncurrent-context:\
+      \ \"\"\nkind: Config\npreferences: {}\nusers: []\n"
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:35+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: cluster-info
+    namespace: kube-public
+    owner_references: null
+    resource_version: '312'
+    self_link: /api/v1/namespaces/kube-public/configmaps/cluster-info
+    uid: 2972871e-a86f-4405-8bc1-c37c439d7a11
+- api_version: null
+  binary_data: null
+  data:
+    Corefile: ".:53 {\n    errors\n    health\n    kubernetes cluster.local in-addr.arpa\
+      \ ip6.arpa {\n       pods insecure\n       upstream\n       fallthrough in-addr.arpa\
+      \ ip6.arpa\n       ttl 30\n    }\n    prometheus :9153\n    forward . /etc/resolv.conf\n\
+      \    cache 30\n    loop\n    reload\n    loadbalance\n}\n"
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:36+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: coredns
+    namespace: kube-system
+    owner_references: null
+    resource_version: '199'
+    self_link: /api/v1/namespaces/kube-system/configmaps/coredns
+    uid: 51428eb2-eb61-4c5f-ac88-ddc8ae1467b5
+- api_version: null
+  binary_data: null
+  data:
+    client-ca-file: '-----BEGIN CERTIFICATE-----
+
+      MIICyDCCAbCgAwIBAgIBADANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwprdWJl
+
+      cm5ldGVzMB4XDTE5MDkxNDE4MjU1NFoXDTI5MDkxMTE4MjU1NFowFTETMBEGA1UE
+
+      AxMKa3ViZXJuZXRlczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKWY
+
+      tJ67+KzT0iYpwmH5XLB7B06MFgKD2eJ2OWZMYOofuglLpH4utQKhtKRFr1A3toh4
+
+      OLQXkXyOo6Vkz0I+p0J0dc9IzPybTZE4m4viOtGYx/LzwzB14QXbGK2dUgGfnp4E
+
+      SoRd/0B8Wj+0qNSXrsYuX6Ko24ZJqWRWPxL62AH2ix/kNyGH5RU9+0E+xqfKJ4ZB
+
+      fl6zMape2fLC5q1Id2qosJnhgHPv9FKZVa48RqtZbUqksatEbnbj7KicnJbdkyKk
+
+      /IGDTpTy45uubpNBIR0SoBqUNLy5ozMGl3RQyCaG6kHhNNuKXKD91a3m8WWhV9+B
+
+      3tM2gmN95yTV3HZdQqECAwEAAaMjMCEwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB
+
+      /wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAC331elXX6GymKTmpUyBhtaG6lc+
+
+      BkLVjiD4kOMBoPF//aUf9Ufb3dybXaTyJqIl0eE6wqkJvTUth5/jgdyzocjQiHE4
+
+      5H2AO9pz3KoWXHbGwl3fEdGPg40bLF9APgUzBkwHR+5dtiHU8J6UU5mjaebZ2Jem
+
+      /sXsS13zY/ZcZCUGInrGNxEdMS4PIvTpJ9bUWohY7hJby71dnBKjqUvzcglh1VP1
+
+      pkFoxvjpLy3rPyfJG+w/ZBLzVAcJssQOonoBk2vEjOaFDAoBdERKi7xl4+AlSV01
+
+      XvcwZ9BgG305K9pbroOltfBrmjY47DV42gwUA2cMmDtcnt1f6l6UnSmsOuA=
+
+      -----END CERTIFICATE-----
+
+      '
+    requestheader-allowed-names: '["front-proxy-client"]'
+    requestheader-client-ca-file: '-----BEGIN CERTIFICATE-----
+
+      MIIC0DCCAbigAwIBAgIBADANBgkqhkiG9w0BAQsFADAZMRcwFQYDVQQDEw5mcm9u
+
+      dC1wcm94eS1jYTAeFw0xOTA5MTQxODI1NTJaFw0yOTA5MTExODI1NTJaMBkxFzAV
+
+      BgNVBAMTDmZyb250LXByb3h5LWNhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+
+      CgKCAQEApF6FDIFoIwCQXG7rm9MJIx4gr6dg60yhspf458c/lyjNYV7lN+Y+L4d3
+
+      KP6oSIIQ9YcytyRitqLV1OP50uE7tzVO0eEptUbsHx1+6pzM3jM7i/qziXcgbY+f
+
+      2HPIVXA2fbqeW/6lxeaVWECyPIlxshee0YQ6tbuBqCGwRf46PtAee36SjaS+gW76
+
+      lTOdnWie7XNBP4Zrjxh54mzXLeIeWRZ+jiJfKeSDJfC+QwuWUSwm3FJ7wqof6orW
+
+      +wiblympx3OKYQhWD93MWFtFESaKdp9xV6tDXWXzY4j7lPHP/VjyauqKrqun8KRb
+
+      bT54oWoVGa0nwMq0ITGqpZScg/vCcQIDAQABoyMwITAOBgNVHQ8BAf8EBAMCAqQw
+
+      DwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAZX7YAJcBbvgfpZUs
+
+      xoDSP1YEKdDrlMRH8MZxfokbSGSNNgn6dZzI6wD4cDIaRkmDz/14IAY6NMICzaQ5
+
+      UtTZDKIoJePyW5jHN6qfdL2rTfSezx8xfpq7QUpw4goIbuqUhTUom/tXkt2qHKSZ
+
+      +N4ifc9s1DTYNwcLqp+hyVHTpCxMABnuVbQfenC9ndv3461ryErpQdC6ou/YU4Ge
+
+      X7ymz7jpqNmdC7l6T4QtFnRuhizn88Hz7qmO7AryP1fv5LlS05vBaM4j8419YsHH
+
+      yYGINhjxpZ5hfwC9DnO4e6HCeL29gFfC5jbWmbYvLFVQdz/XeO0VNufOzCxVf0A/
+
+      sJPvyw==
+
+      -----END CERTIFICATE-----
+
+      '
+    requestheader-extra-headers-prefix: '["X-Remote-Extra-"]'
+    requestheader-group-headers: '["X-Remote-Group"]'
+    requestheader-username-headers: '["X-Remote-User"]'
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:32+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: extension-apiserver-authentication
+    namespace: kube-system
+    owner_references: null
+    resource_version: '41'
+    self_link: /api/v1/namespaces/kube-system/configmaps/extension-apiserver-authentication
+    uid: d3a7413d-c0a4-4171-8016-54fe6eae6de0
+- api_version: null
+  binary_data: null
+  data:
+    cni-conf.json: "{\n  \"name\": \"cbr0\",\n  \"plugins\": [\n    {\n      \"type\"\
+      : \"flannel\",\n      \"delegate\": {\n        \"hairpinMode\": true,\n    \
+      \    \"isDefaultGateway\": true\n      }\n    },\n    {\n      \"type\": \"\
+      portmap\",\n      \"capabilities\": {\n        \"portMappings\": true\n    \
+      \  }\n    }\n  ]\n}\n"
+    net-conf.json: "{\n  \"Network\": \"10.244.0.0/16\",\n  \"Backend\": {\n    \"\
+      Type\": \"vxlan\"\n  }\n}\n"
+  kind: null
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"v1","data":{"cni-conf.json":"{\n  \"name\":
+        \"cbr0\",\n  \"plugins\": [\n    {\n      \"type\": \"flannel\",\n      \"delegate\":
+        {\n        \"hairpinMode\": true,\n        \"isDefaultGateway\": true\n      }\n    },\n    {\n      \"type\":
+        \"portmap\",\n      \"capabilities\": {\n        \"portMappings\": true\n      }\n    }\n  ]\n}\n","net-conf.json":"{\n  \"Network\":
+        \"10.244.0.0/16\",\n  \"Backend\": {\n    \"Type\": \"vxlan\"\n  }\n}\n"},"kind":"ConfigMap","metadata":{"annotations":{},"labels":{"app":"flannel","tier":"node"},"name":"kube-flannel-cfg","namespace":"kube-system"}}
+
+        '
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:27:53+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      app: flannel
+      tier: node
+    managed_fields: null
+    name: kube-flannel-cfg
+    namespace: kube-system
+    owner_references: null
+    resource_version: '456'
+    self_link: /api/v1/namespaces/kube-system/configmaps/kube-flannel-cfg
+    uid: 8fd9a45e-9345-4666-9bfe-8536341ffc7b
+- api_version: null
+  binary_data: null
+  data:
+    config.conf: "apiVersion: kubeproxy.config.k8s.io/v1alpha1\nbindAddress: 0.0.0.0\n\
+      clientConnection:\n  acceptContentTypes: \"\"\n  burst: 10\n  contentType: application/vnd.kubernetes.protobuf\n\
+      \  kubeconfig: /var/lib/kube-proxy/kubeconfig.conf\n  qps: 5\nclusterCIDR: 10.244.0.0/16\n\
+      configSyncPeriod: 15m0s\nconntrack:\n  maxPerCore: 32768\n  min: 131072\n  tcpCloseWaitTimeout:\
+      \ 1h0m0s\n  tcpEstablishedTimeout: 24h0m0s\nenableProfiling: false\nhealthzBindAddress:\
+      \ 0.0.0.0:10256\nhostnameOverride: \"\"\niptables:\n  masqueradeAll: false\n\
+      \  masqueradeBit: 14\n  minSyncPeriod: 0s\n  syncPeriod: 30s\nipvs:\n  excludeCIDRs:\
+      \ null\n  minSyncPeriod: 0s\n  scheduler: \"\"\n  strictARP: false\n  syncPeriod:\
+      \ 30s\nkind: KubeProxyConfiguration\nmetricsBindAddress: 127.0.0.1:10249\nmode:\
+      \ \"\"\nnodePortAddresses: null\noomScoreAdj: -999\nportRange: \"\"\nresourceContainer:\
+      \ /kube-proxy\nudpIdleTimeout: 250ms\nwinkernel:\n  enableDSR: false\n  networkName:\
+      \ \"\"\n  sourceVip: \"\""
+    kubeconfig.conf: "apiVersion: v1\nkind: Config\nclusters:\n- cluster:\n    certificate-authority:\
+      \ /var/run/secrets/kubernetes.io/serviceaccount/ca.crt\n    server: https://172.16.99.110:6443\n\
+      \  name: default\ncontexts:\n- context:\n    cluster: default\n    namespace:\
+      \ default\n    user: default\n  name: default\ncurrent-context: default\nusers:\n\
+      - name: default\n  user:\n    tokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token"
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:36+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      app: kube-proxy
+    managed_fields: null
+    name: kube-proxy
+    namespace: kube-system
+    owner_references: null
+    resource_version: '218'
+    self_link: /api/v1/namespaces/kube-system/configmaps/kube-proxy
+    uid: a23e70f8-74e3-43bd-b5f6-a82492ddfc2f
+- api_version: null
+  binary_data: null
+  data:
+    ClusterConfiguration: "apiServer:\n  extraArgs:\n    authorization-mode: Node,RBAC\n\
+      \  timeoutForControlPlane: 4m0s\napiVersion: kubeadm.k8s.io/v1beta2\ncertificatesDir:\
+      \ /etc/kubernetes/pki\nclusterName: kubernetes\ncontrollerManager: {}\ndns:\n\
+      \  type: CoreDNS\netcd:\n  local:\n    dataDir: /var/lib/etcd\nimageRepository:\
+      \ k8s.gcr.io\nkind: ClusterConfiguration\nkubernetesVersion: v1.15.3\nnetworking:\n\
+      \  dnsDomain: cluster.local\n  podSubnet: 10.244.0.0/16\n  serviceSubnet: 10.96.0.0/12\n\
+      scheduler: {}\n"
+    ClusterStatus: "apiEndpoints:\n  localhost.localdomain:\n    advertiseAddress:\
+      \ 172.16.99.110\n    bindPort: 6443\napiVersion: kubeadm.k8s.io/v1beta2\nkind:\
+      \ ClusterStatus\n"
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:34+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: kubeadm-config
+    namespace: kube-system
+    owner_references: null
+    resource_version: '155'
+    self_link: /api/v1/namespaces/kube-system/configmaps/kubeadm-config
+    uid: 34083132-7fd5-43e1-a227-b538fa7ad1ed
+- api_version: null
+  binary_data: null
+  data:
+    kubelet: "address: 0.0.0.0\napiVersion: kubelet.config.k8s.io/v1beta1\nauthentication:\n\
+      \  anonymous:\n    enabled: false\n  webhook:\n    cacheTTL: 2m0s\n    enabled:\
+      \ true\n  x509:\n    clientCAFile: /etc/kubernetes/pki/ca.crt\nauthorization:\n\
+      \  mode: Webhook\n  webhook:\n    cacheAuthorizedTTL: 5m0s\n    cacheUnauthorizedTTL:\
+      \ 30s\ncgroupDriver: cgroupfs\ncgroupsPerQOS: true\nclusterDNS:\n- 10.96.0.10\n\
+      clusterDomain: cluster.local\nconfigMapAndSecretChangeDetectionStrategy: Watch\n\
+      containerLogMaxFiles: 5\ncontainerLogMaxSize: 10Mi\ncontentType: application/vnd.kubernetes.protobuf\n\
+      cpuCFSQuota: true\ncpuCFSQuotaPeriod: 100ms\ncpuManagerPolicy: none\ncpuManagerReconcilePeriod:\
+      \ 10s\nenableControllerAttachDetach: true\nenableDebuggingHandlers: true\nenforceNodeAllocatable:\n\
+      - pods\neventBurst: 10\neventRecordQPS: 5\nevictionHard:\n  imagefs.available:\
+      \ 15%\n  memory.available: 100Mi\n  nodefs.available: 10%\n  nodefs.inodesFree:\
+      \ 5%\nevictionPressureTransitionPeriod: 5m0s\nfailSwapOn: true\nfileCheckFrequency:\
+      \ 20s\nhairpinMode: promiscuous-bridge\nhealthzBindAddress: 127.0.0.1\nhealthzPort:\
+      \ 10248\nhttpCheckFrequency: 20s\nimageGCHighThresholdPercent: 85\nimageGCLowThresholdPercent:\
+      \ 80\nimageMinimumGCAge: 2m0s\niptablesDropBit: 15\niptablesMasqueradeBit: 14\n\
+      kind: KubeletConfiguration\nkubeAPIBurst: 10\nkubeAPIQPS: 5\nmakeIPTablesUtilChains:\
+      \ true\nmaxOpenFiles: 1000000\nmaxPods: 110\nnodeLeaseDurationSeconds: 40\n\
+      nodeStatusReportFrequency: 1m0s\nnodeStatusUpdateFrequency: 10s\noomScoreAdj:\
+      \ -999\npodPidsLimit: -1\nport: 10250\nregistryBurst: 10\nregistryPullQPS: 5\n\
+      resolvConf: /etc/resolv.conf\nrotateCertificates: true\nruntimeRequestTimeout:\
+      \ 2m0s\nserializeImagePulls: true\nstaticPodPath: /etc/kubernetes/manifests\n\
+      streamingConnectionIdleTimeout: 4h0m0s\nsyncFrequency: 1m0s\nvolumeStatsAggPeriod:\
+      \ 1m0s\n"
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:34+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: kubelet-config-1.15
+    namespace: kube-system
+    owner_references: null
+    resource_version: '158'
+    self_link: /api/v1/namespaces/kube-system/configmaps/kubelet-config-1.15
+    uid: f052713b-8f9d-4dcc-9c66-705b216b5a68
+- api_version: null
+  binary_data: null
+  data:
+    config: "address-pools:\n- name: default\n  protocol: layer2\n  addresses:\n \
+      \ - 172.16.99.240/28\n"
+  kind: null
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"v1","data":{"config":"address-pools:\n-
+        name: default\n  protocol: layer2\n  addresses:\n  - 172.16.99.240/28\n"},"kind":"ConfigMap","metadata":{"annotations":{},"name":"config","namespace":"metallb-system"}}
+
+        '
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:47+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: config
+    namespace: metallb-system
+    owner_references: null
+    resource_version: '637'
+    self_link: /api/v1/namespaces/metallb-system/configmaps/config
+    uid: f2991cd0-4c70-4505-91d6-7a548003868a
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: YWRhbGltYXlldQ==
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSmhaR0ZzYVcxaGVXVjFJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpXTnlaWFF1Ym1GdFpTSTZJbVJsWm1GMWJIUXRkRzlyWlc0dGNUUTVhbTRpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1dVlXMWxJam9pWkdWbVlYVnNkQ0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVnlkbWxqWlMxaFkyTnZkVzUwTG5WcFpDSTZJak5pWlRaaU1UQTJMV05oTW1RdE5HWmtaQzFoTVRJMkxXRXdNek5pWXpRMlpEa3dNQ0lzSW5OMVlpSTZJbk41YzNSbGJUcHpaWEoyYVdObFlXTmpiM1Z1ZERwaFpHRnNhVzFoZVdWMU9tUmxabUYxYkhRaWZRLmw1ZzBIYlY5dkFYWExuenNhcnRZY3ZYMXplcXdVNWJBb3AwTE83ZnJXWnlWMWNvU3h1R1FoRTJyQlh3dVlzY2JvMVpVRENNRzBGeVA1QjBNcURHdXJpaGpfQ1lhUWc0bEtsbWtQV0JTcVFwbVF3Wk9XV3kyRVRqeDN6M1ZoR3Nla00yZ1YxaGtsUnEwcThXSkN3dXBjWEJDNW1GWS1pd0thcWVtSXVLalZFbjRHU3k4WFhoVU4tYWVKanRteWZfVzlZRVpBa3ZRRGZsSm1jcEEwTGpreW13Z3pkakoyZ3hiY1VVN0owSTdZMEhUcnlKbHRSQnoxcU1NZmJvM2hFX01Md2QzNjd1TUtLUzV2eHNYdjg1cUlsSFhIdW1ZSEYxeWo1aGt6ZTN3NnRZZ3I1SXVHekJkaHhjQ3JtU25iVnNlajlFZ2hKOXJMS096TXB3Ty1nRmRjQQ==
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: default
+      kubernetes.io/service-account.uid: 3be6b106-ca2d-4fdd-a126-a033bc46d900
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:52:46+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: default-token-q49jn
+    namespace: adalimayeu
+    owner_references: null
+    resource_version: '2485'
+    self_link: /api/v1/namespaces/adalimayeu/secrets/default-token-q49jn
+    uid: 6b9267c4-f003-4044-a2b9-548555e99908
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: ZGVmYXVsdA==
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSmtaV1poZFd4MElpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WldOeVpYUXVibUZ0WlNJNkltUmxabUYxYkhRdGRHOXJaVzR0YlhGbmJXNGlMQ0pyZFdKbGNtNWxkR1Z6TG1sdkwzTmxjblpwWTJWaFkyTnZkVzUwTDNObGNuWnBZMlV0WVdOamIzVnVkQzV1WVcxbElqb2laR1ZtWVhWc2RDSXNJbXQxWW1WeWJtVjBaWE11YVc4dmMyVnlkbWxqWldGalkyOTFiblF2YzJWeWRtbGpaUzFoWTJOdmRXNTBMblZwWkNJNkltSm1OREV3WXpaakxXRmlZMlV0TkdFMU5TMWhaRFExTFRobE4yVXlNbVU0TldaaU9DSXNJbk4xWWlJNkluTjVjM1JsYlRwelpYSjJhV05sWVdOamIzVnVkRHBrWldaaGRXeDBPbVJsWm1GMWJIUWlmUS5vY1JCanlpWUl2N0toaDhwZ0lvVS1oQy1Sc083UUlzUUdWQnRzdjlqYW02SFRZRTBsZDI5N1hmWmc1N3hoYm11ZlZaaDVTbkFIdDhLTGZNaVdMdDY5NEloZEVwdWMyTGctQS1jMXZWMzlleGRsakxDX3FQTnVZTnhZQ3BxamhJQWpncFFTWkVudVh4ZjZRU1JHUVBfU0FjMVd2QkYzNFE5UkhBY2ZmcTR6ZWhBY3Ffa1o4eVFMYmZfWDBLRUZ2MDZoY0prRVZzb2p6amZoSld1S25oU2huSXpBY2ZmZ2NtdnNGT29PVmVNVXdaRzZqdTV3MVBnd2RTclF5UDZHT1B3OVJqZVBlRTZmTGJCNVhtbDhiSnpHX2tGdEh2MVRfdVJXVGtGdWlUaDB4LWN4dlVQTmJyWktPMWUyVDk5a2tmSmRFTDBLa3BYSjdNcUlQMldialVfcEE=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: default
+      kubernetes.io/service-account.uid: bf410c6c-abce-4a55-ad45-8e7e22e85fb8
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:52+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: default-token-mqgmn
+    namespace: default
+    owner_references: null
+    resource_version: '353'
+    self_link: /api/v1/namespaces/default/secrets/default-token-mqgmn
+    uid: 10b2b0e9-9161-4c4f-92fa-daebfb10f91a
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: aW5ncmVzcy1uZ2lueA==
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnBibWR5WlhOekxXNW5hVzU0SWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaV055WlhRdWJtRnRaU0k2SW1SbFptRjFiSFF0ZEc5clpXNHRlbmQzY2pnaUxDSnJkV0psY201bGRHVnpMbWx2TDNObGNuWnBZMlZoWTJOdmRXNTBMM05sY25acFkyVXRZV05qYjNWdWRDNXVZVzFsSWpvaVpHVm1ZWFZzZENJc0ltdDFZbVZ5Ym1WMFpYTXVhVzh2YzJWeWRtbGpaV0ZqWTI5MWJuUXZjMlZ5ZG1salpTMWhZMk52ZFc1MExuVnBaQ0k2SWpVeU5XUmxNR1JsTFdZME5ERXROR0ZqTVMxaE1HVmtMV0UzTTJVMlpUVTFaamswT0NJc0luTjFZaUk2SW5ONWMzUmxiVHB6WlhKMmFXTmxZV05qYjNWdWREcHBibWR5WlhOekxXNW5hVzU0T21SbFptRjFiSFFpZlEuZ2xLc3ktSnREUTdZX1BhUGsyQXhyU0hZZXQxWXVRRGh4SHE1YkhtZWNrSWtTRXoydm1XcGtvbjRqTEtkN0pMZG9xSlpEYXlWN1ZNUXIyTVpRT1Y4a0J0WkRjbU5UOUpSei0ycG9zNVpOeThBZUQtV3ppTzd1Y3ZVTUk0X0RIYV8wTUg4bmFVbUlpRWljQ1F2LUF5QXRQemZ0RXlrUUlWdjdCNDlYT2hpWlNYRlEzS2tfTHU1N3pFRU9qRVE2UTBjeU5uODVvXzEyVkNYLU1Zc1U5UlVGSkxrRzVlQjVGWlo0amxPaEV2bnRPZDFBUElyVGROV29JakdXczRHT0NTVmdCQXFJZEEyUFRnazJXOC1TRF9xMS14bjRQSmhTbWI2dzgyeGktbEVnUFNNQkc4RVU5bFRpY0d2eWVuaW9GSGtyNVVhRk5iLVEtTExOTXREdDNIZnJB
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: default
+      kubernetes.io/service-account.uid: 525de0de-f441-4ac1-a0ed-a73e6e55f948
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:55+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: default-token-zwwr8
+    namespace: ingress-nginx
+    owner_references: null
+    resource_version: '670'
+    self_link: /api/v1/namespaces/ingress-nginx/secrets/default-token-zwwr8
+    uid: fe726714-09d3-4ecb-8429-e80f42cf7a25
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: aW5ncmVzcy1uZ2lueA==
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnBibWR5WlhOekxXNW5hVzU0SWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaV055WlhRdWJtRnRaU0k2SW01bmFXNTRMV2x1WjNKbGMzTXRjMlZ5ZG1salpXRmpZMjkxYm5RdGRHOXJaVzR0TkhBMk9XSWlMQ0pyZFdKbGNtNWxkR1Z6TG1sdkwzTmxjblpwWTJWaFkyTnZkVzUwTDNObGNuWnBZMlV0WVdOamIzVnVkQzV1WVcxbElqb2libWRwYm5ndGFXNW5jbVZ6Y3kxelpYSjJhV05sWVdOamIzVnVkQ0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVnlkbWxqWlMxaFkyTnZkVzUwTG5WcFpDSTZJalZoTWpnM05UVTRMV1F4T0dFdE5EWTNZeTFpWXpnd0xXUm1aR1U0TkdJd09Ua3lPU0lzSW5OMVlpSTZJbk41YzNSbGJUcHpaWEoyYVdObFlXTmpiM1Z1ZERwcGJtZHlaWE56TFc1bmFXNTRPbTVuYVc1NExXbHVaM0psYzNNdGMyVnlkbWxqWldGalkyOTFiblFpZlEuVF82aUVESXR0aXJvbUFNeHVKcThJc3ZVaU9xaGZZLW9NbWlJN1IxdDFyTll0SW1GTjFlUnFOZmlhRUNfZi1HMmsxMnlWZ3UtNEFXVldFQWZrR25TUG51NTMxZjFDZFgzT3A4YXdUc2JLOUZTbld1ckpXcmtOZGk2ZWhGNGhVaWNnaWFlemxYYlZBTFNmZUQwWjVOZGMzZkoyckFaa0pBbFB5dFZ5OFo3b0l2X19LMlhaOWNzWV9oMUplQ2Nyam5QcFRSaFNJenZfN0VNMFpkcVpNc2RINjRqTnpFVTlVTXN4M0RieGd1X3ZmUTNJdUVjOTl1NUlOVXNRUzhTQ2lsaV9Bc25CV09RQUFoa2lfVFFDSm1ldjdRNUR2UnU1YU5tdEFoMW1lMzZWY04xSFVFLWo0dXF1SmFFcXlQNHJIT3dUZUhUTFdjTi1aRE5wUVZCdDN3SWRB
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: nginx-ingress-serviceaccount
+      kubernetes.io/service-account.uid: 5a287558-d18a-467c-bc80-dfde84b09929
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:55+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: nginx-ingress-serviceaccount-token-4p69b
+    namespace: ingress-nginx
+    owner_references: null
+    resource_version: '673'
+    self_link: /api/v1/namespaces/ingress-nginx/secrets/nginx-ingress-serviceaccount-token-4p69b
+    uid: 8c66d4dd-63e2-44bd-aa9b-f326dddb466b
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1ub2RlLWxlYXNl
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFc1dlpHVXRiR1ZoYzJVaUxDSnJkV0psY201bGRHVnpMbWx2TDNObGNuWnBZMlZoWTJOdmRXNTBMM05sWTNKbGRDNXVZVzFsSWpvaVpHVm1ZWFZzZEMxMGIydGxiaTF3T0dkcmFpSXNJbXQxWW1WeWJtVjBaWE11YVc4dmMyVnlkbWxqWldGalkyOTFiblF2YzJWeWRtbGpaUzFoWTJOdmRXNTBMbTVoYldVaU9pSmtaV1poZFd4MElpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WlhKMmFXTmxMV0ZqWTI5MWJuUXVkV2xrSWpvaU1EWXhPV1JsTXpBdFlUTXhZaTAwWW1FekxUZ3dOVFV0WmpreE56UTVOakV3TWpNNUlpd2ljM1ZpSWpvaWMzbHpkR1Z0T25ObGNuWnBZMlZoWTJOdmRXNTBPbXQxWW1VdGJtOWtaUzFzWldGelpUcGtaV1poZFd4MEluMC5mbmp0Znc0dnJGWEV5OTZ4anVMZ2paRjJ1WVhkY1N2VnZ2NnFtM1FCQUFzY29FSnlTdjJrWkpxZG8zUTZFMzR2VGw0WE1hT1A1YXhVY3AxX1YydHVnN3p6VVJLekV4MG9FM3paalBoMmVYZEdkMDl2dE9RemdVeVhudndra19iNFYxbVF6ZHZkWURNZ0tFMDExdE9yT1hEdldFM3kwbUc1VHFIZUxhcE50dm0wbWpwek5SNUh6dktCNnBZektwWUhtTkt0UElZb09yb1N3dndaYWpqNzRMeEpCc3FCR283Z2tmZzY3clFmMHFfQzV0dEtXNklVWll5clJxbVU1UVR2Y3lwVVBuNGVZODJDRTE0SGNPeGhTdTA0OUVfRExTV0prMWRPaFdzWFhyUHBsTUFiOWpBZ1BmQXR1Ry1qZG9LcGxQTm13MkFZZExXWGJNaDlnNm9SMUE=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: default
+      kubernetes.io/service-account.uid: 0619de30-a31b-4ba3-8055-f91749610239
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:52+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: default-token-p8gkj
+    namespace: kube-node-lease
+    owner_references: null
+    resource_version: '351'
+    self_link: /api/v1/namespaces/kube-node-lease/secrets/default-token-p8gkj
+    uid: 72f5743c-a150-46e9-8da5-3bc92d792af3
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1wdWJsaWM=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhCMVlteHBZeUlzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUprWldaaGRXeDBMWFJ2YTJWdUxYQnhlbU51SWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWJtRnRaU0k2SW1SbFptRjFiSFFpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1MWFXUWlPaUpoTTJRNFpURmlaUzFoTnpnNExUUXdOVFV0WVdVell5MHhOREV4TkdVMU1UbGlObVFpTENKemRXSWlPaUp6ZVhOMFpXMDZjMlZ5ZG1salpXRmpZMjkxYm5RNmEzVmlaUzF3ZFdKc2FXTTZaR1ZtWVhWc2RDSjkuZXBDbmxGcjI0VHlKSTU0djdzVDVqY0E3SVdhdnFSNVlxZlVNZWx2TG1QTndQZ3NraG94MW02bzlqNWt1VDdFeWs5bEgtbWk2LXgzTEd5QUpOXy1NU3ltWjhJdlpZUVNmcEdGcm50LWI3YU5FN0o3T3YxR1JzdWZYWjVVQXRZZERRWVN0cHI1TUoyVGRoblMyTEZrUWhqRzhrcjRVdzNBdDE3d1BqWmhkUk1OdWFRY2JUOGFGR1doVW5VNG5xNjE1WmNOaVRNQzZZS2llNlpNT3Ixb0JuQWN5T005UnVyTzNsa1JnUTJjaFpPcDdUZm9iOFQ3NWxRTEFQWGVWa25jMEt3NzZKOGp2cnRiV1ZTZGxKQTZIdW5RRWotQ0JKMmpTNGw4djBmZy0xYXlFSFVxSFJTXzhiMXI3LUtzNzJlTVNjMk1EYjZqU1Z4eU5LSmI3ay16U0dB
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: default
+      kubernetes.io/service-account.uid: a3d8e1be-a788-4055-ae3c-14114e519b6d
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:52+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: default-token-pqzcn
+    namespace: kube-public
+    owner_references: null
+    resource_version: '350'
+    self_link: /api/v1/namespaces/kube-public/secrets/default-token-pqzcn
+    uid: 380a2ec5-cefd-45ce-b989-5bb121306b36
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUpoZEhSaFkyaGtaWFJoWTJndFkyOXVkSEp2Ykd4bGNpMTBiMnRsYmkxa2NYWmlkeUlzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVnlkbWxqWlMxaFkyTnZkVzUwTG01aGJXVWlPaUpoZEhSaFkyaGtaWFJoWTJndFkyOXVkSEp2Ykd4bGNpSXNJbXQxWW1WeWJtVjBaWE11YVc4dmMyVnlkbWxqWldGalkyOTFiblF2YzJWeWRtbGpaUzFoWTJOdmRXNTBMblZwWkNJNkltSTJPR00zWldZNExXTXhaamd0TkRZNVpDMDRZMkUxTFdFd00yUTFaakE0TjJFNE9TSXNJbk4xWWlJNkluTjVjM1JsYlRwelpYSjJhV05sWVdOamIzVnVkRHByZFdKbExYTjVjM1JsYlRwaGRIUmhZMmhrWlhSaFkyZ3RZMjl1ZEhKdmJHeGxjaUo5LlhfUllzaF95a0hqX24weDBPejdlYThad2ZzQi14ZVlBdFpYSk5jeExrNFNTcUpTaDRDVlRzV05iUUFfSkZHbkNCeW1FalpjeGpnSUJRakdUeE9laEw4cGZwaUJWZnQyLWtyemFoNElGMVBjX0JrWE9MV01va3FrSXdwRVZXVV85SklJZnVpUDhmWERzcC1XN2xXeUl1bjN3U18xd1Jyc25VVm0tUHhCbEV5OEdCVERpZS1wcno0QVhTazJ5MTZOdmtadlpKVGJGemFuNE4xSG1OdEd3OHkzSTYxZC1tOXBtaWtYMWtjYmY5czRvZm55dmtyaTBFQUREWHBnbmJ6RVcwaHFzODVwYjJvVGNuaVJPcnJIRmEwZklhcld5WjZYdGFma3FHS2M5SWY5aWNhbTNHQkdiOER4TVZjdzU5ZUNTanloQnB0eEVtRkI2X1N5em82WlNKZw==
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: attachdetach-controller
+      kubernetes.io/service-account.uid: b68c7ef8-c1f8-469d-8ca5-a03d5f087a89
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:36+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: attachdetach-controller-token-dqvbw
+    namespace: kube-system
+    owner_references: null
+    resource_version: '200'
+    self_link: /api/v1/namespaces/kube-system/secrets/attachdetach-controller-token-dqvbw
+    uid: 92f12246-a55f-46d9-bc37-966ab08abfeb
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUppYjI5MGMzUnlZWEF0YzJsbmJtVnlMWFJ2YTJWdUxXaGtOR05qSWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWJtRnRaU0k2SW1KdmIzUnpkSEpoY0MxemFXZHVaWElpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1MWFXUWlPaUkzT1dJeU1UQm1ZeTFtTW1KakxUUmtZVGd0WVRJelpTMWpaVFEyWmpBMk16ZzJOVEVpTENKemRXSWlPaUp6ZVhOMFpXMDZjMlZ5ZG1salpXRmpZMjkxYm5RNmEzVmlaUzF6ZVhOMFpXMDZZbTl2ZEhOMGNtRndMWE5wWjI1bGNpSjkuSVZDblUyMHBvU3ZIVFg4UEVIMExUTG1tcHlSclhHOE1BY0tfd3NPZHdoZ3RMcy1tczhVR1dqRHN0UlBsS1BNRnhuS0wxbXNhelgxTjlVNFhKWWlwaUM5UExxanJDYndoQzlyb1IxcHhqZnN2bmR6eFBnT1pTUVRudmR6dXFWSGh0bTc1YVZ1NnFodi01TWtNdVJuNHRDeXMzaGIyTENjUzd1VXdpUExLZ3UtQ0dvc0Jydk0ycEdNdmJfcjFMY205U1hVTEt5cmtadHZ2Ujd2WXE3eURBaERGTVBuSUVlMDhmVmt2SDRsTGlvUzhneG9jNXlVY2lYVjloWllKd2tZd1c2dk9OaGtlbHJHLVljS3VId21WcHhzUFhSV1dwRTl6eHoxNF9wd2dDUGRUY0gwUGVXUzl1Z2lMUVE4MVlEWUR6WDlZZ2JGZ0RCeGR1UEF1YW9NM1Jn
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: bootstrap-signer
+      kubernetes.io/service-account.uid: 79b210fc-f2bc-4da8-a23e-ce46f0638651
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:35+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: bootstrap-signer-token-hd4cc
+    namespace: kube-system
+    owner_references: null
+    resource_version: '186'
+    self_link: /api/v1/namespaces/kube-system/secrets/bootstrap-signer-token-hd4cc
+    uid: 6efbc4bc-b605-4701-a6ef-8871655b0f0a
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    auth-extra-groups: c3lzdGVtOmJvb3RzdHJhcHBlcnM6a3ViZWFkbTpkZWZhdWx0LW5vZGUtdG9rZW4=
+    description: VGhlIGRlZmF1bHQgYm9vdHN0cmFwIHRva2VuIGdlbmVyYXRlZCBieSAna3ViZWFkbSBpbml0Jy4=
+    expiration: MjAxOS0wOS0xNVQxNDoyNjozNS0wNDowMA==
+    token-id: YWJjZGVm
+    token-secret: MDEyMzQ1Njc4OWFiY2RlZg==
+    usage-bootstrap-authentication: dHJ1ZQ==
+    usage-bootstrap-signing: dHJ1ZQ==
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:35+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: bootstrap-token-abcdef
+    namespace: kube-system
+    owner_references: null
+    resource_version: '182'
+    self_link: /api/v1/namespaces/kube-system/secrets/bootstrap-token-abcdef
+    uid: ba4e3d8d-4ed5-43c4-9ddf-4eea14f6dea2
+  string_data: null
+  type: bootstrap.kubernetes.io/token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUpqWlhKMGFXWnBZMkYwWlMxamIyNTBjbTlzYkdWeUxYUnZhMlZ1TFhoaU9IZDBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpYSjJhV05sTFdGalkyOTFiblF1Ym1GdFpTSTZJbU5sY25ScFptbGpZWFJsTFdOdmJuUnliMnhzWlhJaUxDSnJkV0psY201bGRHVnpMbWx2TDNObGNuWnBZMlZoWTJOdmRXNTBMM05sY25acFkyVXRZV05qYjNWdWRDNTFhV1FpT2lKaFpEVmxabUkzTmkxaFpqa3lMVFF3TkdJdFlqazBaUzAxWmpCa09ESTRNREF6TjJFaUxDSnpkV0lpT2lKemVYTjBaVzA2YzJWeWRtbGpaV0ZqWTI5MWJuUTZhM1ZpWlMxemVYTjBaVzA2WTJWeWRHbG1hV05oZEdVdFkyOXVkSEp2Ykd4bGNpSjkudWVRTWdTQjloQXMwSU8yemFDeDBoUEJzU2xhWUw4dXJMSXVMcFJXaGx1blpyemJZTG1XTklMZDVQWGVtMS1iT09EZTJwSHVnWTNxYVRWYXVOYU9vdDVOejcwVVF0VER0WnQ2VXNFQk5OWFVYRy1DRW44UDFzanI4Z0xhZnVOUE1XWE1leEVuUnlvTEVfRDUtaFR3empJckdiS2pxUTNWVm5PZEgwc0daX3BhazZRNkFqeWVCaGM4M1ViWDhvYW1fSEhDbFR3TEtDOFhfMXdUQk5QMU16MWV5Y2RhRmFqdHBKbGdzc0pDbHZQWHVrbEFrblhKd01TbXhaQzhCYzRIZUpsZ1kxUGRDUGNXQlhNLUZmMFBSX0ZXWDFya0NRb1Q1NmliM3pIdEVBTy1rbDAySGU3RjFtMzhXazJ2dFJRQnh1N0FUQ0t5S1gyNm1DSUpvUFZDdGFn
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: certificate-controller
+      kubernetes.io/service-account.uid: ad5efb76-af92-404b-b94e-5f0d8280037a
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:35+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: certificate-controller-token-xb8wt
+    namespace: kube-system
+    owner_references: null
+    resource_version: '179'
+    self_link: /api/v1/namespaces/kube-system/secrets/certificate-controller-token-xb8wt
+    uid: 2e270cf5-c92f-47a5-95a2-ba8fca3f3100
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUpqYkhWemRHVnljbTlzWlMxaFoyZHlaV2RoZEdsdmJpMWpiMjUwY205c2JHVnlMWFJ2YTJWdUxXNDBOV2gwSWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWJtRnRaU0k2SW1Oc2RYTjBaWEp5YjJ4bExXRm5aM0psWjJGMGFXOXVMV052Ym5SeWIyeHNaWElpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1MWFXUWlPaUkxWmpReU1EWTJNUzAzWVROa0xUUmhORE10T1RReFppMHlOV1l3TVdJM09EVmxPRGdpTENKemRXSWlPaUp6ZVhOMFpXMDZjMlZ5ZG1salpXRmpZMjkxYm5RNmEzVmlaUzF6ZVhOMFpXMDZZMngxYzNSbGNuSnZiR1V0WVdkbmNtVm5ZWFJwYjI0dFkyOXVkSEp2Ykd4bGNpSjkubUptT1JMZndnSWs4ZTFpR25PR05xY1VWNklDb1dFek1xcnpmT3R1MUd5cDBwS1lDVzNsTFVEWjFIekZkTS1jVGhIbk11dGJ4TElQTmo0UXZyeXRtcVF1d1VrX1BSVFhRdGp3TzdtbnJHYmZCNGctVnFEWXpuQUVxcVVCOFBhLXZkZnJRYVFmVjJYRFpYOW1uRGJpaHNBaHhJbWVTRnVvRkg5UjJTcUUtQjVxaFQxLWt1RWxmWEVUOW9ISElVYm5XWHVhWjgzWmNOa3lSa2N5SDRLTTlGYTJUSElZNjRlOWZOQXNIM1NUVENUeGFBLUp1WUp2UWxDcmxMbXRzNk1XZXlsWXBFWmdydGRUUVJMblVrU3RJcjBDcmI5T0J6eDI2N1g0bVItX0VnRUN2V0trdGRqRW85a0pZelNTdkN0b0VGZlNlY2JVZnFYVVpla0FnRld3Z3Jn
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: clusterrole-aggregation-controller
+      kubernetes.io/service-account.uid: 5f420661-7a3d-4a43-941f-25f01b785e88
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:37+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: clusterrole-aggregation-controller-token-n45ht
+    namespace: kube-system
+    owner_references: null
+    resource_version: '242'
+    self_link: /api/v1/namespaces/kube-system/secrets/clusterrole-aggregation-controller-token-n45ht
+    uid: f5223f68-779b-455e-8afa-cd959831b940
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUpqYjNKbFpHNXpMWFJ2YTJWdUxXY3lOWE0ySWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWJtRnRaU0k2SW1OdmNtVmtibk1pTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1MWFXUWlPaUl4WW1Ga05ESTNOaTB3TlRFM0xUUmxabVl0WVRNME1pMWtNRGhqWldVMllqUmpNekFpTENKemRXSWlPaUp6ZVhOMFpXMDZjMlZ5ZG1salpXRmpZMjkxYm5RNmEzVmlaUzF6ZVhOMFpXMDZZMjl5WldSdWN5SjkuVl9yTUN6V1NXQ1RnOWZibE9YRDJobm4xd2hCNElXRThqbHhCdW44OExWU3lRd2VMVU1hQlFSM3pueEpJSXJjYS05cEhoTVEtcFpnVXVIb0V1bEsweUVLVURvWWkyek1XdTVnaXg4SHZMLXFoSkFENU5SQkpYZ1hkUU55TkRPRUVKa0NqdXo3TDhIUjUxSGdZdl9RVWdkb3N1Y0p5d2xtM24wNlRSdjZWdTRwRUZJVnUxRG4xdTdOdm1HUWF0bm1PRE9SU2lEcmlSR25CM2NBMVhiNVV1V3lBRmVPT2k5MlAwVUNpMUQySEt4ZGhfVkFVMVFmcHFmd3hTSkQ5cFdPUnNuWkRIaXp2UnpLazA1b2NaZDNIUkZHdzVSTDYyTldyZU5uZFdjUWJMSUNfTFZuWk5nOXFTand1T0JfZDdiV3NRYlh1UzVpbUhwVkhlRmo4QTdtUlNR
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: coredns
+      kubernetes.io/service-account.uid: 1bad4276-0517-4eff-a342-d08cee6b4c30
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:36+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: coredns-token-g25s6
+    namespace: kube-system
+    owner_references: null
+    resource_version: '207'
+    self_link: /api/v1/namespaces/kube-system/secrets/coredns-token-g25s6
+    uid: fb6819a9-915a-499a-8c49-b3d6a83e1bfb
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUpqY205dWFtOWlMV052Ym5SeWIyeHNaWEl0ZEc5clpXNHROemg2Tm5JaUxDSnJkV0psY201bGRHVnpMbWx2TDNObGNuWnBZMlZoWTJOdmRXNTBMM05sY25acFkyVXRZV05qYjNWdWRDNXVZVzFsSWpvaVkzSnZibXB2WWkxamIyNTBjbTlzYkdWeUlpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WlhKMmFXTmxMV0ZqWTI5MWJuUXVkV2xrSWpvaU1qUTBaRFJtT1RNdFpUSTFaUzAwTlRFd0xXSXlOakF0TVdRMlpUYzJNVFJtT1RCa0lpd2ljM1ZpSWpvaWMzbHpkR1Z0T25ObGNuWnBZMlZoWTJOdmRXNTBPbXQxWW1VdGMzbHpkR1Z0T21OeWIyNXFiMkl0WTI5dWRISnZiR3hsY2lKOS5TSUp4dEFkQW1EOWJ3U1gtUDJoLS1fUXI4Nms3TzN4dUwtYU1sbHVCdFdiTXZzaThKTDJxMzQ5T21sUExDVlJrREVmcXU0ak1FOUh3VnptOXZHZWM5ZlZqWmVrY0lTMmd3MFAxUmZpdHBzOFRqUk9rbFhrNnQ0STVYNXVnX3MwbzZHX1ZoaGJXYjg1YW1NcnM4UGhoeVFUYjF2TjFhcVQ3SFJCeGNDT3YySDVhdGVLZjJ1QWlvVUJTNDRra3NEa0VSb0tVYW8tSWxkcWJRV2tWSy1aQmVHZy1iaTRYT2hGTGExWi05ZGR4ZmJjLTRxRGhSVUxhcWRWTEZHYVc1c2xxc21rczBrUjBoZ2g1LW83d2w3VFVoSUJ5SHBXelhhVDY2NUdmSmJfN2ZFNkdtWEx1aWRmRk1EVV9sVkhNaE5hb2pNaVZoV3NsbjRQUzZwVnkzMkZjZHc=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: cronjob-controller
+      kubernetes.io/service-account.uid: 244d4f93-e25e-4510-b260-1d6e7614f90d
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:36+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: cronjob-controller-token-78z6r
+    namespace: kube-system
+    owner_references: null
+    resource_version: '229'
+    self_link: /api/v1/namespaces/kube-system/secrets/cronjob-controller-token-78z6r
+    uid: c7e8367b-5f59-4a10-851e-18a1f0db384c
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUprWVdWdGIyNHRjMlYwTFdOdmJuUnliMnhzWlhJdGRHOXJaVzR0T0hCd1luRWlMQ0pyZFdKbGNtNWxkR1Z6TG1sdkwzTmxjblpwWTJWaFkyTnZkVzUwTDNObGNuWnBZMlV0WVdOamIzVnVkQzV1WVcxbElqb2laR0ZsYlc5dUxYTmxkQzFqYjI1MGNtOXNiR1Z5SWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWRXbGtJam9pTmpsak1UWXhZV0l0T0RCa05pMDBNV001TFdKa09XTXRZek0xTWpNMU5ETmtOR0UzSWl3aWMzVmlJam9pYzNsemRHVnRPbk5sY25acFkyVmhZMk52ZFc1ME9tdDFZbVV0YzNsemRHVnRPbVJoWlcxdmJpMXpaWFF0WTI5dWRISnZiR3hsY2lKOS5Kb3ZxVjE5cEpuNDljWGF4aVlBRVVqV212WjlMMkdnZU1jZE1qejN2TEU1T2xieDhCSVRXOFE3WTlzV1lPbFRmaGFrVFBYdFdIWHkzbVctWTNXaERITEJsaDdPclJxbGtBcFJiNTJLMXkzb3dxWnBhQmpPb2VBVnJZTl8wY1VNUHRqUTJDZzlJa0tXSVNXamRGNEFtaVM0T3dfT2pYSGNsNVBmc00yN0NXN3FOVXV3M0dvS2ctRG1lM1Z5Tm0zQzNZdGxIWlVGeVBjbTAzdmFmVk5CUnBjb1AwQjloLXEyQWg2SDNLVFE4RVRiSVd2YXEta1dOM2JQUG96SFF5TkFGOUlWQmJQdmhSbzNIOUNvU1RyNERHSXJMbTB0QmtNYVdYTXpFVHBGV3pMYW8tc0s2RGdya3pmRXBNV0p1Vl9hZWE1amxWOXQtaGlvRUg4ZE1hakUxV2c=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: daemon-set-controller
+      kubernetes.io/service-account.uid: 69c161ab-80d6-41c9-bd9c-c3523543d4a7
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:36+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: daemon-set-controller-token-8ppbq
+    namespace: kube-system
+    owner_references: null
+    resource_version: '210'
+    self_link: /api/v1/namespaces/kube-system/secrets/daemon-set-controller-token-8ppbq
+    uid: c1574822-b8b4-49c8-af2d-8f71718745a3
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUprWldaaGRXeDBMWFJ2YTJWdUxXSnRkM1E0SWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWJtRnRaU0k2SW1SbFptRjFiSFFpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1MWFXUWlPaUppWVdFM1ptWTJOQzAwWVRBNExUUTNORFF0T0Rrd01TMDFOek0wWVRkalpqUXlaV0VpTENKemRXSWlPaUp6ZVhOMFpXMDZjMlZ5ZG1salpXRmpZMjkxYm5RNmEzVmlaUzF6ZVhOMFpXMDZaR1ZtWVhWc2RDSjkuSzVNeVdkTWpIczY2RndOMWpGSHdJdXZiU0sybnp4MXZMd1U2eDU5ZzhjRzI3aTZpVHFONlVIOVZody12X3Vjd1JPZUM1ZGVVZ0otRUVNQ2xMQVFlT3U2THg1Slg5UkZfOFNlOTlhbTNXelNOb2ZoRmNSMU5aVkRrMWxENVlxVXN2V1ZMUVlhOXk5YlFyd2NpTndkMmoyNHRyTzBYMWVhLU9wQ1lZLUV4U3MtZC1SbnpocHM4b2k0blRDck83aVZvMHdWRFZ6WnU4NDRHVUlaaWlPRHJLMUxmVThzOUFhS2xrSmluYVhYbVRRV0owMFAxVV9yTThGZjNNWGV6SkxCUDlBVVZwT0c0Y095Tm1jWXBDV3N4X1duUm5fWHlleUtLMTY1a2hWVjNwV0pOR01CNUxuTGYzMldQOVhpMzdxMGRmX0RYc2hQU2pKRXlpaVp0NEd4ZWFn
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: default
+      kubernetes.io/service-account.uid: baa7ff64-4a08-4744-8901-5734a7cf42ea
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:52+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: default-token-bmwt8
+    namespace: kube-system
+    owner_references: null
+    resource_version: '342'
+    self_link: /api/v1/namespaces/kube-system/secrets/default-token-bmwt8
+    uid: c77324c7-625c-4a40-b1b5-124f53886c49
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUprWlhCc2IzbHRaVzUwTFdOdmJuUnliMnhzWlhJdGRHOXJaVzR0T0hGeWJESWlMQ0pyZFdKbGNtNWxkR1Z6TG1sdkwzTmxjblpwWTJWaFkyTnZkVzUwTDNObGNuWnBZMlV0WVdOamIzVnVkQzV1WVcxbElqb2laR1Z3Ykc5NWJXVnVkQzFqYjI1MGNtOXNiR1Z5SWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWRXbGtJam9pTUdJNU5EVmhORE10TURFMk5DMDBNekUwTFRsak1UTXRaREZtWm1OallqSXlOMkkySWl3aWMzVmlJam9pYzNsemRHVnRPbk5sY25acFkyVmhZMk52ZFc1ME9tdDFZbVV0YzNsemRHVnRPbVJsY0d4dmVXMWxiblF0WTI5dWRISnZiR3hsY2lKOS5iczdwVVJEVjNXQTZNYXZDdTVxYkRsZWNzT2J2S3dDYkpLQ2dRRnNTM3JjYjJmV0xQRkpuQkg1ekM5alktZzFZd3NZX0lBM3BmR1Q3QmMzd1FUS21QTDVHT191QUZNRzNReU40OFJOcnFtWnNrT2ZkRnN4U0ZkTFlobmZhaEJvMmxCWUFMZTB0aHNyOE5KRF9FZGwyUEpQOXJhWVpfVlFNcGlmeHFVd21RMEdtV1llZzVpNVVxMWFOUks4eDYweXJYdlVuek5UVUNNalRQRWVTWjRKZVpReG4zT244cnBKYWF0QzZDVzV0eGFVYnREYWNPNHk2ZTN0YUlSb0J4TUtxSHRpVTJjU0I1WHZ5aHJiTXhTc0JaNV9IalJZOXNvZDlCQll5c0lrX0VoXzE4NWtDV1AwTldnT1hvT3ZVaVJ0T2NBQUZKSzBaa3daV1hWN1VyRjUtb2c=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: deployment-controller
+      kubernetes.io/service-account.uid: 0b945a43-0164-4314-9c13-d1ffccb227b6
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:36+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: deployment-controller-token-8qrl2
+    namespace: kube-system
+    owner_references: null
+    resource_version: '219'
+    self_link: /api/v1/namespaces/kube-system/secrets/deployment-controller-token-8qrl2
+    uid: e02dd8d3-7936-4773-9b75-63b19eb588ec
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUprYVhOeWRYQjBhVzl1TFdOdmJuUnliMnhzWlhJdGRHOXJaVzR0WTIwNVp6UWlMQ0pyZFdKbGNtNWxkR1Z6TG1sdkwzTmxjblpwWTJWaFkyTnZkVzUwTDNObGNuWnBZMlV0WVdOamIzVnVkQzV1WVcxbElqb2laR2x6Y25Wd2RHbHZiaTFqYjI1MGNtOXNiR1Z5SWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWRXbGtJam9pTmpNNFpEY3pNell0TVdRM1pDMDBZemt3TFdKbU5ERXRaVGs1TkRGa01ESXlaR1prSWl3aWMzVmlJam9pYzNsemRHVnRPbk5sY25acFkyVmhZMk52ZFc1ME9tdDFZbVV0YzNsemRHVnRPbVJwYzNKMWNIUnBiMjR0WTI5dWRISnZiR3hsY2lKOS5UWnFQZGhmVnhfZktwV0hiejJNR0xtNVNSNjJVdXluVmFsZDBkRnhaSG9LSEJCMVptMVlZaHItM0N4OW5HV2lUQ2puSEx6ODktaWJNdTJMcG5KaUNTS1RHWVlXckdGdWtkWTVBZm9FYm5WQ2RzQXFsa1NqSjcwdHdJTW5CNnVQU1NPcmlqVVZsdTFQamI1TTNPTm1YLTgwaGZ1TE5lVjdIQzdsYWFwNGplVk9lY0xKMXhWYmlMdXlud3lyU3pCelJ6RFRFTlpCdWkyaU4zMUNXcDFDWkdhb0o1cDFqeDBpZnk1cUk3ZXNpRlp3WThXVWpMRVBIdTl6eVczOTdvV0NLMVlvb1ZYQWJfUnZ5dzlCdnZrRzhGY2wtMXZueThhMlNjdjFuZFkzaGVUQmVXb29SOXJVR3lLZmV4OHdaM3o1WG1iQTMxQktfaXM4cEdRN0xUSFhDbGc=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: disruption-controller
+      kubernetes.io/service-account.uid: 638d7336-1d7d-4c90-bf41-e9941d022dfd
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:39+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: disruption-controller-token-cm9g4
+    namespace: kube-system
+    owner_references: null
+    resource_version: '276'
+    self_link: /api/v1/namespaces/kube-system/secrets/disruption-controller-token-cm9g4
+    uid: 484fac22-4b1a-481f-8494-567a096b8455
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUpsYm1Sd2IybHVkQzFqYjI1MGNtOXNiR1Z5TFhSdmEyVnVMVEp4ZUhkcUlpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WlhKMmFXTmxMV0ZqWTI5MWJuUXVibUZ0WlNJNkltVnVaSEJ2YVc1MExXTnZiblJ5YjJ4c1pYSWlMQ0pyZFdKbGNtNWxkR1Z6TG1sdkwzTmxjblpwWTJWaFkyTnZkVzUwTDNObGNuWnBZMlV0WVdOamIzVnVkQzUxYVdRaU9pSmxOakptTXpJd1pDMWtabVpsTFRSa1lXRXRZalprTXkwME56VXhOakF3T0RCak1EQWlMQ0p6ZFdJaU9pSnplWE4wWlcwNmMyVnlkbWxqWldGalkyOTFiblE2YTNWaVpTMXplWE4wWlcwNlpXNWtjRzlwYm5RdFkyOXVkSEp2Ykd4bGNpSjkuTC13RFNLdW1hQlFfQmJPMndxLVdHeXZlakRONkRoNUxMNXd3eVowYjFWV19IcWJUbmhuVmtZN0dsZTlYYkp5NXhSei1hems0b2hrRFYyNnZXemNlYzZIQ3FtYVQ5Rm5pMS1XcmNaeHNiZjlvcFBreURVZ2h3MHZjazFrUnF1SWFTdmh6ajZCVXJYUURlVmVfMWJxMG10d1JtaWlxejNfZ0oxbVlVVVJiSV9XZ3hrYnJEMXk1VXNlUTRWS0JDR29PekJNdlp0MTVSTnBURy1BNV9faWFZV0lPMlZiQWNsZ3BwT2t4TjZQRzVQN3JGOUlmNmNjaF9McTR6X3dVUWNGbjhCVnI2M05jaTVnWTdzYl9Ha0dPbzBBckNSRzl5enRtODJ1amhvYldVREhqZUlEd0NYdUZtZHRXX3N6SXBmX3FpdkJxM2xKYUdXai1PUjQzS2hWejd3
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: endpoint-controller
+      kubernetes.io/service-account.uid: e62f320d-dffe-4daa-b6d3-475160080c00
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:35+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: endpoint-controller-token-2qxwj
+    namespace: kube-system
+    owner_references: null
+    resource_version: '168'
+    self_link: /api/v1/namespaces/kube-system/secrets/endpoint-controller-token-2qxwj
+    uid: 472aa3ff-4b1a-49a2-a1f5-d6a402c7b8dd
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUpsZUhCaGJtUXRZMjl1ZEhKdmJHeGxjaTEwYjJ0bGJpMTBjM0J0Y2lJc0ltdDFZbVZ5Ym1WMFpYTXVhVzh2YzJWeWRtbGpaV0ZqWTI5MWJuUXZjMlZ5ZG1salpTMWhZMk52ZFc1MExtNWhiV1VpT2lKbGVIQmhibVF0WTI5dWRISnZiR3hsY2lJc0ltdDFZbVZ5Ym1WMFpYTXVhVzh2YzJWeWRtbGpaV0ZqWTI5MWJuUXZjMlZ5ZG1salpTMWhZMk52ZFc1MExuVnBaQ0k2SWpBNVl6bG1NRFJqTFRNd1lXUXROR1EwWlMxaE16Sm1MVEEwTm1Zek5EQTBNV1V4WlNJc0luTjFZaUk2SW5ONWMzUmxiVHB6WlhKMmFXTmxZV05qYjNWdWREcHJkV0psTFhONWMzUmxiVHBsZUhCaGJtUXRZMjl1ZEhKdmJHeGxjaUo5LndCM2p5NUpGUnNaLVQtNEZaUXZlNFluQUlhQUY4eDFiMXc4Z1NQdktlTW1aOExJY08xdEk0V3NDM09hZjhaSFhzUWxXVzdJLXhDLVpXWG0wMXRSdGM3Q1dFMm9VcWZxV0tVb29RRjVaUG5hdDNXblNHQklLbUJ5RWRtR25IRXVaVVUza01mTjhVeE04MUYybkNCOW52dmVkNkZZR2NFR25IZUF1SnlOaGVUdkRBc04zRTBRZDIxaVpHOV9iaUQ5a2JpYUVZVDgtV0dUX19mSVJ6MTFQb0FsRTJVRkpVTG1QcV9iRlBKS0Z1a0tzRGdRVDByd3ZzeVJ4ekQyam5ucW9BNE11WExHd3Rra2NfUUk3dk5BZ3pSWnRyd1E5RGJNYmFvYlJfcGlIRkxqUzVGNTI2S3c1a1p1RV9CSXhFa3pSTC1YbW5aT1BKZTgzSEJhWXdEQU9vQQ==
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: expand-controller
+      kubernetes.io/service-account.uid: 09c9f04c-30ad-4d4e-a32f-046f34041e1e
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:41+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: expand-controller-token-tspmr
+    namespace: kube-system
+    owner_references: null
+    resource_version: '290'
+    self_link: /api/v1/namespaces/kube-system/secrets/expand-controller-token-tspmr
+    uid: 737d483f-de6e-4698-bb99-e6f89f073db8
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUptYkdGdWJtVnNMWFJ2YTJWdUxUWnRNbWh4SWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWJtRnRaU0k2SW1ac1lXNXVaV3dpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1MWFXUWlPaUl5Tm1KaFpUY3dZaTFrTVRJeExUUTNZamN0T1dNM1lTMWtNMk00T0RjeU1tWm1aREFpTENKemRXSWlPaUp6ZVhOMFpXMDZjMlZ5ZG1salpXRmpZMjkxYm5RNmEzVmlaUzF6ZVhOMFpXMDZabXhoYm01bGJDSjkucGQzVFJrVHVGcmE5aDVlTU1RLWpOZWZLMmlIdy1qblBKcEJVaVk1SlN3WnladXRZTGZHMk05b2V2U05RTXVQMDdvM2RVMXBiaW43XzVsTGs2RFRpeXBRbmZUYkxOUzJWdENibFlnTlhPbE5zTTdoZUhFMk1HeVhUOVJtNm9fZXk1QkJUNkxrUEJqRmVhbmRSWTVsU3R1dzMwTWViWHlzaGJMOXpPYkVZYVVoWnJqOGx6b1lJSndyQ3dqczZpVmdBMkpmYl9wcGtJaGExOUl2ODJuWnBSNUJnVkxlMkFWMkxmeTA2N0R0M1FLQ2M4SzBaU1JZd0tuNEU5QndlM01kbS15MFE2VFpGNjMzbjRIU2RZZ0JHeE5nTmtVREZuaTRBOVhqTUVQd0NZd2dna25jSk1KUGFJd0dxQmVzejhWb01NbTFWb0lXUHpqQnlEaGhBTTVwOUpn
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: flannel
+      kubernetes.io/service-account.uid: 26bae70b-d121-47b7-9c7a-d3c88722ffd0
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:27:53+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: flannel-token-6m2hq
+    namespace: kube-system
+    owner_references: null
+    resource_version: '454'
+    self_link: /api/v1/namespaces/kube-system/secrets/flannel-token-6m2hq
+    uid: 554179d9-5145-44d6-aead-9f3799a5b191
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUpuWlc1bGNtbGpMV2RoY21KaFoyVXRZMjlzYkdWamRHOXlMWFJ2YTJWdUxUWnpaM3AwSWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWJtRnRaU0k2SW1kbGJtVnlhV010WjJGeVltRm5aUzFqYjJ4c1pXTjBiM0lpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1MWFXUWlPaUkxTTJFeU1EVTBaaTA0T0ROaExUUXhPVGN0T0dNek5TMHdZamMxWWpCaU1UVTJabVlpTENKemRXSWlPaUp6ZVhOMFpXMDZjMlZ5ZG1salpXRmpZMjkxYm5RNmEzVmlaUzF6ZVhOMFpXMDZaMlZ1WlhKcFl5MW5ZWEppWVdkbExXTnZiR3hsWTNSdmNpSjkuTTM0NmZ1WmlqM2hNbXlEZWFlY2pLajNqcGxFcHpIX3BpNHBDQkx6SzFPWjBkQ3NVNm40SFlRQktRMmg4eDQ3U2dKOWlxTjFjQWg1YnZoRm5GOEZtSV9NZy1aNEJVclN2NXhvenppcmlNSkJDMlZGM2FRY1lXcVgzU2txUWUtT2hFRnc0OUJFUnJXOUliXzVsR0pTYXlxQ2Mzd1JGSkZfU0RJOE5nckVKaXlfdzVsdFNQNkU2anlaLU05SEkyTXVCQUd2NXJyUFVDejh4eXdTWU41MFFHaGxlekhIQ0k2SG1KLUxncHo4MU10clkyM3NGRXFjY0o5WDExcWM2YjlIYmJDM0lRaE5TN1Mwc3dfcURZeVVHa3FFcVY2ckpGOWNrdkEyX0cwQi0xNURiaUVCX1V0aHVBTjJQNUhKektCVGktcFlSc29ONWNvTTVSN0hfRVY4OXl3
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: generic-garbage-collector
+      kubernetes.io/service-account.uid: 53a2054f-883a-4197-8c35-0b75b0b156ff
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:38+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: generic-garbage-collector-token-6sgzt
+    namespace: kube-system
+    owner_references: null
+    resource_version: '261'
+    self_link: /api/v1/namespaces/kube-system/secrets/generic-garbage-collector-token-6sgzt
+    uid: ef31290f-a6b4-42f7-9f80-bf6dd256c76d
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUpvYjNKcGVtOXVkR0ZzTFhCdlpDMWhkWFJ2YzJOaGJHVnlMWFJ2YTJWdUxUbHVabVJ1SWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWJtRnRaU0k2SW1odmNtbDZiMjUwWVd3dGNHOWtMV0YxZEc5elkyRnNaWElpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1MWFXUWlPaUkzTURZMFpESTFaQzFtTTJJMExUUTROalF0T1RrM05TMDVNbVZtTlRnM01HUmxaamdpTENKemRXSWlPaUp6ZVhOMFpXMDZjMlZ5ZG1salpXRmpZMjkxYm5RNmEzVmlaUzF6ZVhOMFpXMDZhRzl5YVhwdmJuUmhiQzF3YjJRdFlYVjBiM05qWVd4bGNpSjkudS1UMlNlek5GemVLYmkyNjd4V0I2b09NbGNGOThoNnlkZlh0aERRZVFLUmxBSXl0cTcycEpfM3NPdmF5VGtmVjFEdndTYWpVSFVoSVdsSGc5QzZ0SC1ybkplSGJRQkZZY1NtTkN6OHladC01WGxpV19ncy15eDNJNUZwck5wNV9udUZqU3plN3d5RG04X2cxaU1pd1lqcFhud2w3Um56YV9fcmRmWEJHbnNNNHByYmc1NUhCSF82Uy1GdFNtS2UtYzJTSFRqeENDYlpRMHVUbHVmXzMza1l4RXZSdExDeURrRzlNenZmQWh2dk85Y0hYNHZkLWQ3SE5yeGJsbnZqVHJJTmIyOW9oU0xaNURLZlZyZUZxZkt1ZF92ekNlNTFxb0JfMWJiQU5LNWtGT1kyTkJra0JJMmR3VHlkZC1hQTBpd3VnTFpqWFl4Y0JRYnV5UFBDV0Zn
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: horizontal-pod-autoscaler
+      kubernetes.io/service-account.uid: 7064d25d-f3b4-4864-9975-92ef5870def8
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:37+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: horizontal-pod-autoscaler-token-9nfdn
+    namespace: kube-system
+    owner_references: null
+    resource_version: '233'
+    self_link: /api/v1/namespaces/kube-system/secrets/horizontal-pod-autoscaler-token-9nfdn
+    uid: adbb10a3-1a79-4da4-82a8-1d1a746892ee
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUpxYjJJdFkyOXVkSEp2Ykd4bGNpMTBiMnRsYmkxaU5tSnJiQ0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVnlkbWxqWlMxaFkyTnZkVzUwTG01aGJXVWlPaUpxYjJJdFkyOXVkSEp2Ykd4bGNpSXNJbXQxWW1WeWJtVjBaWE11YVc4dmMyVnlkbWxqWldGalkyOTFiblF2YzJWeWRtbGpaUzFoWTJOdmRXNTBMblZwWkNJNklqYzJNakl6TVRObUxUTmhPR010TkRjeE1TMWhNakl3TFdZM016ZzRZbU5sWW1RMU5TSXNJbk4xWWlJNkluTjVjM1JsYlRwelpYSjJhV05sWVdOamIzVnVkRHByZFdKbExYTjVjM1JsYlRwcWIySXRZMjl1ZEhKdmJHeGxjaUo5LlBhS08ySFlFZk5MY1JOcnhtT21Gd0JicThfVVNnbHJWclg1SGttSjBKN2toR1NHM2RZdUFGUWlBaDVfeGRTekE1b2RELUZlWGV0R0hmZ1pfTTAzdWtGOHZ6Sjd1TTlpQllXVEg5RzRxVEp2YnF0YXFXX3pBWTFnbVVDZWl2N0s5ZUd2RUdJdWZhaDFhQmVXeVFTT1FPTl9XS1NqNWhIb3BBbGJlbUdQQ3pVelR0NElUNFEzSFJrQjlKWmRTYmM3Q1JSVDlVRHp5Q2xJaDdqRi1QRnhNY1RUYlY5dkhJMHFwaHkyNjFfdTB1UF9VWVh1Mk5KNHplSmZVX2p6SXh3aGJRMGdCMjBFcng4NTdsVUk1MnpIemh0Zk9sMW9iUGNKMS1yVzZwV2l5NFNtNjNNRGYxZ2F3ZlpXdDg5c3VmcXJ2TG5qaUxkZkhFaFhpMVdFc1drYkxsZw==
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: job-controller
+      kubernetes.io/service-account.uid: 7622313f-3a8c-4711-a220-f7388bcebd55
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:41+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: job-controller-token-b6bkl
+    namespace: kube-system
+    owner_references: null
+    resource_version: '293'
+    self_link: /api/v1/namespaces/kube-system/secrets/job-controller-token-b6bkl
+    uid: 5c0b96ec-2d27-476b-bfde-bc243558931f
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUpyZFdKbExYQnliM2g1TFhSdmEyVnVMWEUxTkRKeElpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WlhKMmFXTmxMV0ZqWTI5MWJuUXVibUZ0WlNJNkltdDFZbVV0Y0hKdmVIa2lMQ0pyZFdKbGNtNWxkR1Z6TG1sdkwzTmxjblpwWTJWaFkyTnZkVzUwTDNObGNuWnBZMlV0WVdOamIzVnVkQzUxYVdRaU9pSmxZVGs0TldVMk9TMDRObU5sTFRRME9EWXRZalpoWVMwME56TTRPVE5oT0RoalptSWlMQ0p6ZFdJaU9pSnplWE4wWlcwNmMyVnlkbWxqWldGalkyOTFiblE2YTNWaVpTMXplWE4wWlcwNmEzVmlaUzF3Y205NGVTSjkuWUFVVF9MaXB6MlUwUG9hb2hOdXozVWZMRG1XR3N3dHFQZWhSM0Y0ZHgyVGpnM1g3LXIwTXdid3d6YzBkbmFTaXBzSUUyR2ZMVTNObTBaTTF6WUV5bml2NVpJbVpYMjdMekVENGdEZFVZWVdRRUd2djJUQlY0Vi1SSjVSMDZUYklKU2w5Uy1VRzZrNkQzdjVTTFZMM0xSdERfWDl3Rlg5Vkc4MHNydy1EeWJqRTlPSUVGbjRwTUtXOTJNcFdRMmx5MUtKcG1ITmtYamlfS2pkX1NrS2dhd2hJRExCeGhaWl9XRFJCc0xxNEdYdHhacW5aRld0cTFnRDZUYmYwQWFDNTVOdWtTRWR2TEpvUlo5VkNPNjY0RGtKWXlOMHhJVUgxUGpKRk9QNzRtQVQzWlRDbkVjbHZnODR0MEp0OW5UTWhjNWNPODNCY3FGRnpNejVPdk9lQmRn
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: kube-proxy
+      kubernetes.io/service-account.uid: ea985e69-86ce-4486-b6aa-473893a88cfb
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:36+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: kube-proxy-token-q542q
+    namespace: kube-system
+    owner_references: null
+    resource_version: '221'
+    self_link: /api/v1/namespaces/kube-system/secrets/kube-proxy-token-q542q
+    uid: 17c4feae-ca1e-4ab0-a928-b162b97e727a
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUp1WVcxbGMzQmhZMlV0WTI5dWRISnZiR3hsY2kxMGIydGxiaTFuYTJkNk9DSXNJbXQxWW1WeWJtVjBaWE11YVc4dmMyVnlkbWxqWldGalkyOTFiblF2YzJWeWRtbGpaUzFoWTJOdmRXNTBMbTVoYldVaU9pSnVZVzFsYzNCaFkyVXRZMjl1ZEhKdmJHeGxjaUlzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVnlkbWxqWlMxaFkyTnZkVzUwTG5WcFpDSTZJamhrT0dRNU1qSTRMV1F4WldRdE5HWmpZeTFpTTJKbExUVTBNRFkzTjJaa1lXVTRaaUlzSW5OMVlpSTZJbk41YzNSbGJUcHpaWEoyYVdObFlXTmpiM1Z1ZERwcmRXSmxMWE41YzNSbGJUcHVZVzFsYzNCaFkyVXRZMjl1ZEhKdmJHeGxjaUo5LkJRYWdDUmRyUkdNUFJQZzFsYkk0UnBEcmNxU285Z293VUVDTkxOYXltS0c2TUQ4MlN0S2dBRUtHUVRObTRXZTNOcG82dGlaYndDMTZYWGs0VXJRU0YzS0hoRmEwZ2dmV2NJQmhaVnZlbkg3TFBaUGZpQ21LeDYwQ3NVMHIwRTY0eC1jNHNCeUJzNWZTSE5FOHNMU0dpaEQ0RkVjMkY3X05Qa0w2MG51R0hzZk9WQ0ZaenY5SGZPSG8xbENCNVdScHRhQ0M4ZlpqajM0TUttWkdRTjE3SWE3LTAzWjI0QlZJbS1oMGtJcjgyaTUzWkk2VXR4TVNzNWxYekVNbDJpSkVqNjlBMjVoQWFjVm1RZEt0V0JoMk1oOXpEaXlsRDJ0LVdfMGVGRlNMNFo0eEtyMEhJckp0TWdzTXZlaDAxTWlla1ZpR1ZGZFhyTXNybEVMZnR4Z3Zhdw==
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: namespace-controller
+      kubernetes.io/service-account.uid: 8d8d9228-d1ed-4fcc-b3be-540677fdae8f
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:40+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: namespace-controller-token-gkgz8
+    namespace: kube-system
+    owner_references: null
+    resource_version: '283'
+    self_link: /api/v1/namespaces/kube-system/secrets/namespace-controller-token-gkgz8
+    uid: 91cfb36b-9359-48a4-adb5-b839f5c6a148
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUp1YjJSbExXTnZiblJ5YjJ4c1pYSXRkRzlyWlc0dGNIcGpkR3NpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1dVlXMWxJam9pYm05a1pTMWpiMjUwY205c2JHVnlJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpYSjJhV05sTFdGalkyOTFiblF1ZFdsa0lqb2lObVV5TUdJNU1qQXRabUZtTmkwME1HWm1MVGhpWW1VdE5XVmlZakEzWmpZM016STVJaXdpYzNWaUlqb2ljM2x6ZEdWdE9uTmxjblpwWTJWaFkyTnZkVzUwT210MVltVXRjM2x6ZEdWdE9tNXZaR1V0WTI5dWRISnZiR3hsY2lKOS5VQ2V5czVoVEo5Z1NSQXlfTVJNNXpxZ0lmb0VNUW5sZE5SRnJudkN2TDBzNGQ5dU9ZWmlhNkFTZFNXaDJoeWtaQTRCVzJTUUJ0Y2RQUFB1em5jcElBdlFwa0M0b2NZeHR3blpiVUhMZmREc2w1eVRNaXozYnNzV3JkZ3hrRzBoSGdLUnpfcko5dnFzM0hIbGpCbktzV0NMMVpXWk5YbldtN08xYjJ0eFJncVdNTklQaER3dG11X0tiekRqTm1PVXppVW9GM2lTeHdBX3NYMGVmNVN2LWxvdk1YRUNsNDQxZzYxdE9ncFZZclR4OFpBaFFBcXJyZ1FqMVRfTFVUekxhZTc2Y3lFMjhWNVRvcHdRaWFFMWQzaF9XRUdZZEVzSmYyWXZoeXlyZmk5M2RIWGhkNkxBMU1WNEcyTWdUc09QVnNkNFhiUXVsTDBMUF9kaXp4eTFWUVE=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: node-controller
+      kubernetes.io/service-account.uid: 6e20b920-faf6-40ff-8bbe-5ebb07f67329
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:36+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: node-controller-token-pzctk
+    namespace: kube-system
+    owner_references: null
+    resource_version: '193'
+    self_link: /api/v1/namespaces/kube-system/secrets/node-controller-token-pzctk
+    uid: 8508ef15-cd6a-4839-a801-251c0e3a5b78
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUp3WlhKemFYTjBaVzUwTFhadmJIVnRaUzFpYVc1a1pYSXRkRzlyWlc0dGNXSnljbTBpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1dVlXMWxJam9pY0dWeWMybHpkR1Z1ZEMxMmIyeDFiV1V0WW1sdVpHVnlJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpYSjJhV05sTFdGalkyOTFiblF1ZFdsa0lqb2lPVEUxWkRNNU1qQXRNekF6TUMwME5qUXpMVGhsWWpRdFpUQmtOR0ZtTWpRNE1XTmpJaXdpYzNWaUlqb2ljM2x6ZEdWdE9uTmxjblpwWTJWaFkyTnZkVzUwT210MVltVXRjM2x6ZEdWdE9uQmxjbk5wYzNSbGJuUXRkbTlzZFcxbExXSnBibVJsY2lKOS5SMFBPWF9wUUlQaEFhQkpsN2VHakNpVUw3dzhHVDZBTF9GUGJNSTk2R0kzZzliUkxwdG40MVV2TzVNNW1jWUk1YmNHQ3pXR0ZmUGFLUHdub3RmWE5FTGVyQXJlRjE3LWlKMFBZZUJ0bUlRRHo4Tmc1REQ0WDJvSlI0dGVic2FzNXo0VkdpcG83cHN2S3R5UHRPSkl1djRmcnZPZW9rdmQxU1c3T1I0SlRiYU82bDV6RDZrY0JMSVNxaHRBbjJ6X3RtbTJmVGlUUmtoRzg3RURMVzhONkFqVVhkVm55UWNyVEtyVEhJY05hbWZMVnpPYUY0M29ic19Wa1NXWXVhSzJ5bXRhSjFLekw5eVFpRlhPLTBYcEdXVGVOOWl6bWhmd21DbjRCOHk2R0FIeGZJWFk1SkwzYmhMQ0E2SlNWNk1MejZsQnBJSFFFVlVKUzFpY0tBcXZuRHc=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: persistent-volume-binder
+      kubernetes.io/service-account.uid: 915d3920-3030-4643-8eb4-e0d4af2481cc
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:38+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: persistent-volume-binder-token-qbrrm
+    namespace: kube-system
+    owner_references: null
+    resource_version: '256'
+    self_link: /api/v1/namespaces/kube-system/secrets/persistent-volume-binder-token-qbrrm
+    uid: 0e55c083-0be4-4b84-8fd6-464170fdcf84
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUp3YjJRdFoyRnlZbUZuWlMxamIyeHNaV04wYjNJdGRHOXJaVzR0WmpKNmNUSWlMQ0pyZFdKbGNtNWxkR1Z6TG1sdkwzTmxjblpwWTJWaFkyTnZkVzUwTDNObGNuWnBZMlV0WVdOamIzVnVkQzV1WVcxbElqb2ljRzlrTFdkaGNtSmhaMlV0WTI5c2JHVmpkRzl5SWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWRXbGtJam9pT0RnM1lqZ3pPVEl0WVRWbE1pMDBaakEwTFdJeU5qRXRaR013T0RWaFl6STFOMlEzSWl3aWMzVmlJam9pYzNsemRHVnRPbk5sY25acFkyVmhZMk52ZFc1ME9tdDFZbVV0YzNsemRHVnRPbkJ2WkMxbllYSmlZV2RsTFdOdmJHeGxZM1J2Y2lKOS5NSnlkZXJ3bG9SZnZVaU82bUo1WVVxN01ULUgwTXExNlhlV01scm1walVSbkJsUWtFSWJPNGhfR0xSaHk1MjFoOWg3VnNFb1lOcno0bVZaUmxNVDhpdWI4NHFoUjVRWUI2dWlQUktOcnR2S0lZU2lIS3BEamVnc1E4aW5YV3JhRnhyZHJlVUhsOE5VU01CQkFocWRCZ1FiMmZtdm80WW1wX2d1UTM4TzZmNmpJdXBZbHhFbGUtMGpHYnpHRWU3cDJFamtQWjZLQ3RTbG4tbXNLeVFkTnhndk91ZGEzVW1iYVpYN2c3M3l2V3ZqTmxRelRWVl9mSGRRM2h0bndnMVBzX2JZdW95WnI3WEVhT3ZlMlhhODNwbm1WaGJ1Zm5rMnJMWkswMzFCazlidktDdExVb0EySEYyc2xSVXB4RFgwb1VScGU4MnRORlZTc2lCWEFSS3lOY1E=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: pod-garbage-collector
+      kubernetes.io/service-account.uid: 887b8392-a5e2-4f04-b261-dc085ac257d7
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:39+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: pod-garbage-collector-token-f2zq2
+    namespace: kube-system
+    owner_references: null
+    resource_version: '272'
+    self_link: /api/v1/namespaces/kube-system/secrets/pod-garbage-collector-token-f2zq2
+    uid: f186ae52-61d2-4bbd-b429-56a4d4c48e3d
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUp3ZGkxd2NtOTBaV04wYVc5dUxXTnZiblJ5YjJ4c1pYSXRkRzlyWlc0dGQyWnRNbllpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1dVlXMWxJam9pY0hZdGNISnZkR1ZqZEdsdmJpMWpiMjUwY205c2JHVnlJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpYSjJhV05sTFdGalkyOTFiblF1ZFdsa0lqb2lPRGt5WWpjMVpEY3RPVE15TXkwME5EbGxMV0ptWTJVdFpUUm1abUUxTjJKa09HTmhJaXdpYzNWaUlqb2ljM2x6ZEdWdE9uTmxjblpwWTJWaFkyTnZkVzUwT210MVltVXRjM2x6ZEdWdE9uQjJMWEJ5YjNSbFkzUnBiMjR0WTI5dWRISnZiR3hsY2lKOS5jZE56cXIzOTFWSDE4ZklzLUdSdnBOSlc3aFhONzFMdFl3cWhIeEhYWkZob1VhbThCb3VxeFdRdFN6TG5jMGpCY0tINnp4TkVSVTlOY3g5cWpzRWtTaHNZNDBfd2FhVjExSU9GUmJ3SV96MXl2RFFONmRLWTNXYkx2Q2dmQVJfLVNyWW9JMUJ0cXZUeURzdU9tSU1GZFl3SFNiaE9PcTFGOFM1WWsxWVlBaGhoRU9Zc0c1TDdqLWJXTm1HVWpXN3AtZzk3Vjk3dEJnNll4d3I2R3htSG9BMllFSnNaeEpENktaaWxQaUZobWl4WWdHdDVVZDZ2RVl6Sndjbm5tWFljeHA1SXowZ3ZNRkNBa2JLVnpIblM3ZzA2a3ZGMVlPMGpWRE1feFdBRzdrSnFnelVMWUxzcDEwVjk4MG9kZDg5YXlZVFBXYVZlMFlCWU9EeVc5WTNlY1E=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: pv-protection-controller
+      kubernetes.io/service-account.uid: 892b75d7-9323-449e-bfce-e4ffa57bd8ca
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:35+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: pv-protection-controller-token-wfm2v
+    namespace: kube-system
+    owner_references: null
+    resource_version: '165'
+    self_link: /api/v1/namespaces/kube-system/secrets/pv-protection-controller-token-wfm2v
+    uid: 502f4287-7b01-453c-b8de-7142a079d2c7
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUp3ZG1NdGNISnZkR1ZqZEdsdmJpMWpiMjUwY205c2JHVnlMWFJ2YTJWdUxYaHljM0p5SWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWJtRnRaU0k2SW5CMll5MXdjbTkwWldOMGFXOXVMV052Ym5SeWIyeHNaWElpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1MWFXUWlPaUl6WmpFMFlUTXdOQzFtWlRJMUxUUTRZV010WVRSbU1TMW1ZV0ZtTjJRMVl6YzJZak1pTENKemRXSWlPaUp6ZVhOMFpXMDZjMlZ5ZG1salpXRmpZMjkxYm5RNmEzVmlaUzF6ZVhOMFpXMDZjSFpqTFhCeWIzUmxZM1JwYjI0dFkyOXVkSEp2Ykd4bGNpSjkuVzFQbTBHYklTZzRYRTJEekw0QzVYMGFQU3RMbGVNdXZza0JCaG1UamtSMGR1ZDFCRkFwT2VYVHFSUW5LMzR5SjcxbXI1Y1ZJUnQ2c1JzY2FBcGp1TGlBLU9EM0Ezc2xvOHBGUFZ2eExJRmRYWnNLZHZQaDU4c2ZLYl9OZTFzN0FCbTB4WVZ4NXRSRWpNaGtPZlR2alcyNExtSllVY1pHTXRVcU1RM1lBVjdGVFdlNURFdkdFLWduSUdEVTQ3RjBYMzJXekNPVDRrYjhmcXU5cnR0RnNBSW90VmtUbVlfeGpEa2RtNEhnNE9oaHN0aldONGV1c21VNGV2T01ySEpFS1ZMT3c4cFk5ZE1kMER2clVNQWJQR2lkSkYyTFhLRy02c3paVnpSNWkxS3NjVkxkOG1xVGJqZE1sUGV5dVVzcGhYcXBBLUhqU2YxMUdOQkxLVmRZaVFn
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: pvc-protection-controller
+      kubernetes.io/service-account.uid: 3f14a304-fe25-48ac-a4f1-faaf7d5c76b3
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:37+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: pvc-protection-controller-token-xrsrr
+    namespace: kube-system
+    owner_references: null
+    resource_version: '238'
+    self_link: /api/v1/namespaces/kube-system/secrets/pvc-protection-controller-token-xrsrr
+    uid: 168fb68e-d4a0-4b17-afb7-88b15be22fb6
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUp5WlhCc2FXTmhjMlYwTFdOdmJuUnliMnhzWlhJdGRHOXJaVzR0Tm5SMFlqY2lMQ0pyZFdKbGNtNWxkR1Z6TG1sdkwzTmxjblpwWTJWaFkyTnZkVzUwTDNObGNuWnBZMlV0WVdOamIzVnVkQzV1WVcxbElqb2ljbVZ3YkdsallYTmxkQzFqYjI1MGNtOXNiR1Z5SWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXpaWEoyYVdObExXRmpZMjkxYm5RdWRXbGtJam9pTkdFd056Tm1ZamN0Tmpkak1TMDBNMkl5TFdKbFpqSXRaVEF6TUdGa1pqRTFOelJqSWl3aWMzVmlJam9pYzNsemRHVnRPbk5sY25acFkyVmhZMk52ZFc1ME9tdDFZbVV0YzNsemRHVnRPbkpsY0d4cFkyRnpaWFF0WTI5dWRISnZiR3hsY2lKOS5xTFpCZ1VrV3NRcDhmZDBQNm5JSVZ5emctRlExdnRsT1UxZVV2bDNONmxZUFNzX2FkT0o1cUNHM0lVLV9uN0pSdHE4SWF4OGN2M0YzRTZfSkZ6R214MlZPRFhYdWVhR1NDNnZIQmptcWQ0T3dlai13THZhekVXOFhkXzJXUF9uaEpaZkNxY3liU3RYLXIwTjV0bGJUNDI4cVZhYkdJaFBSYmJPX000N21vWTUyWXFleXVZWTBRcm8zeWtzelpwX1pXQnlINnl4Y3NLQlJFQlMxRnhxVVdHaWd0aVM5TmF5RmNuaElYZ1BrVXQ4WTVSVFRwRFp1dHhJeGhSYk1BLVZ1LUdXaUFZM0xiUnpsSHh2NUtCaXRtSEcxR2tfNUJfVFRONkl5ZDBNTzE3UkRfRC1HOERabXdRNWdaSDF3V3hOcVMzVVZrV1VQRzZTOWF3T0hYX2liS0E=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: replicaset-controller
+      kubernetes.io/service-account.uid: 4a073fb7-67c1-43b2-bef2-e030adf1574c
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:35+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: replicaset-controller-token-6ttb7
+    namespace: kube-system
+    owner_references: null
+    resource_version: '175'
+    self_link: /api/v1/namespaces/kube-system/secrets/replicaset-controller-token-6ttb7
+    uid: 30d62957-9fdb-4ded-8049-cb723f0e35b0
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUp5WlhCc2FXTmhkR2x2YmkxamIyNTBjbTlzYkdWeUxYUnZhMlZ1TFhKNE5HTTVJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpYSjJhV05sTFdGalkyOTFiblF1Ym1GdFpTSTZJbkpsY0d4cFkyRjBhVzl1TFdOdmJuUnliMnhzWlhJaUxDSnJkV0psY201bGRHVnpMbWx2TDNObGNuWnBZMlZoWTJOdmRXNTBMM05sY25acFkyVXRZV05qYjNWdWRDNTFhV1FpT2lJM016VTNZelE0T0MwMU5UWmpMVFF6WldVdE9URmhOeTB3TURRME5qbGhNR1l4TXpNaUxDSnpkV0lpT2lKemVYTjBaVzA2YzJWeWRtbGpaV0ZqWTI5MWJuUTZhM1ZpWlMxemVYTjBaVzA2Y21Wd2JHbGpZWFJwYjI0dFkyOXVkSEp2Ykd4bGNpSjkudEpUTkhPZE1mbzlwS1dGVWRzMGp5YzlPNVVRV1lia1FtY0lORVFvZkNJYXRyTUdoTUJZOThwSlM5TmFEQ09nd3dIUUtOazVzZnU0QmZORjVxZ3lJNTJHNXdzeFF3YnltMmdUSy1GQWs1WTluLU5vd1FmT3VVVWJlR0JsXzdNdUhyaHRfQzFpbXdaRWxfMGJXXzV4bHdOM1FwOU1hckZfUDh2dUhieW5zdV9SWjBmMmduX3BWcG93VWFrcUd4NWxJZTNveXM4RWozUXNCVWFwMXJjODJoUHlXVFdhUXFrV0ZzYW9jeGFIOUtSQ0JwTHktaWNpWlFsS2dtakJ0VDNMSEpNbzVtTHM3M2d0Y3NmNTM0LWVfVVYwWm5lOHRmaDJpdlZnOXVYWHkwcUFTaWFQQmloWWw2ekdab0FwUlFja1hBcU5hX3BBVEEwRlVHTmNFaDdzU3l3
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: replication-controller
+      kubernetes.io/service-account.uid: 7357c488-556c-43ee-91a7-004469a0f133
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:35+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: replication-controller-token-rx4c9
+    namespace: kube-system
+    owner_references: null
+    resource_version: '172'
+    self_link: /api/v1/namespaces/kube-system/secrets/replication-controller-token-rx4c9
+    uid: d7faf1a1-302a-46a3-b001-1dea1c83e1c8
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUp5WlhOdmRYSmpaWEYxYjNSaExXTnZiblJ5YjJ4c1pYSXRkRzlyWlc0dFp6aHNiSEVpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1dVlXMWxJam9pY21WemIzVnlZMlZ4ZFc5MFlTMWpiMjUwY205c2JHVnlJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpYSjJhV05sTFdGalkyOTFiblF1ZFdsa0lqb2lNR1F3WVdKaE5qRXRPVE0wWkMwME5UazFMVGs0TWpZdE9HTmlOamt5WVRGbVpHUTNJaXdpYzNWaUlqb2ljM2x6ZEdWdE9uTmxjblpwWTJWaFkyTnZkVzUwT210MVltVXRjM2x6ZEdWdE9uSmxjMjkxY21ObGNYVnZkR0V0WTI5dWRISnZiR3hsY2lKOS5pVGd6ZXAzT212WllRTGdXZXp2MXJEcUUzNmVDbmtuS3N1cjRmNk9DRU95WVJCVzZ2U3lvWTQwREhsdEJEUVJVVnhUOHZsSXd2OXBFVmljNVE1Z0ZMWUVPWXU2c0x3MkdDa0dzM0FJUklqdlNraFNxT040STRYNXlUMzI3UDEwRDlvT2dOZE1zZDkzQk11WjZudkhGbE92bkZzNmtxek5OWE1tSkNyUjFKYkU5RnBmVTZIRE02VWM4TldyUlowMlZBVkJ4R0pRODl2Q2FaNkxJcWRaSGd5VnVjajNsTTR5Nk1mY1M2T0JxaDZUakFzT1M4ZnJYR1BzaEduNDNlZnZkRnViUmNxRGlTMU9KUkpoQlI2UklaVTZ2RVh4d2hjeExrRzRfUzVQSDlLd2xMSUVBWGRnYnJ3UWFhYXFGazlxOTZYMUt4alZnSW0xMm5Bc3dWWV9QLWc=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: resourcequota-controller
+      kubernetes.io/service-account.uid: 0d0aba61-934d-4595-9826-8cb692a1fdd7
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:40+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: resourcequota-controller-token-g8llq
+    namespace: kube-system
+    owner_references: null
+    resource_version: '280'
+    self_link: /api/v1/namespaces/kube-system/secrets/resourcequota-controller-token-g8llq
+    uid: 4c78060f-de27-451d-ae49-070adbe2f5ed
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUp6WlhKMmFXTmxMV0ZqWTI5MWJuUXRZMjl1ZEhKdmJHeGxjaTEwYjJ0bGJpMXNjMlJzY1NJc0ltdDFZbVZ5Ym1WMFpYTXVhVzh2YzJWeWRtbGpaV0ZqWTI5MWJuUXZjMlZ5ZG1salpTMWhZMk52ZFc1MExtNWhiV1VpT2lKelpYSjJhV05sTFdGalkyOTFiblF0WTI5dWRISnZiR3hsY2lJc0ltdDFZbVZ5Ym1WMFpYTXVhVzh2YzJWeWRtbGpaV0ZqWTI5MWJuUXZjMlZ5ZG1salpTMWhZMk52ZFc1MExuVnBaQ0k2SW1KaU1tSmtPVEExTFRRd056VXROR1JoTlMxaU0yVTJMV0l4WmpRelpHTXpNREEyTkNJc0luTjFZaUk2SW5ONWMzUmxiVHB6WlhKMmFXTmxZV05qYjNWdWREcHJkV0psTFhONWMzUmxiVHB6WlhKMmFXTmxMV0ZqWTI5MWJuUXRZMjl1ZEhKdmJHeGxjaUo5LndJWGQ5ckpsLVA4dEhzX09jbFFJaTZrZG1vV2xUN1hmZWEzdkNKWXZ4dWM0dXB6bGRNeDdpUkllYTA0akNSN01jbThndXZBRjJ1eENycUpkRDd4RF9VaWxMaFgweFJ0Y3paMURQMVpkdjlveFhZZDY4SXpjbE9sSEZPTmF5dnVIbmx1RHVOakxIWG1BZ1hvUy1DZXdqUEQ4RGZQTm9XZm92UlUyVmtMVk01LXk3UTZMbTBEanhNQnQ0NEFBMV9BdldnV3htcDNSS1ZxWVhzTXhKeWItc2lISVU5NXM4aDM3amNtMml3TnpMRmo5aXVFTEl2RzBVRFg3MmIyTGRTUDlLZVJVYk95VzU1QjROM29NX0wzb2Q4cVpXOTNRUEI1TW5ucF9MMUM3OFVFSWVvLU9QVmtGOVVDSk9fZmlyNi14cFZVVl9EM21SX3Yxd2JGTnNQLUctQQ==
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: service-account-controller
+      kubernetes.io/service-account.uid: bb2bd905-4075-4da5-b3e6-b1f43dc30064
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:37+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: service-account-controller-token-lsdlq
+    namespace: kube-system
+    owner_references: null
+    resource_version: '246'
+    self_link: /api/v1/namespaces/kube-system/secrets/service-account-controller-token-lsdlq
+    uid: 18951215-0e84-4968-9ed5-3e7a139b6998
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUp6WlhKMmFXTmxMV052Ym5SeWIyeHNaWEl0ZEc5clpXNHRZemxzYXpJaUxDSnJkV0psY201bGRHVnpMbWx2TDNObGNuWnBZMlZoWTJOdmRXNTBMM05sY25acFkyVXRZV05qYjNWdWRDNXVZVzFsSWpvaWMyVnlkbWxqWlMxamIyNTBjbTlzYkdWeUlpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WlhKMmFXTmxMV0ZqWTI5MWJuUXVkV2xrSWpvaVpUQTJZalF3Tm1FdFpEZ3paUzAwWm1NeUxXSm1NV1l0WkdFMk1XWTFPV1EwTVRsaUlpd2ljM1ZpSWpvaWMzbHpkR1Z0T25ObGNuWnBZMlZoWTJOdmRXNTBPbXQxWW1VdGMzbHpkR1Z0T25ObGNuWnBZMlV0WTI5dWRISnZiR3hsY2lKOS5HZER4SXpaSzYyT0MtLU5GRlByYkNTRy10WmNxVWlvSkxiWFdXYVlDWGVIdUxlalVfU0d6X3QxcGVEYTlYVVIwbzBGTkpuMnFJWEpCTTJQUHd3RG9ZNm1IeWZrZkxPa1ZSYnlvQUl5SjBtdnRpZ0FiSDBfeFlLM3NWTEVxbENLWU1LTEVuMnZzTXlVckN6SWs3aDBXbHEyZ2FncUNWRUFxZ0hrZkdKZXFsNHhzUlhhOFlSN2NqMGsxNFhWSkNjQUNPdU5UQkpES3FYVVE2VHpMcHAtMUFEUDVnTkhGb0htRXBLU1psTzdyRmRVLTBqaEdvQ2Rlei1CN2lxdEctVDBIY0JaWVVNc2dZYUtCYVlmSUN6T0o3Rkx2ODhvSTMtMGFaMDJBTHhYM2FWQjlsWHdsUkRFWmprSTNzVUkxV3Y1VWFjUlpXR2VudFhDQktBMHd6b001LWc=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: service-controller
+      kubernetes.io/service-account.uid: e06b406a-d83e-4fc2-bf1f-da61f59d419b
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:40+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: service-controller-token-c9lk2
+    namespace: kube-system
+    owner_references: null
+    resource_version: '287'
+    self_link: /api/v1/namespaces/kube-system/secrets/service-controller-token-c9lk2
+    uid: 72c5d9a0-3904-49f9-953b-322437c0d19a
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUp6ZEdGMFpXWjFiSE5sZEMxamIyNTBjbTlzYkdWeUxYUnZhMlZ1TFhCeGNqbHRJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpYSjJhV05sTFdGalkyOTFiblF1Ym1GdFpTSTZJbk4wWVhSbFpuVnNjMlYwTFdOdmJuUnliMnhzWlhJaUxDSnJkV0psY201bGRHVnpMbWx2TDNObGNuWnBZMlZoWTJOdmRXNTBMM05sY25acFkyVXRZV05qYjNWdWRDNTFhV1FpT2lJek5XWTVPRGMyTkMwMlpHRmhMVFJsTURNdE9UUmpPUzB3T1RJM1l6ZzFaV1JrTVRZaUxDSnpkV0lpT2lKemVYTjBaVzA2YzJWeWRtbGpaV0ZqWTI5MWJuUTZhM1ZpWlMxemVYTjBaVzA2YzNSaGRHVm1kV3h6WlhRdFkyOXVkSEp2Ykd4bGNpSjkuQUdWUmo5ZTNLcTNZTzdTRjdRSnpnUFhzM0dhWGpuYUNLRXpnRG0xNl91Rk9TaEdDOGFXMWMtb1VmTFJodlQ2Zk1qWXdFTGhjSUhQUFdieFFoS1Rxbl9MXzVnbE1vTGo5RjlfOVZPWFdPYXlGcDlGTDY2bnpVYm9FQjJuUnJXUURGaFdzVElSVGZ4NFVRaEFHUjdDc0pIWS1wU000UjYwYm9QOE1SY3BpZGtJN1NZbDQzY0VpVTNtZWJjT0wtdXlrWjg5SkVzNVo0eFNwUEFJTjRVUnUxN3gxVHJOVUdOSmt3anY5dGJfQVJyYlpPMG9MSElZbGozMVBXNU1FVy1PYm00SDZXX0JLaWlVX3RZdDlzR1I4ZFlEUkZCVTdpWWlBN2Q1R0hyamZJQXI5Rng4ejRrOHFFdVRCNXN2STgzOTgzbnhkWDNISVhDbEJwTnRyYllNSkln
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: statefulset-controller
+      kubernetes.io/service-account.uid: 35f98764-6daa-4e03-94c9-0927c85edd16
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:38+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: statefulset-controller-token-pqr9m
+    namespace: kube-system
+    owner_references: null
+    resource_version: '250'
+    self_link: /api/v1/namespaces/kube-system/secrets/statefulset-controller-token-pqr9m
+    uid: f521ecbf-7a8d-49ff-a5d0-3d1e58684609
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUowYjJ0bGJpMWpiR1ZoYm1WeUxYUnZhMlZ1TFdoamEyaGpJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpYSjJhV05sTFdGalkyOTFiblF1Ym1GdFpTSTZJblJ2YTJWdUxXTnNaV0Z1WlhJaUxDSnJkV0psY201bGRHVnpMbWx2TDNObGNuWnBZMlZoWTJOdmRXNTBMM05sY25acFkyVXRZV05qYjNWdWRDNTFhV1FpT2lJMFpEaGhOMk0wTXkxbE0ySTFMVFExTm1FdE9UZzVOUzB3T1dRMVpUVTRZMkpqTkRnaUxDSnpkV0lpT2lKemVYTjBaVzA2YzJWeWRtbGpaV0ZqWTI5MWJuUTZhM1ZpWlMxemVYTjBaVzA2ZEc5clpXNHRZMnhsWVc1bGNpSjkuZXU4RGUwRG5BS3NtYTQ0VjhYU2FQMVh2ZzJjR1ByOGhoUVdqNzRIQkNmOEZQR2ZGNDdZZUMxTlpVdDBXVlk5VWNUMnlZdy1RZ1hwc3YwS21haFYwMUEtQmItb0xCcktkVHlLX1JPVUZ0UkRITkcxb3F4NjZPNGdmNkdWdHk4MmRvSDRPSFI3N1VKbHhBVU5WTVJQd2Zwam5oS2lqVk84U3p5cjFEdVhWaGlKU2JjZ3hwei16WDRfXzN0b0UtRWJabXR6QXZ1RzNpeUFNVEphT3V0Qmc2dzZsSE13a3RyZ3ZUQXNSbXFsU0hFSHVpWS1CSkpfYko4S2h4Qm5aZXpsdkRaNTlzOXFNQzZHUEo2NTRpcTFFaDgxUWMxZFdDLXdfMGlSellGRmlGc1F3RklRN2pSM25GblBZcF8wMmp6Q2FqekRIZ2lnbUM1ckdmNHhYRGowbXl3
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: token-cleaner
+      kubernetes.io/service-account.uid: 4d8a7c43-e3b5-456a-9895-09d5e58cbc48
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:41+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: token-cleaner-token-hckhc
+    namespace: kube-system
+    owner_references: null
+    resource_version: '296'
+    self_link: /api/v1/namespaces/kube-system/secrets/token-cleaner-token-hckhc
+    uid: 1cb86685-a401-460d-86fb-f1668e77267a
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: a3ViZS1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnJkV0psTFhONWMzUmxiU0lzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVmpjbVYwTG01aGJXVWlPaUowZEd3dFkyOXVkSEp2Ykd4bGNpMTBiMnRsYmkwMGFqSndaaUlzSW10MVltVnlibVYwWlhNdWFXOHZjMlZ5ZG1salpXRmpZMjkxYm5RdmMyVnlkbWxqWlMxaFkyTnZkVzUwTG01aGJXVWlPaUowZEd3dFkyOXVkSEp2Ykd4bGNpSXNJbXQxWW1WeWJtVjBaWE11YVc4dmMyVnlkbWxqWldGalkyOTFiblF2YzJWeWRtbGpaUzFoWTJOdmRXNTBMblZwWkNJNkltUXlORGsyWXpjd0xXVTJNVEV0TkRjMFppMDRaamhqTFRrelpURXpaR0kxTWpnNU5TSXNJbk4xWWlJNkluTjVjM1JsYlRwelpYSjJhV05sWVdOamIzVnVkRHByZFdKbExYTjVjM1JsYlRwMGRHd3RZMjl1ZEhKdmJHeGxjaUo5LlVNR2piUXMxVG1HVk9HNExuLVRkVGs2ZE42WnRKY1JQNEEyNG5rTktkSFB6REtzQ3VVWjFnV0ExOWFlUWpSRDNJVjhKZlRteWVDUEt2azJvS0dmTloyRHZ6WEhRd1A1Z2RKRGxvSS1FeDNHMlBkTGpHcGM4Ul83VG50UmNJWU9pTDZaMmh6OTFHYXB5YTF4ZGpaX2wwX3pQLTN2clFfUXFKSklNbHRCd0FxWG9Xd0ZHQnkxejdmMFYyZXlENWsxc3JyMEFXRWp3XzhfUVQ2dEYtYVJFNGdaT0lKbmxQQktaeC1nQ2htSzVOcTcwM0M4OWNCVGxOdzh6TXVNVlpaa2JYYnhiZnFoTFZZLVd1T3BHQnUwRWEzYjhvU3V2U1FhTUxHRkNYaERhSkFHdlROajBkWEtXbEJDU0JzTUJITWNVY2JocWJSY0tad0V5b09CVWZpLXdoUQ==
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: ttl-controller
+      kubernetes.io/service-account.uid: d2496c70-e611-474f-8f8c-93e13db52895
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:39+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: ttl-controller-token-4j2pf
+    namespace: kube-system
+    owner_references: null
+    resource_version: '268'
+    self_link: /api/v1/namespaces/kube-system/secrets/ttl-controller-token-4j2pf
+    uid: 10ebc419-4637-437a-810d-c822a475cb95
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: bWV0YWxsYi1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnRaWFJoYkd4aUxYTjVjM1JsYlNJc0ltdDFZbVZ5Ym1WMFpYTXVhVzh2YzJWeWRtbGpaV0ZqWTI5MWJuUXZjMlZqY21WMExtNWhiV1VpT2lKamIyNTBjbTlzYkdWeUxYUnZhMlZ1TFhSemREbHVJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpYSjJhV05sTFdGalkyOTFiblF1Ym1GdFpTSTZJbU52Ym5SeWIyeHNaWElpTENKcmRXSmxjbTVsZEdWekxtbHZMM05sY25acFkyVmhZMk52ZFc1MEwzTmxjblpwWTJVdFlXTmpiM1Z1ZEM1MWFXUWlPaUpoWXpZMk5qZzVZaTAzWkRRekxUUTNZamN0T1RJMU9DMHdPVFl5WlRZd09XWm1OVElpTENKemRXSWlPaUp6ZVhOMFpXMDZjMlZ5ZG1salpXRmpZMjkxYm5RNmJXVjBZV3hzWWkxemVYTjBaVzA2WTI5dWRISnZiR3hsY2lKOS5jeVBOWVhmQjlqX0tydkpUQktBTFJpcC0xOEZveEdSN00wRkQ5V2cwaXJ2NjdNMjQzaUc1ZFpjMDhVeklIZ05MdXViUGhoQjBESFlvMm1BblFIUUQ5bEl5eE9BSnlJOFJ0Q2N1R2lMaXJmc0xrc2JBSnhGYXBxWUE3SnVlYmhqc3UwVW1JR0E3QmkzWTVLUGpSdXpCUGdaUjlOZHdKODV2dDhBTnRpYzM3STJZZExWOFB0Y0RvbDc5TnBHenpVR0hsVlI0cER2bEo5dFgyS0hQT0JYSlZpR0pVZ2t5VHBtNXVUSkFIZ0hDeW5ILWFTSjMwamtsR3MtdHNUd09EdHp3R2Ruc0FsR1pnd3UtYTQtM29ydy14djRlS3hhcE1uUmEzRW4wTXZMMFBTT3hBYW1qem1lZDlYUjZMQ1BPcTQ0WGU1YzlWSDE4dUNYZkliZVRHUWJTc0E=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: controller
+      kubernetes.io/service-account.uid: ac66689b-7d43-47b7-9258-0962e609ff52
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:43+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: controller-token-tst9n
+    namespace: metallb-system
+    owner_references: null
+    resource_version: '591'
+    self_link: /api/v1/namespaces/metallb-system/secrets/controller-token-tst9n
+    uid: 6b72bec8-cfc7-4ae9-aef2-a459a58f70bb
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: bWV0YWxsYi1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnRaWFJoYkd4aUxYTjVjM1JsYlNJc0ltdDFZbVZ5Ym1WMFpYTXVhVzh2YzJWeWRtbGpaV0ZqWTI5MWJuUXZjMlZqY21WMExtNWhiV1VpT2lKa1pXWmhkV3gwTFhSdmEyVnVMV0p3Y0c1aUlpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WlhKMmFXTmxMV0ZqWTI5MWJuUXVibUZ0WlNJNkltUmxabUYxYkhRaUxDSnJkV0psY201bGRHVnpMbWx2TDNObGNuWnBZMlZoWTJOdmRXNTBMM05sY25acFkyVXRZV05qYjNWdWRDNTFhV1FpT2lJME5qa3laalppWWkwelpEWXpMVFExTXpjdE9EVTNNeTB3TTJVNVlUQXlOR0kxWVRnaUxDSnpkV0lpT2lKemVYTjBaVzA2YzJWeWRtbGpaV0ZqWTI5MWJuUTZiV1YwWVd4c1lpMXplWE4wWlcwNlpHVm1ZWFZzZENKOS52ZXdIMkV1VFl5N2hXcHNnZUV6Y3FQOWVuaU5oeUY5ZG5qN0VGNnRvV3JZQ1JUSnBnQWRoNkZYLUQyUHhFV1gwR3p0bGhPZ0tWWUNpWE5pbk51N01HMWpLaG1kWW9sbmRRRGh2WHh1RklzckF3aUs1ZjZ3LUM2SlRZYlhYVkZMWUQzczl0Qm1SNDZpWmtldXdlQ05qMUNoUTZjRC1sZUlKRXBibG1DZUVqN0ZqWTZEc2htSE9xY05zTnhPRkVPVHl5MndYRWVTbUJXemhMc3lLa1F5N1ZEaXFCdjdqVXkyNkNGTXNETjJIbXhfX3cyOVdfZnpoQkhRQk83ejY2Y3lyWFI2dGxMcHhxeWx6WHRtcTdPeE5fLXhINzZXeG5rajRlejdzR3pyWjhyQnRieWZDNEhqLVNsbmxsc3A0b0tlOENkVkxDYVpMY1B0UjFNZDlVQkQ0U2c=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: default
+      kubernetes.io/service-account.uid: 4692f6bb-3d63-4537-8573-03e9a024b5a8
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:43+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: default-token-bppnb
+    namespace: metallb-system
+    owner_references: null
+    resource_version: '589'
+    self_link: /api/v1/namespaces/metallb-system/secrets/default-token-bppnb
+    uid: 85f1baea-d628-4091-a239-66f47ed1dfa0
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: bWV0YWxsYi1zeXN0ZW0=
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSnRaWFJoYkd4aUxYTjVjM1JsYlNJc0ltdDFZbVZ5Ym1WMFpYTXVhVzh2YzJWeWRtbGpaV0ZqWTI5MWJuUXZjMlZqY21WMExtNWhiV1VpT2lKemNHVmhhMlZ5TFhSdmEyVnVMVEp5ZGpZeUlpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WlhKMmFXTmxMV0ZqWTI5MWJuUXVibUZ0WlNJNkluTndaV0ZyWlhJaUxDSnJkV0psY201bGRHVnpMbWx2TDNObGNuWnBZMlZoWTJOdmRXNTBMM05sY25acFkyVXRZV05qYjNWdWRDNTFhV1FpT2lJME5tSXdNV0U1TlMwMk9XWXdMVFJqWVRjdFlqSmpNeTFqWW1FMk1tRTVaakV3TUdVaUxDSnpkV0lpT2lKemVYTjBaVzA2YzJWeWRtbGpaV0ZqWTI5MWJuUTZiV1YwWVd4c1lpMXplWE4wWlcwNmMzQmxZV3RsY2lKOS5TOVJCSjVmR013M2tXRjVKT0xmdURkTjdOMWlNQlJjalpfVXRLc19CeFJ3WWt3d1hOZXlGLThLWHNqM0RjakJlSUZ1X09iV0xEeDdRQ0d6aUQ5M2w3b2N2c2tsNndvX1NzLUQyc2ZPekxMbGU1VG5JcWpRMlRlSHl6VDd2am5nSlFmTGlBVnlvZnprWkpicDY1bHUtcFdPa1RNQjQ5cjRMTTU0T2xKLWVsdVlnOTJ4cm9aQkxtZzFCSTN0RkwwdXBqQmdqd0dTYVNrT1VteTByQy13YWh0LUg2YXlfbkFrYkJTY2plM3NLWlZnd2pWaTloc0cyLWZhVVI2bUpOZTNHRlZ6ejd6SFMxM2Q4Qlh1b2U2dnpJb1hkSmpZSGZ1SkhWejZXMmkxQ20xcE1YWkNvYWZkNkhiNVd3UmptUUE0Zmg5NXhUS2VxLTdBM1JjSmZJTFlZdUE=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: speaker
+      kubernetes.io/service-account.uid: 46b01a95-69f0-4ca7-b2c3-cba62a9f100e
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:43+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: speaker-token-2rv62
+    namespace: metallb-system
+    owner_references: null
+    resource_version: '594'
+    self_link: /api/v1/namespaces/metallb-system/secrets/speaker-token-2rv62
+    uid: 73bdffff-5315-4f92-acf7-e75b1487eaa7
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: dGVzdDJucw==
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSjBaWE4wTW01eklpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WldOeVpYUXVibUZ0WlNJNkltUmxabUYxYkhRdGRHOXJaVzR0YW5ONmRIRWlMQ0pyZFdKbGNtNWxkR1Z6TG1sdkwzTmxjblpwWTJWaFkyTnZkVzUwTDNObGNuWnBZMlV0WVdOamIzVnVkQzV1WVcxbElqb2laR1ZtWVhWc2RDSXNJbXQxWW1WeWJtVjBaWE11YVc4dmMyVnlkbWxqWldGalkyOTFiblF2YzJWeWRtbGpaUzFoWTJOdmRXNTBMblZwWkNJNkltVXhOelZpTXpSa0xXRTVOVGt0TkRkaVpDMWhaalppTFdReU56VmtZelk0WmpFNFl5SXNJbk4xWWlJNkluTjVjM1JsYlRwelpYSjJhV05sWVdOamIzVnVkRHAwWlhOME1tNXpPbVJsWm1GMWJIUWlmUS5vQVB5Zll4SG5sblNWNkJvQzVmV1c1WkVvUl9JdkVHbEpxNEF5dG4takRyUmI4Umh1YnFWQmZDT3UybXNIWW82R0hkMVFXZU9fUEF0V2FvZHNEWE5mdnFMWk5PUmZtcmNjTnRFWnR3Znk2MllPWXUxbk1TclN2Q0RLMEpRclJ3LTd5eWVyd3dvQ3p0UXdOSTJsSVh6MFF0enhrMjlNWTR3ZllCQ29oSkxKclhHS2p5TWNUaU1NazI4M3o2R1BQVi1NamFnLVNSQlg2SXRpTjJjemF0Wnh5VXlodHdVWFlDclNBN0JlUjR4ZVhraWdqMExKTlZ6eVRyanpTQzYwMzFnNnZYemJFb3BmblJzZXhpNG1jQmNtOUp3YjRJX0FyOG1sVjlmVnAtLUFxX2xUT1JVd016ekRvd0FXX0I3NmNFZ0FjUUY3QkpMOERkcVgwYW1Bb3Fsa3c=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: default
+      kubernetes.io/service-account.uid: e175b34d-a959-47bd-af6b-d275dc68f18c
+    cluster_name: null
+    creation_timestamp: '2019-09-14 21:49:42+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: default-token-jsztq
+    namespace: test2ns
+    owner_references: null
+    resource_version: '15794'
+    self_link: /api/v1/namespaces/test2ns/secrets/default-token-jsztq
+    uid: aed99367-08e9-4087-aadd-2e8d9f57b444
+  string_data: null
+  type: kubernetes.io/service-account-token
+- api_version: null
+  data:
+    ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3hOREU0TWpVMU5Gb1hEVEk1TURreE1URTRNalUxTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1dZCnRKNjcrS3pUMGlZcHdtSDVYTEI3QjA2TUZnS0QyZUoyT1daTVlPb2Z1Z2xMcEg0dXRRS2h0S1JGcjFBM3RvaDQKT0xRWGtYeU9vNlZrejBJK3AwSjBkYzlJelB5YlRaRTRtNHZpT3RHWXgvTHp3ekIxNFFYYkdLMmRVZ0dmbnA0RQpTb1JkLzBCOFdqKzBxTlNYcnNZdVg2S28yNFpKcVdSV1B4TDYyQUgyaXgva055R0g1UlU5KzBFK3hxZktKNFpCCmZsNnpNYXBlMmZMQzVxMUlkMnFvc0puaGdIUHY5RktaVmE0OFJxdFpiVXFrc2F0RWJuYmo3S2ljbkpiZGt5S2sKL0lHRFRwVHk0NXV1YnBOQklSMFNvQnFVTkx5NW96TUdsM1JReUNhRzZrSGhOTnVLWEtEOTFhM204V1doVjkrQgozdE0yZ21OOTV5VFYzSFpkUXFFQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDMzMxZWxYWDZHeW1LVG1wVXlCaHRhRzZsYysKQmtMVmppRDRrT01Cb1BGLy9hVWY5VWZiM2R5YlhhVHlKcUlsMGVFNndxa0p2VFV0aDUvamdkeXpvY2pRaUhFNAo1SDJBTzlwejNLb1dYSGJHd2wzZkVkR1BnNDBiTEY5QVBnVXpCa3dIUis1ZHRpSFU4SjZVVTVtamFlYloySmVtCi9zWHNTMTN6WS9aY1pDVUdJbnJHTnhFZE1TNFBJdlRwSjliVVdvaFk3aEpieTcxZG5CS2pxVXZ6Y2dsaDFWUDEKcGtGb3h2anBMeTNyUHlmSkcrdy9aQkx6VkFjSnNzUU9vbm9CazJ2RWpPYUZEQW9CZEVSS2k3eGw0K0FsU1YwMQpYdmN3WjlCZ0czMDVLOXBicm9PbHRmQnJtalk0N0RWNDJnd1VBMmNNbUR0Y250MWY2bDZVblNtc091QT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    namespace: d2F0Y2hlcg==
+    token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSjNZWFJqYUdWeUlpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WldOeVpYUXVibUZ0WlNJNkltUmxabUYxYkhRdGRHOXJaVzR0Y1hkNGVHb2lMQ0pyZFdKbGNtNWxkR1Z6TG1sdkwzTmxjblpwWTJWaFkyTnZkVzUwTDNObGNuWnBZMlV0WVdOamIzVnVkQzV1WVcxbElqb2laR1ZtWVhWc2RDSXNJbXQxWW1WeWJtVjBaWE11YVc4dmMyVnlkbWxqWldGalkyOTFiblF2YzJWeWRtbGpaUzFoWTJOdmRXNTBMblZwWkNJNklqSTBaR1U0TWpFMUxUTTNOamd0TkRVMll5MWhOVFpoTFRCak5qTmpPVFk1TlRjeFppSXNJbk4xWWlJNkluTjVjM1JsYlRwelpYSjJhV05sWVdOamIzVnVkRHAzWVhSamFHVnlPbVJsWm1GMWJIUWlmUS5QQXp2dG9iSVRiQ2dwWmN0RVZnUldqU3J5akNNLVhfRVdoNWNFMXZGa2NrY3lXV1dVMzN5NmpkclVpSi1CSjI1OEZuek1pZ1RrOUppRk1SVzVnMzhTaGxpWUliRDdnNEJvVzdIZTRlclZrVXB0SVlsU3FXYy04ODdoSTNsbU1fSl9NalVrY3lTOWRYVndSOU9PN1lqRnA1ZTZFQWFNS2FCamJ5M2FCeERPd1NVT3FkYjVxaDBPOTdxOEZiNldUSzRxRllqQnFwLWdrQm1Mb2dyWFRnSVFqX0EwT1BZOXdzYW44cTYxTVBwM05KY2JTMkZJS0Y1ZG1QS3AwUzBYbVpaTXRmdXJfM3l6OTd1eW9tRU5TQnQtTHdjdEZicjdOSmp2dHl2dkZmQlJfcDJzM0d1S0huaXZQWFdLVm1rV2tmMVhoR05sNENLdDJ1M0QzM0tjUkIwX0E=
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/service-account.name: default
+      kubernetes.io/service-account.uid: 24de8215-3768-456c-a56a-0c63c969571f
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:40:26+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: default-token-qwxxj
+    namespace: watcher
+    owner_references: null
+    resource_version: '1629'
+    self_link: /api/v1/namespaces/watcher/secrets/default-token-qwxxj
+    uid: 988cb9e5-7598-44a5-a1dc-5e70202fa3cc
+  string_data: null
+  type: kubernetes.io/service-account-token
+

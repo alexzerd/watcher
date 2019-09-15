@@ -1,0 +1,3952 @@
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      flannel.alpha.coreos.com/backend-data: '{"VtepMAC":"12:c9:0c:0b:d9:b3"}'
+      flannel.alpha.coreos.com/backend-type: vxlan
+      flannel.alpha.coreos.com/kube-subnet-manager: 'true'
+      flannel.alpha.coreos.com/public-ip: 10.0.2.15
+      kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+      node.alpha.kubernetes.io/ttl: '0'
+      volumes.kubernetes.io/controller-managed-attach-detach: 'true'
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:31+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      beta.kubernetes.io/arch: amd64
+      beta.kubernetes.io/os: linux
+      kubernetes.io/arch: amd64
+      kubernetes.io/hostname: localhost.localdomain
+      kubernetes.io/os: linux
+      node-role.kubernetes.io/master: ''
+    managed_fields: null
+    name: localhost.localdomain
+    namespace: null
+    owner_references: null
+    resource_version: '26761'
+    self_link: /api/v1/nodes/localhost.localdomain
+    uid: bd8dc006-779c-4aac-a838-eb8dde420895
+  spec:
+    config_source: null
+    external_id: null
+    pod_cidr: 10.244.0.0/24
+    provider_id: null
+    taints: null
+    unschedulable: null
+  status:
+    addresses:
+    - address: 172.16.99.110
+      type: InternalIP
+    - address: localhost.localdomain
+      type: Hostname
+    allocatable:
+      cpu: '2'
+      ephemeral-storage: '16415037823'
+      hugepages-2Mi: '0'
+      memory: 2185236Ki
+      pods: '110'
+    capacity:
+      cpu: '2'
+      ephemeral-storage: 17394Mi
+      hugepages-2Mi: '0'
+      memory: 2287636Ki
+      pods: '110'
+    conditions:
+    - last_heartbeat_time: '2019-09-15 08:43:44+00:00'
+      last_transition_time: '2019-09-14 18:26:26+00:00'
+      message: kubelet has sufficient memory available
+      reason: KubeletHasSufficientMemory
+      status: 'False'
+      type: MemoryPressure
+    - last_heartbeat_time: '2019-09-15 08:43:44+00:00'
+      last_transition_time: '2019-09-14 18:26:26+00:00'
+      message: kubelet has no disk pressure
+      reason: KubeletHasNoDiskPressure
+      status: 'False'
+      type: DiskPressure
+    - last_heartbeat_time: '2019-09-15 08:43:44+00:00'
+      last_transition_time: '2019-09-14 18:26:26+00:00'
+      message: kubelet has sufficient PID available
+      reason: KubeletHasSufficientPID
+      status: 'False'
+      type: PIDPressure
+    - last_heartbeat_time: '2019-09-15 08:43:44+00:00'
+      last_transition_time: '2019-09-14 18:28:04+00:00'
+      message: kubelet is posting ready status
+      reason: KubeletReady
+      status: 'True'
+      type: Ready
+    config: null
+    daemon_endpoints:
+      kubelet_endpoint:
+        port: 10250
+    images:
+    - names:
+      - python@sha256:0f0e991a97426db345ca7ec59fa911c8ed27ced27c88ae9966b452bcc6438c2f
+      - python:latest
+      size_bytes: 917532380
+    - names:
+      - quay.io/kubernetes-ingress-controller/nginx-ingress-controller@sha256:0c4941fa8c812dd44297b5f4900e3b26c3e6a8a42940e48fe9a1a585fe8f7e25
+      - quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.25.1
+      size_bytes: 510687563
+    - names:
+      - k8s.gcr.io/etcd@sha256:17da501f5d2a675be46040422a27b7cc21b8a43895ac998b171db1c346f361f7
+      - k8s.gcr.io/etcd:3.3.10
+      size_bytes: 258116302
+    - names:
+      - k8s.gcr.io/kube-apiserver@sha256:120c31707be05d6ff5bd05e56e95cac09cdb75e3b533b91fd2c6a2b771c19609
+      - k8s.gcr.io/kube-apiserver:v1.15.3
+      size_bytes: 206843838
+    - names:
+      - k8s.gcr.io/kube-controller-manager@sha256:0bf6211a0d8cb1c444aa3148941ae4dfbb43dfbbd2a7a9177a9594535fbed838
+      - k8s.gcr.io/kube-controller-manager:v1.15.3
+      size_bytes: 158743102
+    - names:
+      - k8s.gcr.io/kube-proxy@sha256:6f910100972afda5b14037ccbba0cd6aa091bb773ae749f46b03f395380935c9
+      - k8s.gcr.io/kube-proxy:v1.15.3
+      size_bytes: 82408284
+    - names:
+      - k8s.gcr.io/kube-scheduler@sha256:e365d380e57c75ee35f7cda99df5aa8c96e86287a5d3b52847e5d67d27ed082a
+      - k8s.gcr.io/kube-scheduler:v1.15.3
+      size_bytes: 81107582
+    - names:
+      - quay.io/coreos/flannel@sha256:7806805c93b20a168d0bbbd25c6a213f00ac58a511c47e8fa6409543528a204e
+      - quay.io/coreos/flannel:v0.11.0-amd64
+      size_bytes: 52567296
+    - names:
+      - metallb/speaker@sha256:148d57d646dd3a1653589195eed8a635642668ee845596fe3cb4705757c4d81d
+      - metallb/speaker:v0.8.1
+      size_bytes: 43521118
+    - names:
+      - metallb/controller@sha256:9958ff8221ab70fc8380cd3ced30667e88d447ee273721b034ca4540b5e95468
+      - metallb/controller:v0.8.1
+      size_bytes: 42542222
+    - names:
+      - k8s.gcr.io/coredns@sha256:02382353821b12c21b062c59184e227e001079bb13ebd01f9d3270ba0fcbf1e4
+      - k8s.gcr.io/coredns:1.3.1
+      size_bytes: 40303560
+    - names:
+      - k8s.gcr.io/pause@sha256:f78411e19d84a252e53bff71a4407a5686c46983a2c2eeed83929b888179acea
+      - k8s.gcr.io/pause:3.1
+      size_bytes: 742472
+    node_info:
+      architecture: amd64
+      boot_id: 9b2f041c-a121-4363-8958-09601c1e9cec
+      container_runtime_version: docker://19.3.2
+      kernel_version: 3.10.0-957.27.2.el7.x86_64
+      kube_proxy_version: v1.15.3
+      kubelet_version: v1.15.3
+      machine_id: 3969abdb031c4b279e9081288d7ac4f1
+      operating_system: linux
+      os_image: CentOS Linux 7 (Core)
+      system_uuid: 3969ABDB-031C-4B27-9E90-81288D7AC4F1
+    phase: null
+    volumes_attached: null
+    volumes_in_use: null
+- api_version: null
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:52:15+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: adalimayeu
+    namespace: null
+    owner_references: null
+    resource_version: '2458'
+    self_link: /api/v1/namespaces/adalimayeu
+    uid: ca8746af-6422-4bd4-8b17-f5ebf3996774
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- api_version: null
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:34+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: default
+    namespace: null
+    owner_references: null
+    resource_version: '147'
+    self_link: /api/v1/namespaces/default
+    uid: 4164c4cf-3e38-4af4-805b-869bbc9e39c8
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"app.kubernetes.io/name":"ingress-nginx","app.kubernetes.io/part-of":"ingress-nginx"},"name":"ingress-nginx"}}
+
+        '
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:55+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+    managed_fields: null
+    name: ingress-nginx
+    namespace: null
+    owner_references: null
+    resource_version: '663'
+    self_link: /api/v1/namespaces/ingress-nginx
+    uid: da076644-f9a3-4bd6-9498-7b1eedfa5401
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- api_version: null
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:31+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: kube-node-lease
+    namespace: null
+    owner_references: null
+    resource_version: '37'
+    self_link: /api/v1/namespaces/kube-node-lease
+    uid: bbfd07fe-3e61-4078-a676-6b02aed41a5b
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- api_version: null
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:31+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: kube-public
+    namespace: null
+    owner_references: null
+    resource_version: '36'
+    self_link: /api/v1/namespaces/kube-public
+    uid: f1664634-b7e2-4451-b8cb-5d510f6155c4
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- api_version: null
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:31+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: kube-system
+    namespace: null
+    owner_references: null
+    resource_version: '35'
+    self_link: /api/v1/namespaces/kube-system
+    uid: 2f4aa40d-9666-494d-9e7a-de6da9549cb4
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"app":"metallb"},"name":"metallb-system"}}
+
+        '
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:43+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      app: metallb
+    managed_fields: null
+    name: metallb-system
+    namespace: null
+    owner_references: null
+    resource_version: '584'
+    self_link: /api/v1/namespaces/metallb-system
+    uid: 025187bb-74e8-4640-9de4-622a72aa3840
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- api_version: null
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 21:49:42+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels: null
+    managed_fields: null
+    name: test2ns
+    namespace: null
+    owner_references: null
+    resource_version: '15792'
+    self_link: /api/v1/namespaces/test2ns
+    uid: 8a18a354-7467-4f14-a6ca-9f61b0c0aa3b
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"name":"watcher"},"name":"watcher"}}
+
+        '
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:40:25+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      name: watcher
+    managed_fields: null
+    name: watcher
+    namespace: null
+    owner_references: null
+    resource_version: '1625'
+    self_link: /api/v1/namespaces/watcher
+    uid: fb9d72f5-7e96-4b80-862e-4f36bf62fc71
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      prometheus.io/port: '10254'
+      prometheus.io/scrape: 'true'
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:56+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: nginx-ingress-controller-79f6884cf6-
+    generation: null
+    initializers: null
+    labels:
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      pod-template-hash: 79f6884cf6
+    managed_fields: null
+    name: nginx-ingress-controller-79f6884cf6-xb8ds
+    namespace: ingress-nginx
+    owner_references:
+    - api_version: apps/v1
+      block_owner_deletion: true
+      controller: true
+      kind: ReplicaSet
+      name: nginx-ingress-controller-79f6884cf6
+      uid: 0ce253b8-1771-4fd8-a5ad-e6401bc51acc
+    resource_version: '2654'
+    self_link: /api/v1/namespaces/ingress-nginx/pods/nginx-ingress-controller-79f6884cf6-xb8ds
+    uid: 0bf7c04d-a87c-4853-a1b9-6b359abef94f
+  spec:
+    active_deadline_seconds: null
+    affinity: null
+    automount_service_account_token: null
+    containers:
+    - args:
+      - /nginx-ingress-controller
+      - --configmap=$(POD_NAMESPACE)/nginx-configuration
+      - --tcp-services-configmap=$(POD_NAMESPACE)/tcp-services
+      - --udp-services-configmap=$(POD_NAMESPACE)/udp-services
+      - --publish-service=$(POD_NAMESPACE)/ingress-nginx
+      - --annotations-prefix=nginx.ingress.kubernetes.io
+      command: null
+      env:
+      - name: POD_NAME
+        value: null
+        value_from:
+          config_map_key_ref: null
+          field_ref:
+            api_version: v1
+            field_path: metadata.name
+          resource_field_ref: null
+          secret_key_ref: null
+      - name: POD_NAMESPACE
+        value: null
+        value_from:
+          config_map_key_ref: null
+          field_ref:
+            api_version: v1
+            field_path: metadata.namespace
+          resource_field_ref: null
+          secret_key_ref: null
+      env_from: null
+      image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.25.1
+      image_pull_policy: IfNotPresent
+      lifecycle: null
+      liveness_probe:
+        _exec: null
+        failure_threshold: 3
+        http_get:
+          host: null
+          http_headers: null
+          path: /healthz
+          port: 10254
+          scheme: HTTP
+        initial_delay_seconds: 10
+        period_seconds: 10
+        success_threshold: 1
+        tcp_socket: null
+        timeout_seconds: 10
+      name: nginx-ingress-controller
+      ports:
+      - container_port: 80
+        host_ip: null
+        host_port: null
+        name: http
+        protocol: TCP
+      - container_port: 443
+        host_ip: null
+        host_port: null
+        name: https
+        protocol: TCP
+      readiness_probe:
+        _exec: null
+        failure_threshold: 3
+        http_get:
+          host: null
+          http_headers: null
+          path: /healthz
+          port: 10254
+          scheme: HTTP
+        initial_delay_seconds: null
+        period_seconds: 10
+        success_threshold: 1
+        tcp_socket: null
+        timeout_seconds: 10
+      resources:
+        limits: null
+        requests: null
+      security_context:
+        allow_privilege_escalation: true
+        capabilities:
+          add:
+          - NET_BIND_SERVICE
+          drop:
+          - ALL
+        privileged: null
+        proc_mount: null
+        read_only_root_filesystem: null
+        run_as_group: null
+        run_as_non_root: null
+        run_as_user: 33
+        se_linux_options: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /var/run/secrets/kubernetes.io/serviceaccount
+        mount_propagation: null
+        name: nginx-ingress-serviceaccount-token-4p69b
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    dns_config: null
+    dns_policy: ClusterFirst
+    enable_service_links: true
+    host_aliases: null
+    host_ipc: null
+    host_network: null
+    host_pid: null
+    hostname: null
+    image_pull_secrets: null
+    init_containers: null
+    node_name: localhost.localdomain
+    node_selector: null
+    priority: 0
+    priority_class_name: null
+    readiness_gates: null
+    restart_policy: Always
+    runtime_class_name: null
+    scheduler_name: default-scheduler
+    security_context:
+      fs_group: null
+      run_as_group: null
+      run_as_non_root: null
+      run_as_user: null
+      se_linux_options: null
+      supplemental_groups: null
+      sysctls: null
+    service_account: nginx-ingress-serviceaccount
+    service_account_name: nginx-ingress-serviceaccount
+    share_process_namespace: null
+    subdomain: null
+    termination_grace_period_seconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      toleration_seconds: 300
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      toleration_seconds: 300
+      value: null
+    volumes:
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path: null
+      iscsi: null
+      name: nginx-ingress-serviceaccount-token-4p69b
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret:
+        default_mode: 420
+        items: null
+        optional: null
+        secret_name: nginx-ingress-serviceaccount-token-4p69b
+      storageos: null
+      vsphere_volume: null
+  status:
+    conditions:
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:56+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Initialized
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:58:35+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Ready
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:58:35+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: ContainersReady
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:56+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: PodScheduled
+    container_statuses:
+    - container_id: docker://7e8f454949a174378335f14e606e1e5ad25a2a4164fc4b2fa625efc6d2bb8b97
+      image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.25.1
+      image_id: docker-pullable://quay.io/kubernetes-ingress-controller/nginx-ingress-controller@sha256:0c4941fa8c812dd44297b5f4900e3b26c3e6a8a42940e48fe9a1a585fe8f7e25
+      last_state:
+        running: null
+        terminated:
+          container_id: docker://bab2b3ee172f1686648911fb8e11a631fb0533bc791599398212939877e6c740
+          exit_code: 143
+          finished_at: '2019-09-14 18:56:28+00:00'
+          message: null
+          reason: Error
+          signal: null
+          started_at: '2019-09-14 18:55:48+00:00'
+        waiting: null
+      name: nginx-ingress-controller
+      ready: true
+      restart_count: 6
+      state:
+        running:
+          started_at: '2019-09-14 18:56:34+00:00'
+        terminated: null
+        waiting: null
+    host_ip: 172.16.99.110
+    init_container_statuses: null
+    message: null
+    nominated_node_name: null
+    phase: Running
+    pod_ip: 10.244.0.9
+    qos_class: BestEffort
+    reason: null
+    start_time: '2019-09-14 18:28:56+00:00'
+- api_version: null
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:52+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: coredns-5c98db65d4-
+    generation: null
+    initializers: null
+    labels:
+      k8s-app: kube-dns
+      pod-template-hash: 5c98db65d4
+    managed_fields: null
+    name: coredns-5c98db65d4-skdhp
+    namespace: kube-system
+    owner_references:
+    - api_version: apps/v1
+      block_owner_deletion: true
+      controller: true
+      kind: ReplicaSet
+      name: coredns-5c98db65d4
+      uid: bca3df86-49b2-425f-9db0-b8cca1816873
+    resource_version: '2588'
+    self_link: /api/v1/namespaces/kube-system/pods/coredns-5c98db65d4-skdhp
+    uid: a839a8a4-0de9-4eac-8da6-fd7f8f8cd3b6
+  spec:
+    active_deadline_seconds: null
+    affinity: null
+    automount_service_account_token: null
+    containers:
+    - args:
+      - -conf
+      - /etc/coredns/Corefile
+      command: null
+      env: null
+      env_from: null
+      image: k8s.gcr.io/coredns:1.3.1
+      image_pull_policy: IfNotPresent
+      lifecycle: null
+      liveness_probe:
+        _exec: null
+        failure_threshold: 5
+        http_get:
+          host: null
+          http_headers: null
+          path: /health
+          port: 8080
+          scheme: HTTP
+        initial_delay_seconds: 60
+        period_seconds: 10
+        success_threshold: 1
+        tcp_socket: null
+        timeout_seconds: 5
+      name: coredns
+      ports:
+      - container_port: 53
+        host_ip: null
+        host_port: null
+        name: dns
+        protocol: UDP
+      - container_port: 53
+        host_ip: null
+        host_port: null
+        name: dns-tcp
+        protocol: TCP
+      - container_port: 9153
+        host_ip: null
+        host_port: null
+        name: metrics
+        protocol: TCP
+      readiness_probe:
+        _exec: null
+        failure_threshold: 3
+        http_get:
+          host: null
+          http_headers: null
+          path: /health
+          port: 8080
+          scheme: HTTP
+        initial_delay_seconds: null
+        period_seconds: 10
+        success_threshold: 1
+        tcp_socket: null
+        timeout_seconds: 1
+      resources:
+        limits:
+          memory: 170Mi
+        requests:
+          cpu: 100m
+          memory: 70Mi
+      security_context:
+        allow_privilege_escalation: false
+        capabilities:
+          add:
+          - NET_BIND_SERVICE
+          drop:
+          - all
+        privileged: null
+        proc_mount: null
+        read_only_root_filesystem: true
+        run_as_group: null
+        run_as_non_root: null
+        run_as_user: null
+        se_linux_options: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /etc/coredns
+        mount_propagation: null
+        name: config-volume
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /var/run/secrets/kubernetes.io/serviceaccount
+        mount_propagation: null
+        name: coredns-token-g25s6
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    dns_config: null
+    dns_policy: Default
+    enable_service_links: true
+    host_aliases: null
+    host_ipc: null
+    host_network: null
+    host_pid: null
+    hostname: null
+    image_pull_secrets: null
+    init_containers: null
+    node_name: localhost.localdomain
+    node_selector:
+      beta.kubernetes.io/os: linux
+    priority: 2000000000
+    priority_class_name: system-cluster-critical
+    readiness_gates: null
+    restart_policy: Always
+    runtime_class_name: null
+    scheduler_name: default-scheduler
+    security_context:
+      fs_group: null
+      run_as_group: null
+      run_as_non_root: null
+      run_as_user: null
+      se_linux_options: null
+      supplemental_groups: null
+      sysctls: null
+    service_account: coredns
+    service_account_name: coredns
+    share_process_namespace: null
+    subdomain: null
+    termination_grace_period_seconds: 30
+    tolerations:
+    - effect: null
+      key: CriticalAddonsOnly
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: null
+      toleration_seconds: null
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      toleration_seconds: 300
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      toleration_seconds: 300
+      value: null
+    volumes:
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map:
+        default_mode: 420
+        items:
+        - key: Corefile
+          mode: null
+          path: Corefile
+        name: coredns
+        optional: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path: null
+      iscsi: null
+      name: config-volume
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path: null
+      iscsi: null
+      name: coredns-token-g25s6
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret:
+        default_mode: 420
+        items: null
+        optional: null
+        secret_name: coredns-token-g25s6
+      storageos: null
+      vsphere_volume: null
+  status:
+    conditions:
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:05+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Initialized
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:56:08+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Ready
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:56:08+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: ContainersReady
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:05+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: PodScheduled
+    container_statuses:
+    - container_id: docker://a9a3d8ea451c30621646b9fed5793615008b16194fe523fa62adbb7cf0c98bea
+      image: k8s.gcr.io/coredns:1.3.1
+      image_id: docker-pullable://k8s.gcr.io/coredns@sha256:02382353821b12c21b062c59184e227e001079bb13ebd01f9d3270ba0fcbf1e4
+      last_state:
+        running: null
+        terminated:
+          container_id: docker://87b6c81d16831e20f3e0cbc641eed4662bc6d555c506e4c7a183ae0a3e9b77f0
+          exit_code: 2
+          finished_at: '2019-09-14 18:55:24+00:00'
+          message: null
+          reason: Error
+          signal: null
+          started_at: '2019-09-14 18:55:14+00:00'
+        waiting: null
+      name: coredns
+      ready: true
+      restart_count: 4
+      state:
+        running:
+          started_at: '2019-09-14 18:55:56+00:00'
+        terminated: null
+        waiting: null
+    host_ip: 172.16.99.110
+    init_container_statuses: null
+    message: null
+    nominated_node_name: null
+    phase: Running
+    pod_ip: 10.244.0.7
+    qos_class: Burstable
+    reason: null
+    start_time: '2019-09-14 18:28:05+00:00'
+- api_version: null
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:52+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: coredns-5c98db65d4-
+    generation: null
+    initializers: null
+    labels:
+      k8s-app: kube-dns
+      pod-template-hash: 5c98db65d4
+    managed_fields: null
+    name: coredns-5c98db65d4-ttdl8
+    namespace: kube-system
+    owner_references:
+    - api_version: apps/v1
+      block_owner_deletion: true
+      controller: true
+      kind: ReplicaSet
+      name: coredns-5c98db65d4
+      uid: bca3df86-49b2-425f-9db0-b8cca1816873
+    resource_version: '2666'
+    self_link: /api/v1/namespaces/kube-system/pods/coredns-5c98db65d4-ttdl8
+    uid: 84c7f259-4999-4377-b35d-4d38c5548aac
+  spec:
+    active_deadline_seconds: null
+    affinity: null
+    automount_service_account_token: null
+    containers:
+    - args:
+      - -conf
+      - /etc/coredns/Corefile
+      command: null
+      env: null
+      env_from: null
+      image: k8s.gcr.io/coredns:1.3.1
+      image_pull_policy: IfNotPresent
+      lifecycle: null
+      liveness_probe:
+        _exec: null
+        failure_threshold: 5
+        http_get:
+          host: null
+          http_headers: null
+          path: /health
+          port: 8080
+          scheme: HTTP
+        initial_delay_seconds: 60
+        period_seconds: 10
+        success_threshold: 1
+        tcp_socket: null
+        timeout_seconds: 5
+      name: coredns
+      ports:
+      - container_port: 53
+        host_ip: null
+        host_port: null
+        name: dns
+        protocol: UDP
+      - container_port: 53
+        host_ip: null
+        host_port: null
+        name: dns-tcp
+        protocol: TCP
+      - container_port: 9153
+        host_ip: null
+        host_port: null
+        name: metrics
+        protocol: TCP
+      readiness_probe:
+        _exec: null
+        failure_threshold: 3
+        http_get:
+          host: null
+          http_headers: null
+          path: /health
+          port: 8080
+          scheme: HTTP
+        initial_delay_seconds: null
+        period_seconds: 10
+        success_threshold: 1
+        tcp_socket: null
+        timeout_seconds: 1
+      resources:
+        limits:
+          memory: 170Mi
+        requests:
+          cpu: 100m
+          memory: 70Mi
+      security_context:
+        allow_privilege_escalation: false
+        capabilities:
+          add:
+          - NET_BIND_SERVICE
+          drop:
+          - all
+        privileged: null
+        proc_mount: null
+        read_only_root_filesystem: true
+        run_as_group: null
+        run_as_non_root: null
+        run_as_user: null
+        se_linux_options: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /etc/coredns
+        mount_propagation: null
+        name: config-volume
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /var/run/secrets/kubernetes.io/serviceaccount
+        mount_propagation: null
+        name: coredns-token-g25s6
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    dns_config: null
+    dns_policy: Default
+    enable_service_links: true
+    host_aliases: null
+    host_ipc: null
+    host_network: null
+    host_pid: null
+    hostname: null
+    image_pull_secrets: null
+    init_containers: null
+    node_name: localhost.localdomain
+    node_selector:
+      beta.kubernetes.io/os: linux
+    priority: 2000000000
+    priority_class_name: system-cluster-critical
+    readiness_gates: null
+    restart_policy: Always
+    runtime_class_name: null
+    scheduler_name: default-scheduler
+    security_context:
+      fs_group: null
+      run_as_group: null
+      run_as_non_root: null
+      run_as_user: null
+      se_linux_options: null
+      supplemental_groups: null
+      sysctls: null
+    service_account: coredns
+    service_account_name: coredns
+    share_process_namespace: null
+    subdomain: null
+    termination_grace_period_seconds: 30
+    tolerations:
+    - effect: null
+      key: CriticalAddonsOnly
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: null
+      toleration_seconds: null
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      toleration_seconds: 300
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      toleration_seconds: 300
+      value: null
+    volumes:
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map:
+        default_mode: 420
+        items:
+        - key: Corefile
+          mode: null
+          path: Corefile
+        name: coredns
+        optional: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path: null
+      iscsi: null
+      name: config-volume
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path: null
+      iscsi: null
+      name: coredns-token-g25s6
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret:
+        default_mode: 420
+        items: null
+        optional: null
+        secret_name: coredns-token-g25s6
+      storageos: null
+      vsphere_volume: null
+  status:
+    conditions:
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:05+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Initialized
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:58:47+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Ready
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:58:47+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: ContainersReady
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:05+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: PodScheduled
+    container_statuses:
+    - container_id: docker://bdca7f032c74c0c12c8ccfa425a41e0d252631510baa2244f2ae9f1bfe12755d
+      image: k8s.gcr.io/coredns:1.3.1
+      image_id: docker-pullable://k8s.gcr.io/coredns@sha256:02382353821b12c21b062c59184e227e001079bb13ebd01f9d3270ba0fcbf1e4
+      last_state:
+        running: null
+        terminated:
+          container_id: docker://2ade48c4b0e8494ced575a3627f353a9e3e2cb5aa8e09979a088506bd3a42566
+          exit_code: 2
+          finished_at: '2019-09-14 18:55:15+00:00'
+          message: null
+          reason: Error
+          signal: null
+          started_at: '2019-09-14 18:55:06+00:00'
+        waiting: null
+      name: coredns
+      ready: true
+      restart_count: 4
+      state:
+        running:
+          started_at: '2019-09-14 18:55:48+00:00'
+        terminated: null
+        waiting: null
+    host_ip: 172.16.99.110
+    init_container_statuses: null
+    message: null
+    nominated_node_name: null
+    phase: Running
+    pod_ip: 10.244.0.6
+    qos_class: Burstable
+    reason: null
+    start_time: '2019-09-14 18:28:05+00:00'
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/config.hash: 7315089be4679710711c0dc180ff3c63
+      kubernetes.io/config.mirror: 7315089be4679710711c0dc180ff3c63
+      kubernetes.io/config.seen: '2019-09-14T14:26:00.489080192-04:00'
+      kubernetes.io/config.source: file
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:27:25+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      component: etcd
+      tier: control-plane
+    managed_fields: null
+    name: etcd-localhost.localdomain
+    namespace: kube-system
+    owner_references: null
+    resource_version: '417'
+    self_link: /api/v1/namespaces/kube-system/pods/etcd-localhost.localdomain
+    uid: c62ed937-5363-4bc3-b546-c7f6cc17f072
+  spec:
+    active_deadline_seconds: null
+    affinity: null
+    automount_service_account_token: null
+    containers:
+    - args: null
+      command:
+      - etcd
+      - --advertise-client-urls=https://172.16.99.110:2379
+      - --cert-file=/etc/kubernetes/pki/etcd/server.crt
+      - --client-cert-auth=true
+      - --data-dir=/var/lib/etcd
+      - --initial-advertise-peer-urls=https://172.16.99.110:2380
+      - --initial-cluster=localhost.localdomain=https://172.16.99.110:2380
+      - --key-file=/etc/kubernetes/pki/etcd/server.key
+      - --listen-client-urls=https://127.0.0.1:2379,https://172.16.99.110:2379
+      - --listen-peer-urls=https://172.16.99.110:2380
+      - --name=localhost.localdomain
+      - --peer-cert-file=/etc/kubernetes/pki/etcd/peer.crt
+      - --peer-client-cert-auth=true
+      - --peer-key-file=/etc/kubernetes/pki/etcd/peer.key
+      - --peer-trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt
+      - --snapshot-count=10000
+      - --trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt
+      env: null
+      env_from: null
+      image: k8s.gcr.io/etcd:3.3.10
+      image_pull_policy: IfNotPresent
+      lifecycle: null
+      liveness_probe:
+        _exec:
+          command:
+          - /bin/sh
+          - -ec
+          - ETCDCTL_API=3 etcdctl --endpoints=https://[127.0.0.1]:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt
+            --cert=/etc/kubernetes/pki/etcd/healthcheck-client.crt --key=/etc/kubernetes/pki/etcd/healthcheck-client.key
+            get foo
+        failure_threshold: 8
+        http_get: null
+        initial_delay_seconds: 15
+        period_seconds: 10
+        success_threshold: 1
+        tcp_socket: null
+        timeout_seconds: 15
+      name: etcd
+      ports: null
+      readiness_probe: null
+      resources:
+        limits: null
+        requests: null
+      security_context: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /var/lib/etcd
+        mount_propagation: null
+        name: etcd-data
+        read_only: null
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /etc/kubernetes/pki/etcd
+        mount_propagation: null
+        name: etcd-certs
+        read_only: null
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    dns_config: null
+    dns_policy: ClusterFirst
+    enable_service_links: true
+    host_aliases: null
+    host_ipc: null
+    host_network: true
+    host_pid: null
+    hostname: null
+    image_pull_secrets: null
+    init_containers: null
+    node_name: localhost.localdomain
+    node_selector: null
+    priority: 2000000000
+    priority_class_name: system-cluster-critical
+    readiness_gates: null
+    restart_policy: Always
+    runtime_class_name: null
+    scheduler_name: default-scheduler
+    security_context:
+      fs_group: null
+      run_as_group: null
+      run_as_non_root: null
+      run_as_user: null
+      se_linux_options: null
+      supplemental_groups: null
+      sysctls: null
+    service_account: null
+    service_account_name: null
+    share_process_namespace: null
+    subdomain: null
+    termination_grace_period_seconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: null
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    volumes:
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /etc/kubernetes/pki/etcd
+        type: DirectoryOrCreate
+      iscsi: null
+      name: etcd-certs
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /var/lib/etcd
+        type: DirectoryOrCreate
+      iscsi: null
+      name: etcd-data
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+  status:
+    conditions:
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:02+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Initialized
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:07+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Ready
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:07+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: ContainersReady
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:02+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: PodScheduled
+    container_statuses:
+    - container_id: docker://426f9c83febd8a223c7e97683e94003b0702fd18a94fa8d321bc65d370e6701b
+      image: k8s.gcr.io/etcd:3.3.10
+      image_id: docker-pullable://k8s.gcr.io/etcd@sha256:17da501f5d2a675be46040422a27b7cc21b8a43895ac998b171db1c346f361f7
+      last_state:
+        running: null
+        terminated: null
+        waiting: null
+      name: etcd
+      ready: true
+      restart_count: 0
+      state:
+        running:
+          started_at: '2019-09-14 18:26:07+00:00'
+        terminated: null
+        waiting: null
+    host_ip: 172.16.99.110
+    init_container_statuses: null
+    message: null
+    nominated_node_name: null
+    phase: Running
+    pod_ip: 172.16.99.110
+    qos_class: BestEffort
+    reason: null
+    start_time: '2019-09-14 18:26:02+00:00'
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/config.hash: 43e3a2204c26514630d168134f0d322d
+      kubernetes.io/config.mirror: 43e3a2204c26514630d168134f0d322d
+      kubernetes.io/config.seen: '2019-09-14T14:26:00.489096249-04:00'
+      kubernetes.io/config.source: file
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:27:26+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      component: kube-apiserver
+      tier: control-plane
+    managed_fields: null
+    name: kube-apiserver-localhost.localdomain
+    namespace: kube-system
+    owner_references: null
+    resource_version: '2498'
+    self_link: /api/v1/namespaces/kube-system/pods/kube-apiserver-localhost.localdomain
+    uid: 12f763a2-8117-4083-adf2-1b01f43d3e46
+  spec:
+    active_deadline_seconds: null
+    affinity: null
+    automount_service_account_token: null
+    containers:
+    - args: null
+      command:
+      - kube-apiserver
+      - --advertise-address=172.16.99.110
+      - --allow-privileged=true
+      - --authorization-mode=Node,RBAC
+      - --client-ca-file=/etc/kubernetes/pki/ca.crt
+      - --enable-admission-plugins=NodeRestriction
+      - --enable-bootstrap-token-auth=true
+      - --etcd-cafile=/etc/kubernetes/pki/etcd/ca.crt
+      - --etcd-certfile=/etc/kubernetes/pki/apiserver-etcd-client.crt
+      - --etcd-keyfile=/etc/kubernetes/pki/apiserver-etcd-client.key
+      - --etcd-servers=https://127.0.0.1:2379
+      - --insecure-port=0
+      - --kubelet-client-certificate=/etc/kubernetes/pki/apiserver-kubelet-client.crt
+      - --kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key
+      - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+      - --proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt
+      - --proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key
+      - --requestheader-allowed-names=front-proxy-client
+      - --requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt
+      - --requestheader-extra-headers-prefix=X-Remote-Extra-
+      - --requestheader-group-headers=X-Remote-Group
+      - --requestheader-username-headers=X-Remote-User
+      - --secure-port=6443
+      - --service-account-key-file=/etc/kubernetes/pki/sa.pub
+      - --service-cluster-ip-range=10.96.0.0/12
+      - --tls-cert-file=/etc/kubernetes/pki/apiserver.crt
+      - --tls-private-key-file=/etc/kubernetes/pki/apiserver.key
+      env: null
+      env_from: null
+      image: k8s.gcr.io/kube-apiserver:v1.15.3
+      image_pull_policy: IfNotPresent
+      lifecycle: null
+      liveness_probe:
+        _exec: null
+        failure_threshold: 8
+        http_get:
+          host: 172.16.99.110
+          http_headers: null
+          path: /healthz
+          port: 6443
+          scheme: HTTPS
+        initial_delay_seconds: 15
+        period_seconds: 10
+        success_threshold: 1
+        tcp_socket: null
+        timeout_seconds: 15
+      name: kube-apiserver
+      ports: null
+      readiness_probe: null
+      resources:
+        limits: null
+        requests:
+          cpu: 250m
+      security_context: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /etc/ssl/certs
+        mount_propagation: null
+        name: ca-certs
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /etc/pki
+        mount_propagation: null
+        name: etc-pki
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /etc/kubernetes/pki
+        mount_propagation: null
+        name: k8s-certs
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    dns_config: null
+    dns_policy: ClusterFirst
+    enable_service_links: true
+    host_aliases: null
+    host_ipc: null
+    host_network: true
+    host_pid: null
+    hostname: null
+    image_pull_secrets: null
+    init_containers: null
+    node_name: localhost.localdomain
+    node_selector: null
+    priority: 2000000000
+    priority_class_name: system-cluster-critical
+    readiness_gates: null
+    restart_policy: Always
+    runtime_class_name: null
+    scheduler_name: default-scheduler
+    security_context:
+      fs_group: null
+      run_as_group: null
+      run_as_non_root: null
+      run_as_user: null
+      se_linux_options: null
+      supplemental_groups: null
+      sysctls: null
+    service_account: null
+    service_account_name: null
+    share_process_namespace: null
+    subdomain: null
+    termination_grace_period_seconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: null
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    volumes:
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /etc/ssl/certs
+        type: DirectoryOrCreate
+      iscsi: null
+      name: ca-certs
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /etc/pki
+        type: DirectoryOrCreate
+      iscsi: null
+      name: etc-pki
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /etc/kubernetes/pki
+        type: DirectoryOrCreate
+      iscsi: null
+      name: k8s-certs
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+  status:
+    conditions:
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:03+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Initialized
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:11+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Ready
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:11+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: ContainersReady
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:03+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: PodScheduled
+    container_statuses:
+    - container_id: docker://ee0bfa3ac2ae036536f032995d164efb868a16fb90ec977934f1ebe4ba96c793
+      image: k8s.gcr.io/kube-apiserver:v1.15.3
+      image_id: docker-pullable://k8s.gcr.io/kube-apiserver@sha256:120c31707be05d6ff5bd05e56e95cac09cdb75e3b533b91fd2c6a2b771c19609
+      last_state:
+        running: null
+        terminated:
+          container_id: docker://216bddb5c80c4fb83d66f3f38dcddb883d8438df242b1950440bec34b0e33a87
+          exit_code: 0
+          finished_at: '2019-09-14 18:54:34+00:00'
+          message: null
+          reason: Completed
+          signal: null
+          started_at: '2019-09-14 18:26:07+00:00'
+        waiting: null
+      name: kube-apiserver
+      ready: true
+      restart_count: 1
+      state:
+        running:
+          started_at: '2019-09-14 18:54:49+00:00'
+        terminated: null
+        waiting: null
+    host_ip: 172.16.99.110
+    init_container_statuses: null
+    message: null
+    nominated_node_name: null
+    phase: Running
+    pod_ip: 172.16.99.110
+    qos_class: Burstable
+    reason: null
+    start_time: '2019-09-14 18:26:03+00:00'
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/config.hash: 3992f9dfb4292d359b757a2f9f410765
+      kubernetes.io/config.mirror: 3992f9dfb4292d359b757a2f9f410765
+      kubernetes.io/config.seen: '2019-09-14T14:26:00.489102064-04:00'
+      kubernetes.io/config.source: file
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:27:37+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      component: kube-controller-manager
+      tier: control-plane
+    managed_fields: null
+    name: kube-controller-manager-localhost.localdomain
+    namespace: kube-system
+    owner_references: null
+    resource_version: '2988'
+    self_link: /api/v1/namespaces/kube-system/pods/kube-controller-manager-localhost.localdomain
+    uid: ecb03e64-61d8-4313-bbac-3c8a4e60ee40
+  spec:
+    active_deadline_seconds: null
+    affinity: null
+    automount_service_account_token: null
+    containers:
+    - args: null
+      command:
+      - kube-controller-manager
+      - --allocate-node-cidrs=true
+      - --authentication-kubeconfig=/etc/kubernetes/controller-manager.conf
+      - --authorization-kubeconfig=/etc/kubernetes/controller-manager.conf
+      - --bind-address=127.0.0.1
+      - --client-ca-file=/etc/kubernetes/pki/ca.crt
+      - --cluster-cidr=10.244.0.0/16
+      - --cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt
+      - --cluster-signing-key-file=/etc/kubernetes/pki/ca.key
+      - --controllers=*,bootstrapsigner,tokencleaner
+      - --kubeconfig=/etc/kubernetes/controller-manager.conf
+      - --leader-elect=true
+      - --node-cidr-mask-size=24
+      - --requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt
+      - --root-ca-file=/etc/kubernetes/pki/ca.crt
+      - --service-account-private-key-file=/etc/kubernetes/pki/sa.key
+      - --use-service-account-credentials=true
+      env: null
+      env_from: null
+      image: k8s.gcr.io/kube-controller-manager:v1.15.3
+      image_pull_policy: IfNotPresent
+      lifecycle: null
+      liveness_probe:
+        _exec: null
+        failure_threshold: 8
+        http_get:
+          host: 127.0.0.1
+          http_headers: null
+          path: /healthz
+          port: 10252
+          scheme: HTTP
+        initial_delay_seconds: 15
+        period_seconds: 10
+        success_threshold: 1
+        tcp_socket: null
+        timeout_seconds: 15
+      name: kube-controller-manager
+      ports: null
+      readiness_probe: null
+      resources:
+        limits: null
+        requests:
+          cpu: 200m
+      security_context: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /etc/ssl/certs
+        mount_propagation: null
+        name: ca-certs
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /etc/pki
+        mount_propagation: null
+        name: etc-pki
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /usr/libexec/kubernetes/kubelet-plugins/volume/exec
+        mount_propagation: null
+        name: flexvolume-dir
+        read_only: null
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /etc/kubernetes/pki
+        mount_propagation: null
+        name: k8s-certs
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /etc/kubernetes/controller-manager.conf
+        mount_propagation: null
+        name: kubeconfig
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    dns_config: null
+    dns_policy: ClusterFirst
+    enable_service_links: true
+    host_aliases: null
+    host_ipc: null
+    host_network: true
+    host_pid: null
+    hostname: null
+    image_pull_secrets: null
+    init_containers: null
+    node_name: localhost.localdomain
+    node_selector: null
+    priority: 2000000000
+    priority_class_name: system-cluster-critical
+    readiness_gates: null
+    restart_policy: Always
+    runtime_class_name: null
+    scheduler_name: default-scheduler
+    security_context:
+      fs_group: null
+      run_as_group: null
+      run_as_non_root: null
+      run_as_user: null
+      se_linux_options: null
+      supplemental_groups: null
+      sysctls: null
+    service_account: null
+    service_account_name: null
+    share_process_namespace: null
+    subdomain: null
+    termination_grace_period_seconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: null
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    volumes:
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /etc/ssl/certs
+        type: DirectoryOrCreate
+      iscsi: null
+      name: ca-certs
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /etc/pki
+        type: DirectoryOrCreate
+      iscsi: null
+      name: etc-pki
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /usr/libexec/kubernetes/kubelet-plugins/volume/exec
+        type: DirectoryOrCreate
+      iscsi: null
+      name: flexvolume-dir
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /etc/kubernetes/pki
+        type: DirectoryOrCreate
+      iscsi: null
+      name: k8s-certs
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /etc/kubernetes/controller-manager.conf
+        type: FileOrCreate
+      iscsi: null
+      name: kubeconfig
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+  status:
+    conditions:
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:03+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Initialized
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 19:11:03+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Ready
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 19:11:03+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: ContainersReady
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:03+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: PodScheduled
+    container_statuses:
+    - container_id: docker://265368b3e7dd56855b47ad9bf47861a271f00e3cbddef202c058616c7f1669a3
+      image: k8s.gcr.io/kube-controller-manager:v1.15.3
+      image_id: docker-pullable://k8s.gcr.io/kube-controller-manager@sha256:0bf6211a0d8cb1c444aa3148941ae4dfbb43dfbbd2a7a9177a9594535fbed838
+      last_state:
+        running: null
+        terminated:
+          container_id: docker://d825b8d779668eb2844f8c81380719ed81999b34a438a7d9bdc2c2a91b7db667
+          exit_code: 255
+          finished_at: '2019-09-14 19:05:50+00:00'
+          message: null
+          reason: Error
+          signal: null
+          started_at: '2019-09-14 19:04:46+00:00'
+        waiting: null
+      name: kube-controller-manager
+      ready: true
+      restart_count: 7
+      state:
+        running:
+          started_at: '2019-09-14 19:11:02+00:00'
+        terminated: null
+        waiting: null
+    host_ip: 172.16.99.110
+    init_container_statuses: null
+    message: null
+    nominated_node_name: null
+    phase: Running
+    pod_ip: 172.16.99.110
+    qos_class: Burstable
+    reason: null
+    start_time: '2019-09-14 18:26:03+00:00'
+- api_version: null
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:27:53+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: kube-flannel-ds-amd64-
+    generation: null
+    initializers: null
+    labels:
+      app: flannel
+      controller-revision-hash: 7f489b5c67
+      pod-template-generation: '1'
+      tier: node
+    managed_fields: null
+    name: kube-flannel-ds-amd64-qw78r
+    namespace: kube-system
+    owner_references:
+    - api_version: apps/v1
+      block_owner_deletion: true
+      controller: true
+      kind: DaemonSet
+      name: kube-flannel-ds-amd64
+      uid: 51bc4ef5-747c-4ca9-ad0d-6edf618da82b
+    resource_version: '572'
+    self_link: /api/v1/namespaces/kube-system/pods/kube-flannel-ds-amd64-qw78r
+    uid: 94d1abe8-0983-4d2e-9632-bbabe702e8c5
+  spec:
+    active_deadline_seconds: null
+    affinity:
+      node_affinity:
+        preferred_during_scheduling_ignored_during_execution: null
+        required_during_scheduling_ignored_during_execution:
+          node_selector_terms:
+          - match_expressions: null
+            match_fields:
+            - key: metadata.name
+              operator: In
+              values:
+              - localhost.localdomain
+      pod_affinity: null
+      pod_anti_affinity: null
+    automount_service_account_token: null
+    containers:
+    - args:
+      - --ip-masq
+      - --kube-subnet-mgr
+      command:
+      - /opt/bin/flanneld
+      env:
+      - name: POD_NAME
+        value: null
+        value_from:
+          config_map_key_ref: null
+          field_ref:
+            api_version: v1
+            field_path: metadata.name
+          resource_field_ref: null
+          secret_key_ref: null
+      - name: POD_NAMESPACE
+        value: null
+        value_from:
+          config_map_key_ref: null
+          field_ref:
+            api_version: v1
+            field_path: metadata.namespace
+          resource_field_ref: null
+          secret_key_ref: null
+      env_from: null
+      image: quay.io/coreos/flannel:v0.11.0-amd64
+      image_pull_policy: IfNotPresent
+      lifecycle: null
+      liveness_probe: null
+      name: kube-flannel
+      ports: null
+      readiness_probe: null
+      resources:
+        limits:
+          cpu: 100m
+          memory: 50Mi
+        requests:
+          cpu: 100m
+          memory: 50Mi
+      security_context:
+        allow_privilege_escalation: null
+        capabilities:
+          add:
+          - NET_ADMIN
+          drop: null
+        privileged: false
+        proc_mount: null
+        read_only_root_filesystem: null
+        run_as_group: null
+        run_as_non_root: null
+        run_as_user: null
+        se_linux_options: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /run/flannel
+        mount_propagation: null
+        name: run
+        read_only: null
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /etc/kube-flannel/
+        mount_propagation: null
+        name: flannel-cfg
+        read_only: null
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /var/run/secrets/kubernetes.io/serviceaccount
+        mount_propagation: null
+        name: flannel-token-6m2hq
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    dns_config: null
+    dns_policy: ClusterFirst
+    enable_service_links: true
+    host_aliases: null
+    host_ipc: null
+    host_network: true
+    host_pid: null
+    hostname: null
+    image_pull_secrets: null
+    init_containers:
+    - args:
+      - -f
+      - /etc/kube-flannel/cni-conf.json
+      - /etc/cni/net.d/10-flannel.conflist
+      command:
+      - cp
+      env: null
+      env_from: null
+      image: quay.io/coreos/flannel:v0.11.0-amd64
+      image_pull_policy: IfNotPresent
+      lifecycle: null
+      liveness_probe: null
+      name: install-cni
+      ports: null
+      readiness_probe: null
+      resources:
+        limits: null
+        requests: null
+      security_context: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /etc/cni/net.d
+        mount_propagation: null
+        name: cni
+        read_only: null
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /etc/kube-flannel/
+        mount_propagation: null
+        name: flannel-cfg
+        read_only: null
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /var/run/secrets/kubernetes.io/serviceaccount
+        mount_propagation: null
+        name: flannel-token-6m2hq
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    node_name: localhost.localdomain
+    node_selector:
+      beta.kubernetes.io/arch: amd64
+    priority: 0
+    priority_class_name: null
+    readiness_gates: null
+    restart_policy: Always
+    runtime_class_name: null
+    scheduler_name: default-scheduler
+    security_context:
+      fs_group: null
+      run_as_group: null
+      run_as_non_root: null
+      run_as_user: null
+      se_linux_options: null
+      supplemental_groups: null
+      sysctls: null
+    service_account: flannel
+    service_account_name: flannel
+    share_process_namespace: null
+    subdomain: null
+    termination_grace_period_seconds: 30
+    tolerations:
+    - effect: NoSchedule
+      key: null
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/network-unavailable
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    volumes:
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /run/flannel
+        type: ''
+      iscsi: null
+      name: run
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /etc/cni/net.d
+        type: ''
+      iscsi: null
+      name: cni
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map:
+        default_mode: 420
+        items: null
+        name: kube-flannel-cfg
+        optional: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path: null
+      iscsi: null
+      name: flannel-cfg
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path: null
+      iscsi: null
+      name: flannel-token-6m2hq
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret:
+        default_mode: 420
+        items: null
+        optional: null
+        secret_name: flannel-token-6m2hq
+      storageos: null
+      vsphere_volume: null
+  status:
+    conditions:
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:27:58+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Initialized
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:39+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Ready
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:39+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: ContainersReady
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:27:53+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: PodScheduled
+    container_statuses:
+    - container_id: docker://fcee0d639546fa115663db1e2313e99fcfab3559c8549cbc0187986cfb321943
+      image: quay.io/coreos/flannel:v0.11.0-amd64
+      image_id: docker-pullable://quay.io/coreos/flannel@sha256:7806805c93b20a168d0bbbd25c6a213f00ac58a511c47e8fa6409543528a204e
+      last_state:
+        running: null
+        terminated:
+          container_id: docker://757535c73a74c02152fea2db18315dc16ad2e6f3742a846f93020336d3beaec3
+          exit_code: 1
+          finished_at: '2019-09-14 18:28:34+00:00'
+          message: null
+          reason: Error
+          signal: null
+          started_at: '2019-09-14 18:28:00+00:00'
+        waiting: null
+      name: kube-flannel
+      ready: true
+      restart_count: 1
+      state:
+        running:
+          started_at: '2019-09-14 18:28:38+00:00'
+        terminated: null
+        waiting: null
+    host_ip: 172.16.99.110
+    init_container_statuses:
+    - container_id: docker://18b252a5c61eecf10e035f04ace9a5bd0487e9bba211782a25823f7ea8ae4af8
+      image: quay.io/coreos/flannel:v0.11.0-amd64
+      image_id: docker-pullable://quay.io/coreos/flannel@sha256:7806805c93b20a168d0bbbd25c6a213f00ac58a511c47e8fa6409543528a204e
+      last_state:
+        running: null
+        terminated: null
+        waiting: null
+      name: install-cni
+      ready: true
+      restart_count: 0
+      state:
+        running: null
+        terminated:
+          container_id: docker://18b252a5c61eecf10e035f04ace9a5bd0487e9bba211782a25823f7ea8ae4af8
+          exit_code: 0
+          finished_at: '2019-09-14 18:27:57+00:00'
+          message: null
+          reason: Completed
+          signal: null
+          started_at: '2019-09-14 18:27:57+00:00'
+        waiting: null
+    message: null
+    nominated_node_name: null
+    phase: Running
+    pod_ip: 172.16.99.110
+    qos_class: Guaranteed
+    reason: null
+    start_time: '2019-09-14 18:27:53+00:00'
+- api_version: null
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:26:52+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: kube-proxy-
+    generation: null
+    initializers: null
+    labels:
+      controller-revision-hash: 58ddb5b85
+      k8s-app: kube-proxy
+      pod-template-generation: '1'
+    managed_fields: null
+    name: kube-proxy-xgxxb
+    namespace: kube-system
+    owner_references:
+    - api_version: apps/v1
+      block_owner_deletion: true
+      controller: true
+      kind: DaemonSet
+      name: kube-proxy
+      uid: 3f7be725-48a9-42d5-8c7e-289684d5c045
+    resource_version: '370'
+    self_link: /api/v1/namespaces/kube-system/pods/kube-proxy-xgxxb
+    uid: 658d3bf0-f850-4a5f-b9ac-fe1abcb42f94
+  spec:
+    active_deadline_seconds: null
+    affinity:
+      node_affinity:
+        preferred_during_scheduling_ignored_during_execution: null
+        required_during_scheduling_ignored_during_execution:
+          node_selector_terms:
+          - match_expressions: null
+            match_fields:
+            - key: metadata.name
+              operator: In
+              values:
+              - localhost.localdomain
+      pod_affinity: null
+      pod_anti_affinity: null
+    automount_service_account_token: null
+    containers:
+    - args: null
+      command:
+      - /usr/local/bin/kube-proxy
+      - --config=/var/lib/kube-proxy/config.conf
+      - --hostname-override=$(NODE_NAME)
+      env:
+      - name: NODE_NAME
+        value: null
+        value_from:
+          config_map_key_ref: null
+          field_ref:
+            api_version: v1
+            field_path: spec.nodeName
+          resource_field_ref: null
+          secret_key_ref: null
+      env_from: null
+      image: k8s.gcr.io/kube-proxy:v1.15.3
+      image_pull_policy: IfNotPresent
+      lifecycle: null
+      liveness_probe: null
+      name: kube-proxy
+      ports: null
+      readiness_probe: null
+      resources:
+        limits: null
+        requests: null
+      security_context:
+        allow_privilege_escalation: null
+        capabilities: null
+        privileged: true
+        proc_mount: null
+        read_only_root_filesystem: null
+        run_as_group: null
+        run_as_non_root: null
+        run_as_user: null
+        se_linux_options: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /var/lib/kube-proxy
+        mount_propagation: null
+        name: kube-proxy
+        read_only: null
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /run/xtables.lock
+        mount_propagation: null
+        name: xtables-lock
+        read_only: null
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /lib/modules
+        mount_propagation: null
+        name: lib-modules
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /var/run/secrets/kubernetes.io/serviceaccount
+        mount_propagation: null
+        name: kube-proxy-token-q542q
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    dns_config: null
+    dns_policy: ClusterFirst
+    enable_service_links: true
+    host_aliases: null
+    host_ipc: null
+    host_network: true
+    host_pid: null
+    hostname: null
+    image_pull_secrets: null
+    init_containers: null
+    node_name: localhost.localdomain
+    node_selector:
+      beta.kubernetes.io/os: linux
+    priority: 2000001000
+    priority_class_name: system-node-critical
+    readiness_gates: null
+    restart_policy: Always
+    runtime_class_name: null
+    scheduler_name: default-scheduler
+    security_context:
+      fs_group: null
+      run_as_group: null
+      run_as_non_root: null
+      run_as_user: null
+      se_linux_options: null
+      supplemental_groups: null
+      sysctls: null
+    service_account: kube-proxy
+    service_account_name: kube-proxy
+    share_process_namespace: null
+    subdomain: null
+    termination_grace_period_seconds: 30
+    tolerations:
+    - effect: null
+      key: CriticalAddonsOnly
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: null
+      key: null
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/network-unavailable
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    volumes:
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map:
+        default_mode: 420
+        items: null
+        name: kube-proxy
+        optional: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path: null
+      iscsi: null
+      name: kube-proxy
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /run/xtables.lock
+        type: FileOrCreate
+      iscsi: null
+      name: xtables-lock
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /lib/modules
+        type: ''
+      iscsi: null
+      name: lib-modules
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path: null
+      iscsi: null
+      name: kube-proxy-token-q542q
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret:
+        default_mode: 420
+        items: null
+        optional: null
+        secret_name: kube-proxy-token-q542q
+      storageos: null
+      vsphere_volume: null
+  status:
+    conditions:
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:52+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Initialized
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:56+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Ready
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:56+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: ContainersReady
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:52+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: PodScheduled
+    container_statuses:
+    - container_id: docker://ab30252c3335c6c3109aeef351de552f8c71fc064a1451fb667e087c1017fec4
+      image: k8s.gcr.io/kube-proxy:v1.15.3
+      image_id: docker-pullable://k8s.gcr.io/kube-proxy@sha256:6f910100972afda5b14037ccbba0cd6aa091bb773ae749f46b03f395380935c9
+      last_state:
+        running: null
+        terminated: null
+        waiting: null
+      name: kube-proxy
+      ready: true
+      restart_count: 0
+      state:
+        running:
+          started_at: '2019-09-14 18:26:54+00:00'
+        terminated: null
+        waiting: null
+    host_ip: 172.16.99.110
+    init_container_statuses: null
+    message: null
+    nominated_node_name: null
+    phase: Running
+    pod_ip: 172.16.99.110
+    qos_class: BestEffort
+    reason: null
+    start_time: '2019-09-14 18:26:52+00:00'
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      kubernetes.io/config.hash: 7d5d3c0a6786e517a8973fa06754cb75
+      kubernetes.io/config.mirror: 7d5d3c0a6786e517a8973fa06754cb75
+      kubernetes.io/config.seen: '2019-09-14T14:26:00.489107407-04:00'
+      kubernetes.io/config.source: file
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:27:26+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: null
+    generation: null
+    initializers: null
+    labels:
+      component: kube-scheduler
+      tier: control-plane
+    managed_fields: null
+    name: kube-scheduler-localhost.localdomain
+    namespace: kube-system
+    owner_references: null
+    resource_version: '2947'
+    self_link: /api/v1/namespaces/kube-system/pods/kube-scheduler-localhost.localdomain
+    uid: ea3d8230-1c8f-4a65-89b4-50b6c9d98948
+  spec:
+    active_deadline_seconds: null
+    affinity: null
+    automount_service_account_token: null
+    containers:
+    - args: null
+      command:
+      - kube-scheduler
+      - --bind-address=127.0.0.1
+      - --kubeconfig=/etc/kubernetes/scheduler.conf
+      - --leader-elect=true
+      env: null
+      env_from: null
+      image: k8s.gcr.io/kube-scheduler:v1.15.3
+      image_pull_policy: IfNotPresent
+      lifecycle: null
+      liveness_probe:
+        _exec: null
+        failure_threshold: 8
+        http_get:
+          host: 127.0.0.1
+          http_headers: null
+          path: /healthz
+          port: 10251
+          scheme: HTTP
+        initial_delay_seconds: 15
+        period_seconds: 10
+        success_threshold: 1
+        tcp_socket: null
+        timeout_seconds: 15
+      name: kube-scheduler
+      ports: null
+      readiness_probe: null
+      resources:
+        limits: null
+        requests:
+          cpu: 100m
+      security_context: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /etc/kubernetes/scheduler.conf
+        mount_propagation: null
+        name: kubeconfig
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    dns_config: null
+    dns_policy: ClusterFirst
+    enable_service_links: true
+    host_aliases: null
+    host_ipc: null
+    host_network: true
+    host_pid: null
+    hostname: null
+    image_pull_secrets: null
+    init_containers: null
+    node_name: localhost.localdomain
+    node_selector: null
+    priority: 2000000000
+    priority_class_name: system-cluster-critical
+    readiness_gates: null
+    restart_policy: Always
+    runtime_class_name: null
+    scheduler_name: default-scheduler
+    security_context:
+      fs_group: null
+      run_as_group: null
+      run_as_non_root: null
+      run_as_user: null
+      se_linux_options: null
+      supplemental_groups: null
+      sysctls: null
+    service_account: null
+    service_account_name: null
+    share_process_namespace: null
+    subdomain: null
+    termination_grace_period_seconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: null
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    volumes:
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /etc/kubernetes/scheduler.conf
+        type: FileOrCreate
+      iscsi: null
+      name: kubeconfig
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+  status:
+    conditions:
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:03+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Initialized
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 19:10:06+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Ready
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 19:10:06+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: ContainersReady
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:26:03+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: PodScheduled
+    container_statuses:
+    - container_id: docker://0e2feff034c74dcc46fa660fd3fb858bb89d6e8f110bbbe4c4e49441fafda456
+      image: k8s.gcr.io/kube-scheduler:v1.15.3
+      image_id: docker-pullable://k8s.gcr.io/kube-scheduler@sha256:e365d380e57c75ee35f7cda99df5aa8c96e86287a5d3b52847e5d67d27ed082a
+      last_state:
+        running: null
+        terminated:
+          container_id: docker://7abafd7f4164eae99587a4e2d1cc919e03b1d2c162ec74deec98d14f5e9e275f
+          exit_code: 1
+          finished_at: '2019-09-14 19:05:03+00:00'
+          message: null
+          reason: Error
+          signal: null
+          started_at: '2019-09-14 19:03:32+00:00'
+        waiting: null
+      name: kube-scheduler
+      ready: true
+      restart_count: 7
+      state:
+        running:
+          started_at: '2019-09-14 19:10:05+00:00'
+        terminated: null
+        waiting: null
+    host_ip: 172.16.99.110
+    init_container_statuses: null
+    message: null
+    nominated_node_name: null
+    phase: Running
+    pod_ip: 172.16.99.110
+    qos_class: Burstable
+    reason: null
+    start_time: '2019-09-14 18:26:03+00:00'
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      prometheus.io/port: '7472'
+      prometheus.io/scrape: 'true'
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:44+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: controller-55d74449-
+    generation: null
+    initializers: null
+    labels:
+      app: metallb
+      component: controller
+      pod-template-hash: 55d74449
+    managed_fields: null
+    name: controller-55d74449-74256
+    namespace: metallb-system
+    owner_references:
+    - api_version: apps/v1
+      block_owner_deletion: true
+      controller: true
+      kind: ReplicaSet
+      name: controller-55d74449
+      uid: 029d5e91-2b1e-42f9-809e-651cddc533f3
+    resource_version: '649'
+    self_link: /api/v1/namespaces/metallb-system/pods/controller-55d74449-74256
+    uid: c7a368fa-fb6c-4c96-aec8-a99b459bfe60
+  spec:
+    active_deadline_seconds: null
+    affinity: null
+    automount_service_account_token: null
+    containers:
+    - args:
+      - --port=7472
+      - --config=config
+      command: null
+      env: null
+      env_from: null
+      image: metallb/controller:v0.8.1
+      image_pull_policy: IfNotPresent
+      lifecycle: null
+      liveness_probe: null
+      name: controller
+      ports:
+      - container_port: 7472
+        host_ip: null
+        host_port: null
+        name: monitoring
+        protocol: TCP
+      readiness_probe: null
+      resources:
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        requests:
+          cpu: 100m
+          memory: 100Mi
+      security_context:
+        allow_privilege_escalation: false
+        capabilities:
+          add: null
+          drop:
+          - all
+        privileged: null
+        proc_mount: null
+        read_only_root_filesystem: true
+        run_as_group: null
+        run_as_non_root: null
+        run_as_user: null
+        se_linux_options: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /var/run/secrets/kubernetes.io/serviceaccount
+        mount_propagation: null
+        name: controller-token-tst9n
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    dns_config: null
+    dns_policy: ClusterFirst
+    enable_service_links: true
+    host_aliases: null
+    host_ipc: null
+    host_network: null
+    host_pid: null
+    hostname: null
+    image_pull_secrets: null
+    init_containers: null
+    node_name: localhost.localdomain
+    node_selector:
+      beta.kubernetes.io/os: linux
+    priority: 0
+    priority_class_name: null
+    readiness_gates: null
+    restart_policy: Always
+    runtime_class_name: null
+    scheduler_name: default-scheduler
+    security_context:
+      fs_group: null
+      run_as_group: null
+      run_as_non_root: true
+      run_as_user: 65534
+      se_linux_options: null
+      supplemental_groups: null
+      sysctls: null
+    service_account: controller
+    service_account_name: controller
+    share_process_namespace: null
+    subdomain: null
+    termination_grace_period_seconds: 0
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      toleration_seconds: 300
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      toleration_seconds: 300
+      value: null
+    volumes:
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path: null
+      iscsi: null
+      name: controller-token-tst9n
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret:
+        default_mode: 420
+        items: null
+        optional: null
+        secret_name: controller-token-tst9n
+      storageos: null
+      vsphere_volume: null
+  status:
+    conditions:
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:45+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Initialized
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:50+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Ready
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:50+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: ContainersReady
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:44+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: PodScheduled
+    container_statuses:
+    - container_id: docker://0a19c3bf81903c6fa79bec9d47522dc392d93201cd70beb5f90045443a6de340
+      image: metallb/controller:v0.8.1
+      image_id: docker-pullable://metallb/controller@sha256:9958ff8221ab70fc8380cd3ced30667e88d447ee273721b034ca4540b5e95468
+      last_state:
+        running: null
+        terminated: null
+        waiting: null
+      name: controller
+      ready: true
+      restart_count: 0
+      state:
+        running:
+          started_at: '2019-09-14 18:28:50+00:00'
+        terminated: null
+        waiting: null
+    host_ip: 172.16.99.110
+    init_container_statuses: null
+    message: null
+    nominated_node_name: null
+    phase: Running
+    pod_ip: 10.244.0.8
+    qos_class: Guaranteed
+    reason: null
+    start_time: '2019-09-14 18:28:45+00:00'
+- api_version: null
+  kind: null
+  metadata:
+    annotations:
+      prometheus.io/port: '7472'
+      prometheus.io/scrape: 'true'
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:28:44+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: speaker-
+    generation: null
+    initializers: null
+    labels:
+      app: metallb
+      component: speaker
+      controller-revision-hash: 7bff99697d
+      pod-template-generation: '1'
+    managed_fields: null
+    name: speaker-m5rqm
+    namespace: metallb-system
+    owner_references:
+    - api_version: apps/v1
+      block_owner_deletion: true
+      controller: true
+      kind: DaemonSet
+      name: speaker
+      uid: 1dcbd599-4afc-4f2f-9a80-9308abaf3c04
+    resource_version: '652'
+    self_link: /api/v1/namespaces/metallb-system/pods/speaker-m5rqm
+    uid: 100f6bd6-fd46-48e4-9188-e40e09564f85
+  spec:
+    active_deadline_seconds: null
+    affinity:
+      node_affinity:
+        preferred_during_scheduling_ignored_during_execution: null
+        required_during_scheduling_ignored_during_execution:
+          node_selector_terms:
+          - match_expressions: null
+            match_fields:
+            - key: metadata.name
+              operator: In
+              values:
+              - localhost.localdomain
+      pod_affinity: null
+      pod_anti_affinity: null
+    automount_service_account_token: null
+    containers:
+    - args:
+      - --port=7472
+      - --config=config
+      command: null
+      env:
+      - name: METALLB_NODE_NAME
+        value: null
+        value_from:
+          config_map_key_ref: null
+          field_ref:
+            api_version: v1
+            field_path: spec.nodeName
+          resource_field_ref: null
+          secret_key_ref: null
+      - name: METALLB_HOST
+        value: null
+        value_from:
+          config_map_key_ref: null
+          field_ref:
+            api_version: v1
+            field_path: status.hostIP
+          resource_field_ref: null
+          secret_key_ref: null
+      env_from: null
+      image: metallb/speaker:v0.8.1
+      image_pull_policy: IfNotPresent
+      lifecycle: null
+      liveness_probe: null
+      name: speaker
+      ports:
+      - container_port: 7472
+        host_ip: null
+        host_port: 7472
+        name: monitoring
+        protocol: TCP
+      readiness_probe: null
+      resources:
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        requests:
+          cpu: 100m
+          memory: 100Mi
+      security_context:
+        allow_privilege_escalation: false
+        capabilities:
+          add:
+          - NET_ADMIN
+          - NET_RAW
+          - SYS_ADMIN
+          drop:
+          - ALL
+        privileged: null
+        proc_mount: null
+        read_only_root_filesystem: true
+        run_as_group: null
+        run_as_non_root: null
+        run_as_user: null
+        se_linux_options: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /var/run/secrets/kubernetes.io/serviceaccount
+        mount_propagation: null
+        name: speaker-token-2rv62
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    dns_config: null
+    dns_policy: ClusterFirst
+    enable_service_links: true
+    host_aliases: null
+    host_ipc: null
+    host_network: true
+    host_pid: null
+    hostname: null
+    image_pull_secrets: null
+    init_containers: null
+    node_name: localhost.localdomain
+    node_selector:
+      beta.kubernetes.io/os: linux
+    priority: 0
+    priority_class_name: null
+    readiness_gates: null
+    restart_policy: Always
+    runtime_class_name: null
+    scheduler_name: default-scheduler
+    security_context:
+      fs_group: null
+      run_as_group: null
+      run_as_non_root: null
+      run_as_user: null
+      se_linux_options: null
+      supplemental_groups: null
+      sysctls: null
+    service_account: speaker
+    service_account_name: speaker
+    share_process_namespace: null
+    subdomain: null
+    termination_grace_period_seconds: 0
+    tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: null
+      toleration_seconds: null
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    - effect: NoSchedule
+      key: node.kubernetes.io/network-unavailable
+      operator: Exists
+      toleration_seconds: null
+      value: null
+    volumes:
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path: null
+      iscsi: null
+      name: speaker-token-2rv62
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret:
+        default_mode: 420
+        items: null
+        optional: null
+        secret_name: speaker-token-2rv62
+      storageos: null
+      vsphere_volume: null
+  status:
+    conditions:
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:44+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Initialized
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:51+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Ready
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:51+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: ContainersReady
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:28:44+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: PodScheduled
+    container_statuses:
+    - container_id: docker://c34fc2227113a634642ffbce80f7383b549807a8ad708c4d15cf4c7a8b92e3eb
+      image: metallb/speaker:v0.8.1
+      image_id: docker-pullable://metallb/speaker@sha256:148d57d646dd3a1653589195eed8a635642668ee845596fe3cb4705757c4d81d
+      last_state:
+        running: null
+        terminated: null
+        waiting: null
+      name: speaker
+      ready: true
+      restart_count: 0
+      state:
+        running:
+          started_at: '2019-09-14 18:28:49+00:00'
+        terminated: null
+        waiting: null
+    host_ip: 172.16.99.110
+    init_container_statuses: null
+    message: null
+    nominated_node_name: null
+    phase: Running
+    pod_ip: 172.16.99.110
+    qos_class: Guaranteed
+    reason: null
+    start_time: '2019-09-14 18:28:44+00:00'
+- api_version: null
+  kind: null
+  metadata:
+    annotations: null
+    cluster_name: null
+    creation_timestamp: '2019-09-14 18:40:26+00:00'
+    deletion_grace_period_seconds: null
+    deletion_timestamp: null
+    finalizers: null
+    generate_name: watcher-6d9b9547c8-
+    generation: null
+    initializers: null
+    labels:
+      pod-template-hash: 6d9b9547c8
+      run: watcher
+    managed_fields: null
+    name: watcher-6d9b9547c8-f9ww9
+    namespace: watcher
+    owner_references:
+    - api_version: apps/v1
+      block_owner_deletion: true
+      controller: true
+      kind: ReplicaSet
+      name: watcher-6d9b9547c8
+      uid: 13e8326f-41d5-47ed-a48e-8e190310c4c4
+    resource_version: '14194'
+    self_link: /api/v1/namespaces/watcher/pods/watcher-6d9b9547c8-f9ww9
+    uid: cdeb3738-0187-4dfb-8db8-d0fe7136e827
+  spec:
+    active_deadline_seconds: null
+    affinity: null
+    automount_service_account_token: null
+    containers:
+    - args: null
+      command:
+      - sleep
+      - '10000'
+      env: null
+      env_from: null
+      image: python
+      image_pull_policy: Always
+      lifecycle: null
+      liveness_probe: null
+      name: python
+      ports: null
+      readiness_probe: null
+      resources:
+        limits: null
+        requests: null
+      security_context: null
+      stdin: null
+      stdin_once: null
+      termination_message_path: /dev/termination-log
+      termination_message_policy: File
+      tty: null
+      volume_devices: null
+      volume_mounts:
+      - mount_path: /watcher
+        mount_propagation: null
+        name: watcher
+        read_only: null
+        sub_path: null
+        sub_path_expr: null
+      - mount_path: /var/run/secrets/kubernetes.io/serviceaccount
+        mount_propagation: null
+        name: default-token-qwxxj
+        read_only: true
+        sub_path: null
+        sub_path_expr: null
+      working_dir: null
+    dns_config: null
+    dns_policy: ClusterFirst
+    enable_service_links: true
+    host_aliases: null
+    host_ipc: null
+    host_network: null
+    host_pid: null
+    hostname: null
+    image_pull_secrets: null
+    init_containers: null
+    node_name: localhost.localdomain
+    node_selector: null
+    priority: 0
+    priority_class_name: null
+    readiness_gates: null
+    restart_policy: Always
+    runtime_class_name: null
+    scheduler_name: default-scheduler
+    security_context:
+      fs_group: null
+      run_as_group: null
+      run_as_non_root: null
+      run_as_user: null
+      se_linux_options: null
+      supplemental_groups: null
+      sysctls: null
+    service_account: default
+    service_account_name: default
+    share_process_namespace: null
+    subdomain: null
+    termination_grace_period_seconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      toleration_seconds: 300
+      value: null
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      toleration_seconds: 300
+      value: null
+    volumes:
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path:
+        path: /media/sf_virtualbox_shared
+        type: Directory
+      iscsi: null
+      name: watcher
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret: null
+      storageos: null
+      vsphere_volume: null
+    - aws_elastic_block_store: null
+      azure_disk: null
+      azure_file: null
+      cephfs: null
+      cinder: null
+      config_map: null
+      csi: null
+      downward_api: null
+      empty_dir: null
+      fc: null
+      flex_volume: null
+      flocker: null
+      gce_persistent_disk: null
+      git_repo: null
+      glusterfs: null
+      host_path: null
+      iscsi: null
+      name: default-token-qwxxj
+      nfs: null
+      persistent_volume_claim: null
+      photon_persistent_disk: null
+      portworx_volume: null
+      projected: null
+      quobyte: null
+      rbd: null
+      scale_io: null
+      secret:
+        default_mode: 420
+        items: null
+        optional: null
+        secret_name: default-token-qwxxj
+      storageos: null
+      vsphere_volume: null
+  status:
+    conditions:
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:40:26+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Initialized
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 21:29:53+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: Ready
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 21:29:53+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: ContainersReady
+    - last_probe_time: null
+      last_transition_time: '2019-09-14 18:40:26+00:00'
+      message: null
+      reason: null
+      status: 'True'
+      type: PodScheduled
+    container_statuses:
+    - container_id: docker://5a1df7329d5cec2452004afe82330cb6aba50cf433f5cb1e58bba78fddc6d956
+      image: python:latest
+      image_id: docker-pullable://python@sha256:0f0e991a97426db345ca7ec59fa911c8ed27ced27c88ae9966b452bcc6438c2f
+      last_state:
+        running: null
+        terminated:
+          container_id: docker://1d03f6b463ce537f0deb77c5085e19e2a66d3d791eeafe4bf9bd59a9a0830ac4
+          exit_code: 0
+          finished_at: '2019-09-14 21:29:44+00:00'
+          message: null
+          reason: Completed
+          signal: null
+          started_at: '2019-09-14 18:43:04+00:00'
+        waiting: null
+      name: python
+      ready: true
+      restart_count: 1
+      state:
+        running:
+          started_at: '2019-09-14 21:29:52+00:00'
+        terminated: null
+        waiting: null
+    host_ip: 172.16.99.110
+    init_container_statuses: null
+    message: null
+    nominated_node_name: null
+    phase: Running
+    pod_ip: 10.244.0.10
+    qos_class: BestEffort
+    reason: null
+    start_time: '2019-09-14 18:40:26+00:00'
+

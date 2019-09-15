@@ -1,0 +1,55 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: watcher
+  labels:
+    name: watcher
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: watcher
+rules:
+- apiGroups: [""]
+  resources: ["nodes", "pods", "deployments", "services", "ingress", "namespaces", "configmaps", "secrets"]
+  verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: watcher
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: watcher
+roleRef:
+  kind: ClusterRole
+  name: watcher
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: watcher
+  name: watcher
+  namespace: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: watcher
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: watcher
+    spec:
+      containers:
+      - image: adalimayeu/watcher
+        imagePullPolicy: Always
+        name: watcher

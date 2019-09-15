@@ -1,0 +1,12 @@
+- kind: Namespace
+  metadata:
+    name: test1ns
+
+- kind: Namespace
+  metadata:
+    name: test2ns
+
+- kind: Namespace
+  metadata:
+    name: test3ns
+
