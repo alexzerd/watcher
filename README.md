@@ -1,9 +1,9 @@
 
 ```bash
-kubectl apply -f guestbook_manifest.yaml
+kubectl apply -f https://raw.githubusercontent.com/adalimaev/watcher/master/guestbook_manifest.yaml
 kubectl create namespace test1ns
 
-kubectl apply -f watcher_manifest.yaml
+kubectl apply -f https://raw.githubusercontent.com/adalimaev/watcher/master/watcher_manifest.yaml
 
 # get Guestbook IP
 kubectl get svc frontend | awk 'END{print $4}'
