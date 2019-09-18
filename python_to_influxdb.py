@@ -2,7 +2,7 @@ from influxdb import InfluxDBClient
 from datetime import datetime
 
 
-client = InfluxDBClient(host='influxdb.default.svc.cluster.local', port=80, username='root', password='root', database='student')
+client = InfluxDBClient(host='influxdb.influxdb.svc.cluster.local', port=80, username='root', password='root', database='student')
 
 client.create_database('student')
 client.get_list_database()
