@@ -37,4 +37,4 @@ spec:
     targetPort: 8086
   selector:
     run: influxdb
-  type: NodePort
+  type: LoadBalancer
